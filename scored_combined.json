@@ -214,5 +214,79 @@
       "relativism": 4.6,
       "ideology": "Exceptionist"
     }
+  },
+  "Nemotron 3 Ultra 550B": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.17,
+        "Equality": 2.67,
+        "Proportionality": 3.5,
+        "Loyalty": 3.0,
+        "Authority": 2.83,
+        "Purity": 2.5
+      },
+      "individualizing": 3.42,
+      "binding": 2.96,
+      "overall_distance": 0.18,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 5.8,
+      "relativism": 5.0,
+      "ideology": "Situationist"
+    }
+  },
+  "Mistral Large 2512": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.75,
+        "Equality": 3.0,
+        "Proportionality": 4.0,
+        "Loyalty": 3.6,
+        "Authority": 4.0,
+        "Purity": 3.5
+      },
+      "individualizing": 3.88,
+      "binding": 3.77,
+      "overall_distance": 0.7,
+      "refusals": [
+        1,
+        2,
+        3,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        36
+      ]
+    },
+    "EPQ": {
+      "idealism": 7.0,
+      "relativism": 5.17,
+      "ideology": "Situationist"
+    }
+  },
+  "Llama 4 Maverick": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 2.83,
+        "Equality": 2.33,
+        "Proportionality": 3.33,
+        "Loyalty": 3.0,
+        "Authority": 2.83,
+        "Purity": 2.83
+      },
+      "individualizing": 2.58,
+      "binding": 3.0,
+      "overall_distance": 0.5,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 5.2,
+      "relativism": 5.0,
+      "ideology": "Situationist"
+    }
   }
 }
