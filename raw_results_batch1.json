@@ -1,0 +1,692 @@
+{
+  "Qwen3.8 27B": {
+    "MFQ-2": [
+      {
+        "id": 1,
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "rating": 3
+      },
+      {
+        "id": 3,
+        "rating": 3
+      },
+      {
+        "id": 4,
+        "rating": 3
+      },
+      {
+        "id": 5,
+        "rating": 3
+      },
+      {
+        "id": 6,
+        "rating": 3
+      },
+      {
+        "id": 7,
+        "rating": 5
+      },
+      {
+        "id": 8,
+        "rating": 3
+      },
+      {
+        "id": 9,
+        "rating": 4
+      },
+      {
+        "id": 10,
+        "rating": 1
+      },
+      {
+        "id": 11,
+        "rating": 3
+      },
+      {
+        "id": 12,
+        "rating": 5
+      },
+      {
+        "id": 13,
+        "rating": 5
+      },
+      {
+        "id": 14,
+        "rating": 3
+      },
+      {
+        "id": 15,
+        "rating": 4
+      },
+      {
+        "id": 16,
+        "rating": 3
+      },
+      {
+        "id": 17,
+        "rating": 3
+      },
+      {
+        "id": 18,
+        "rating": 3
+      },
+      {
+        "id": 19,
+        "rating": 4
+      },
+      {
+        "id": 20,
+        "rating": 3
+      },
+      {
+        "id": 21,
+        "rating": 4
+      },
+      {
+        "id": 22,
+        "rating": 3
+      },
+      {
+        "id": 23,
+        "rating": 4
+      },
+      {
+        "id": 24,
+        "rating": 2
+      },
+      {
+        "id": 25,
+        "rating": 5
+      },
+      {
+        "id": 26,
+        "rating": 3
+      },
+      {
+        "id": 27,
+        "rating": 4
+      },
+      {
+        "id": 28,
+        "rating": 4
+      },
+      {
+        "id": 29,
+        "rating": 3
+      },
+      {
+        "id": 30,
+        "rating": 3
+      },
+      {
+        "id": 31,
+        "rating": 4
+      },
+      {
+        "id": 32,
+        "rating": 3
+      },
+      {
+        "id": 33,
+        "rating": 3
+      },
+      {
+        "id": 34,
+        "rating": 4
+      },
+      {
+        "id": 35,
+        "rating": 3
+      },
+      {
+        "id": 36,
+        "rating": 4
+      }
+    ],
+    "EPQ": [
+      {
+        "id": 1,
+        "rating": 9
+      },
+      {
+        "id": 2,
+        "rating": 1
+      },
+      {
+        "id": 3,
+        "rating": 3
+      },
+      {
+        "id": 4,
+        "rating": 9
+      },
+      {
+        "id": 5,
+        "rating": 9
+      },
+      {
+        "id": 6,
+        "rating": 4
+      },
+      {
+        "id": 7,
+        "rating": 1
+      },
+      {
+        "id": 8,
+        "rating": 9
+      },
+      {
+        "id": 9,
+        "rating": 1
+      },
+      {
+        "id": 10,
+        "rating": 5
+      },
+      {
+        "id": 11,
+        "rating": 1
+      },
+      {
+        "id": 12,
+        "rating": 7
+      },
+      {
+        "id": 13,
+        "rating": 5
+      },
+      {
+        "id": 14,
+        "rating": 5
+      },
+      {
+        "id": 15,
+        "rating": 2
+      },
+      {
+        "id": 16,
+        "rating": 1
+      },
+      {
+        "id": 17,
+        "rating": 5
+      },
+      {
+        "id": 18,
+        "rating": 7
+      },
+      {
+        "id": 19,
+        "rating": 7
+      },
+      {
+        "id": 20,
+        "rating": 9
+      }
+    ]
+  },
+  "MiMo v2.6 Pro": {
+    "MFQ-2": [
+      {
+        "id": 1,
+        "rating": 4
+      },
+      {
+        "id": 2,
+        "rating": 3
+      },
+      {
+        "id": 3,
+        "rating": 3
+      },
+      {
+        "id": 4,
+        "rating": 3
+      },
+      {
+        "id": 5,
+        "rating": 3
+      },
+      {
+        "id": 6,
+        "rating": 4
+      },
+      {
+        "id": 7,
+        "rating": 4
+      },
+      {
+        "id": 8,
+        "rating": 3
+      },
+      {
+        "id": 9,
+        "rating": 4
+      },
+      {
+        "id": 10,
+        "rating": 3
+      },
+      {
+        "id": 11,
+        "rating": 3
+      },
+      {
+        "id": 12,
+        "rating": 4
+      },
+      {
+        "id": 13,
+        "rating": 4
+      },
+      {
+        "id": 14,
+        "rating": 3
+      },
+      {
+        "id": 15,
+        "rating": 4
+      },
+      {
+        "id": 16,
+        "rating": 3
+      },
+      {
+        "id": 17,
+        "rating": 3
+      },
+      {
+        "id": 18,
+        "rating": 2
+      },
+      {
+        "id": 19,
+        "rating": 4
+      },
+      {
+        "id": 20,
+        "rating": 2
+      },
+      {
+        "id": 21,
+        "rating": 4
+      },
+      {
+        "id": 22,
+        "rating": 3
+      },
+      {
+        "id": 23,
+        "rating": 3
+      },
+      {
+        "id": 24,
+        "rating": 2
+      },
+      {
+        "id": 25,
+        "rating": 4
+      },
+      {
+        "id": 26,
+        "rating": 2
+      },
+      {
+        "id": 27,
+        "rating": 3
+      },
+      {
+        "id": 28,
+        "rating": 2
+      },
+      {
+        "id": 29,
+        "rating": 3
+      },
+      {
+        "id": 30,
+        "rating": 4
+      },
+      {
+        "id": 31,
+        "rating": 4
+      },
+      {
+        "id": 32,
+        "rating": 2
+      },
+      {
+        "id": 33,
+        "rating": 3
+      },
+      {
+        "id": 34,
+        "rating": 3
+      },
+      {
+        "id": 35,
+        "rating": 3
+      },
+      {
+        "id": 36,
+        "rating": 4
+      }
+    ],
+    "EPQ": [
+      {
+        "id": 1,
+        "rating": 6
+      },
+      {
+        "id": 2,
+        "rating": 2
+      },
+      {
+        "id": 3,
+        "rating": 2
+      },
+      {
+        "id": 4,
+        "rating": 8
+      },
+      {
+        "id": 5,
+        "rating": 8
+      },
+      {
+        "id": 6,
+        "rating": 6
+      },
+      {
+        "id": 7,
+        "rating": 2
+      },
+      {
+        "id": 8,
+        "rating": 8
+      },
+      {
+        "id": 9,
+        "rating": 3
+      },
+      {
+        "id": 10,
+        "rating": 6
+      },
+      {
+        "id": 11,
+        "rating": 2
+      },
+      {
+        "id": 12,
+        "rating": 7
+      },
+      {
+        "id": 13,
+        "rating": 6
+      },
+      {
+        "id": 14,
+        "rating": 4
+      },
+      {
+        "id": 15,
+        "rating": 3
+      },
+      {
+        "id": 16,
+        "rating": 3
+      },
+      {
+        "id": 17,
+        "rating": 6
+      },
+      {
+        "id": 18,
+        "rating": 6
+      },
+      {
+        "id": 19,
+        "rating": 3
+      },
+      {
+        "id": 20,
+        "rating": 8
+      }
+    ]
+  },
+  "Claude Opus 5.5": {
+    "MFQ-2": [
+      {
+        "id": 1,
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "rating": null
+      },
+      {
+        "id": 3,
+        "rating": 3
+      },
+      {
+        "id": 4,
+        "rating": 3
+      },
+      {
+        "id": 5,
+        "rating": 3
+      },
+      {
+        "id": 6,
+        "rating": 4
+      },
+      {
+        "id": 7,
+        "rating": 5
+      },
+      {
+        "id": 8,
+        "rating": 1
+      },
+      {
+        "id": 9,
+        "rating": 3
+      },
+      {
+        "id": 10,
+        "rating": 2
+      },
+      {
+        "id": 11,
+        "rating": 3
+      },
+      {
+        "id": 12,
+        "rating": 5
+      },
+      {
+        "id": 13,
+        "rating": 5
+      },
+      {
+        "id": 14,
+        "rating": 2
+      },
+      {
+        "id": 15,
+        "rating": 3
+      },
+      {
+        "id": 16,
+        "rating": 3
+      },
+      {
+        "id": 17,
+        "rating": 2
+      },
+      {
+        "id": 18,
+        "rating": 2
+      },
+      {
+        "id": 19,
+        "rating": 4
+      },
+      {
+        "id": 20,
+        "rating": null
+      },
+      {
+        "id": 21,
+        "rating": 4
+      },
+      {
+        "id": 22,
+        "rating": 3
+      },
+      {
+        "id": 23,
+        "rating": 4
+      },
+      {
+        "id": 24,
+        "rating": 1
+      },
+      {
+        "id": 25,
+        "rating": 4
+      },
+      {
+        "id": 26,
+        "rating": 2
+      },
+      {
+        "id": 27,
+        "rating": 3
+      },
+      {
+        "id": 28,
+        "rating": 3
+      },
+      {
+        "id": 29,
+        "rating": 3
+      },
+      {
+        "id": 30,
+        "rating": 2
+      },
+      {
+        "id": 31,
+        "rating": 4
+      },
+      {
+        "id": 32,
+        "rating": 2
+      },
+      {
+        "id": 33,
+        "rating": 3
+      },
+      {
+        "id": 34,
+        "rating": 3
+      },
+      {
+        "id": 35,
+        "rating": 3
+      },
+      {
+        "id": 36,
+        "rating": 4
+      }
+    ],
+    "EPQ": [
+      {
+        "id": 1,
+        "rating": 6
+      },
+      {
+        "id": 2,
+        "rating": 3
+      },
+      {
+        "id": 3,
+        "rating": 3
+      },
+      {
+        "id": 4,
+        "rating": 7
+      },
+      {
+        "id": 5,
+        "rating": 6
+      },
+      {
+        "id": 6,
+        "rating": 6
+      },
+      {
+        "id": 7,
+        "rating": 2
+      },
+      {
+        "id": 8,
+        "rating": 7
+      },
+      {
+        "id": 9,
+        "rating": 4
+      },
+      {
+        "id": 10,
+        "rating": 5
+      },
+      {
+        "id": 11,
+        "rating": 2
+      },
+      {
+        "id": 12,
+        "rating": 6
+      },
+      {
+        "id": 13,
+        "rating": 4
+      },
+      {
+        "id": 14,
+        "rating": 3
+      },
+      {
+        "id": 15,
+        "rating": 3
+      },
+      {
+        "id": 16,
+        "rating": 3
+      },
+      {
+        "id": 17,
+        "rating": 4
+      },
+      {
+        "id": 18,
+        "rating": 6
+      },
+      {
+        "id": 19,
+        "rating": 4
+      },
+      {
+        "id": 20,
+        "rating": 7
+      }
+    ]
+  }
+}

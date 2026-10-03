@@ -1,0 +1,218 @@
+{
+  "Qwen3.8 27B": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.67,
+        "Equality": 3.0,
+        "Proportionality": 3.67,
+        "Loyalty": 3.0,
+        "Authority": 3.17,
+        "Purity": 3.33
+      },
+      "individualizing": 3.83,
+      "binding": 3.29,
+      "refusals": [],
+      "overall_distance": 0.37
+    },
+    "EPQ": {
+      "idealism": 5.1,
+      "relativism": 4.9,
+      "ideology": "Absolutist"
+    }
+  },
+  "MiMo v2.6 Pro": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.0,
+        "Equality": 2.5,
+        "Proportionality": 3.5,
+        "Loyalty": 2.83,
+        "Authority": 3.0,
+        "Purity": 3.33
+      },
+      "individualizing": 3.25,
+      "binding": 3.17,
+      "refusals": [],
+      "overall_distance": 0.28
+    },
+    "EPQ": {
+      "idealism": 5.1,
+      "relativism": 4.8,
+      "ideology": "Absolutist"
+    }
+  },
+  "Claude Opus 5.5": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.5,
+        "Equality": 1.75,
+        "Proportionality": 3.17,
+        "Loyalty": 2.83,
+        "Authority": 3.0,
+        "Purity": 3.0
+      },
+      "individualizing": 3.12,
+      "binding": 3.0,
+      "refusals": [
+        2,
+        20
+      ],
+      "overall_distance": 0.47
+    },
+    "EPQ": {
+      "idealism": 4.9,
+      "relativism": 4.2,
+      "ideology": "Exceptionist"
+    }
+  },
+  "GPT-6.1 Sol": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.33,
+        "Equality": 2.17,
+        "Proportionality": 3.33,
+        "Loyalty": 2.5,
+        "Authority": 3.17,
+        "Purity": 2.83
+      },
+      "individualizing": 3.25,
+      "binding": 2.96,
+      "overall_distance": 0.39,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 4.8,
+      "relativism": 4.8,
+      "ideology": "Exceptionist"
+    }
+  },
+  "GLM 5.3": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.83,
+        "Equality": 2.17,
+        "Proportionality": 3.67,
+        "Loyalty": 2.5,
+        "Authority": 2.67,
+        "Purity": 2.83
+      },
+      "individualizing": 3.5,
+      "binding": 2.92,
+      "overall_distance": 0.46,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 4.7,
+      "relativism": 4.6,
+      "ideology": "Exceptionist"
+    }
+  },
+  "Grok 4.7": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.83,
+        "Equality": 1.5,
+        "Proportionality": 3.67,
+        "Loyalty": 2.33,
+        "Authority": 3.0,
+        "Purity": 2.67
+      },
+      "individualizing": 3.17,
+      "binding": 2.92,
+      "overall_distance": 0.52,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 5.5,
+      "relativism": 4.0,
+      "ideology": "Absolutist"
+    }
+  },
+  "DeepSeek V4.1 Flash": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.33,
+        "Equality": 2.67,
+        "Proportionality": 3.5,
+        "Loyalty": 2.67,
+        "Authority": 3.0,
+        "Purity": 2.33
+      },
+      "individualizing": 3.5,
+      "binding": 2.88,
+      "overall_distance": 0.14,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 5.3,
+      "relativism": 5.7,
+      "ideology": "Situationist"
+    }
+  },
+  "Kimi K3": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.5,
+        "Equality": 2.17,
+        "Proportionality": 3.83,
+        "Loyalty": 3.33,
+        "Authority": 2.83,
+        "Purity": 3.17
+      },
+      "individualizing": 3.33,
+      "binding": 3.29,
+      "overall_distance": 0.5,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 5.0,
+      "relativism": 4.4,
+      "ideology": "Absolutist"
+    }
+  },
+  "MiniMax M3": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.67,
+        "Equality": 2.17,
+        "Proportionality": 3.83,
+        "Loyalty": 2.67,
+        "Authority": 3.5,
+        "Purity": 3.5
+      },
+      "individualizing": 3.42,
+      "binding": 3.38,
+      "overall_distance": 0.57,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 5.5,
+      "relativism": 4.7,
+      "ideology": "Absolutist"
+    }
+  },
+  "Gemini 3.8 Flash": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 3.5,
+        "Equality": 2.5,
+        "Proportionality": 3.0,
+        "Loyalty": 2.67,
+        "Authority": 3.0,
+        "Purity": 2.33
+      },
+      "individualizing": 3.0,
+      "binding": 2.75,
+      "overall_distance": 0.3,
+      "refusals": [
+        2,
+        8
+      ]
+    },
+    "EPQ": {
+      "idealism": 4.1,
+      "relativism": 4.6,
+      "ideology": "Exceptionist"
+    }
+  }
+}

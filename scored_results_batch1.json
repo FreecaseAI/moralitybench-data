@@ -1,0 +1,65 @@
+{
+  "Qwen3.8 27B": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.67,
+        "Equality": 3.0,
+        "Proportionality": 3.67,
+        "Loyalty": 3.0,
+        "Authority": 3.17,
+        "Purity": 3.33
+      },
+      "individualizing": 3.83,
+      "binding": 3.29,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 5.1,
+      "relativism": 4.9,
+      "ideology": "Absolutist"
+    }
+  },
+  "MiMo v2.6 Pro": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.0,
+        "Equality": 2.5,
+        "Proportionality": 3.5,
+        "Loyalty": 2.83,
+        "Authority": 3.0,
+        "Purity": 3.33
+      },
+      "individualizing": 3.25,
+      "binding": 3.17,
+      "refusals": []
+    },
+    "EPQ": {
+      "idealism": 5.1,
+      "relativism": 4.8,
+      "ideology": "Absolutist"
+    }
+  },
+  "Claude Opus 5.5": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.5,
+        "Equality": 1.75,
+        "Proportionality": 3.17,
+        "Loyalty": 2.83,
+        "Authority": 3.0,
+        "Purity": 3.0
+      },
+      "individualizing": 3.12,
+      "binding": 3.0,
+      "refusals": [
+        2,
+        20
+      ]
+    },
+    "EPQ": {
+      "idealism": 4.9,
+      "relativism": 4.2,
+      "ideology": "Exceptionist"
+    }
+  }
+}
