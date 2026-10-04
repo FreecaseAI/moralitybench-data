@@ -50,9 +50,9 @@ Ordering and labeling effects in language-model surveys show why the response pr
 
 ### Resource and unit of analysis
 
-The public release contains instrument definitions, administration scripts, individual ratings, scored summaries, and a website for comparing profiles [9]. The instrument metadata identifies version 1.0, created October 2, 2026. Appendix A identifies the snapshot used here. We analyze each *recorded model configuration* under its repository label and requested API identifier. We retain those identifiers so others can attempt replication. The stored ratings do not authenticate the backend checkpoint that answered a request.
+The public release contains instrument definitions, administration scripts, individual ratings, scored summaries, and a website for comparing profiles [9].  Appendix A identifies the snapshot used here. We analyze each *recorded model configuration* under its repository label and requested API identifier. We retain those identifiers so others can attempt replication. The stored ratings do not authenticate the backend checkpoint that answered a request.
 
-The generative scripts name 14 configurations, of which 13 appear in the combined scored release. Muse Spark 1.3 has 56 missing ratings, so it has no score to compare. We report Jev separately. The initial audit uses the released records and published human reference means. Section 6 reports four additional administrations of each scored LLM. Neither analysis involved new human participants.
+The generative scripts name 14 configurations, of which 13 appear in the combined scored release. We report Jev separately. The initial audit uses the released records and published human reference means. Section 6 reports four additional administrations of each scored LLM. Neither analysis involved new human participants.
 
 
 ### Adapted MFQ-2
