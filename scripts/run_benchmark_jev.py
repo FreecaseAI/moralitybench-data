@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Moral Psychology Benchmark — Jev (TypeSafe System One) Runner"""
-import json, urllib.request, time
+import json, os, urllib.request, time
 
-API_KEY = "apikey_2228de5aea7605774b1a817f38cc61950510_4f1a1ef95f68af445ac234935b24dfee7f293dbe2be7df93036d827c9a4365b4"
+API_KEY = os.environ["TYPESAFE_API_KEY"]
 API_URL = "https://api.typesafe.ai/v1/systemone"
 BENCH = '/home/jim/.hermes/cache/scratch/moral-bench/benchmark.json'
 RESULTS = '/home/jim/.hermes/cache/scratch/moral-bench/raw_results_jev.json'
