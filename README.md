@@ -1,30 +1,21 @@
-# MoralityBench.ai — Benchmark Data
+# MoralityBench data
 
-Open benchmark testing LLMs against validated moral psychology instruments.
+Open data for an exploratory benchmark of AI responses to adapted moral psychology questionnaires. The current release includes five runs for 13 scored LLM configurations and a separate Jev comparison.
 
-## Data Files
+- [Live leaderboard](https://moralitybench.ai): five-run averages, agreement, missing answers, and charts.
+- [Five-run data and reproducible analysis](repeated-runs/2026-10-04/README.md): full repeat responses, original baselines, CSV/JSON summaries, scripts, and verification hashes.
+- [Working academic paper](paper/moralitybench.md) and [LaTeX source](paper/moralitybench.tex). Authorship and disclosures still require human review before submission.
 
-| File | Description |
-|---|---|
-| `benchmark.json` | Full benchmark instrument — all 56 items, scoring keys, prompt template |
-| `benchmark.html` | Visual reference page with all items and scoring criteria |
-| `raw_results_batch1.json` | Raw Likert responses — Qwen 3.8, MiMo v2.6, Claude Opus 5.5 |
-| `raw_results_batch2.json` | Raw Likert responses — GPT-6.1 Sol, GLM 5.3, Grok 4.7, DeepSeek V4.1, Kimi K3, Muse 1.3, MiniMax M3, Gemini 3.8 Flash |
-| `scored_results_batch1.json` | Computed subscale scores — Batch 1 |
-| `scored_results_batch2.json` | Computed subscale scores — Batch 2 |
-| `scored_combined.json` | All 10 models scored and ranked |
-| `scripts/run_batch1.py` | Benchmark runner script (OpenRouter API) |
-| `scripts/run_batch2.py` | Batch 2 runner script |
+## Reading the results
 
-## Instruments
+Agreement compares answers to the same question across all ten pairs of the five runs, omitting missing answers. Average distance measures how close the foundation scores are to published US human reference means. Neither quantity measures moral correctness or deployment safety. Jev uses a different prompt and interface and stays outside the LLM ranking. See the release README for exact definitions and denominators.
 
-- **MFQ-2** (Moral Foundations Questionnaire 2) — Atari, Haidt, Graham et al. (2023). 36 items, 6 foundations.
-- **EPQ** (Ethics Position Questionnaire) — Forsyth (1980). 20 items, 2 subscales, 4 ideologies.
+## Original snapshot
 
-## Website
+Root-level instrument files, raw results, scored summaries, and `scripts/` preserve the original snapshot. `scored_combined.json` is the original single-run leaderboard, **not** the five-run aggregate. The current website uses `repeated-runs/2026-10-04/five-run-summary.json`. Original missing values labeled as refusals cannot be distinguished from other failures because the old LLM files do not retain response text or error receipts.
 
-Results are displayed at [moralitybench.ai](https://moralitybench.ai).
+MFQ-2 has 36 items across six foundations. EPQ has 20 items across idealism and relativism. The benchmark adapts human wording and replaces four Purity items. Human validation of the original instruments does not establish validity of this AI adaptation.
 
-## License
+## Research use
 
-Instrument items are from published, peer-reviewed research. Benchmark methodology and data are open for research use.
+The archive is public for inspection and replication. Consult the original publications for instrument rights; this repository does not grant rights beyond those held by its contributors. Do not commit credentials.

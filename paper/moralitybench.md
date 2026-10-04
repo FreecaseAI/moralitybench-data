@@ -1,0 +1,444 @@
+# MoralityBench: An exploratory benchmark of elicited moral profiles in generative and structured decision models
+
+**Working manuscript, October 2026**
+
+Authors and affiliations to be confirmed.
+
+
+
+## Abstract
+
+MoralityBench describes the moral response profiles elicited from AI systems using an adapted 36-item Moral Foundations Questionnaire 2 (MFQ-2) and the 20-item Ethics Position Questionnaire (EPQ). We audit an original public snapshot and administer each questionnaire four more times to 13 generative model configurations and Jev, a structured decision system. Across five runs, the LLMs yield 3,580 usable ratings from 3,640 scheduled items. Exact agreement across all ten pairs of runs ranges from 60.4% to 94.7%, after excluding missing ratings. DeepSeek V4.1 Flash has the lowest average distance from the six published US foundation means (0.239), followed by MiMo v2.6 Pro (0.253). MiMo has the lowest distance in three of the four new runs. Four configurations cross an EPQ category boundary between runs. The original snapshot's finding that every configuration exceeds the human Purity reference does not persist: DeepSeek's five-run mean is below it. Four of the six Purity items were replaced, which limits interpretation of that comparison. Jev returns all 280 ratings, with 95.7% agreement after rounding. Its prompt and structured interface differ from the generative protocol, so these observations cannot establish an architectural advantage. The release includes individual responses, completion records, scoring code, and a public leaderboard with five-run averages and agreement percentages. These descriptive results concern responses to adapted questionnaires; they do not establish equivalent human traits, moral agency, ethical superiority, or deployment safety.
+
+**Keywords:** AI evaluation; moral psychology; moral foundations; ethical ideology; survey validity; structured decision models.
+
+
+## Introduction
+
+AI systems give advice about welfare, fairness, obligations, and conflicts between social commitments. Evaluating that advice requires knowing which commitments a response expresses and how the question elicited them. Calling a system "aligned" leaves several questions unanswered. Does its answer resemble a population average? Does it meet a stated ethical standard? Would different wording produce the same answer, and does the answer predict behavior outside the questionnaire?
+
+Existing benchmarks examine different parts of this problem. ETHICS tests predictions about ethical judgments [1]. MoralChoice examines choices in moral scenarios, including uncertainty and consistency [2]. MoralBench adapts moral-foundations questionnaires and vignettes for model evaluation [3]. Each approach requires a clear account of what it measures and how it administers and scores the task. None of these instruments can answer every question about AI morality.
+
+MoralityBench combines two moral-psychology instruments in a compact resource whose responses and scores are open to inspection. The adapted MFQ-2 distinguishes equality from proportionality: a respondent can endorse equal treatment or outcomes while taking a different position on allocating rewards according to contribution. The EPQ measures idealism and relativism, which describe ethical positions rather than the content of a foundation profile. Using both instruments exposes differences that an overall score can hide.
+
+We use *profile* to mean the scores produced by a specified interface, prompt, item set, and scoring rule. Those scores do not establish that a model has a stable personality, private convictions, or moral agency. A questionnaire validated for human respondents needs further validation when researchers adapt it for machines. Biases in how models answer surveys create another source of uncertainty [7].
+
+We describe the instruments and administration procedures, then recompute the published foundation and ethical-position scores from the individual ratings. We also check completion rates and examine how missing items, the Purity adaptation, category thresholds, and Jev's score conversion affect the results. The analysis distinguishes findings in the released data from explanations that would require another experiment.
+
+
+## Related work and measurement scope
+
+
+### Moral evaluation benchmarks
+
+ETHICS covers commonsense morality, justice, deontology, virtue, and utilitarianism [1]. It tests whether a system predicts specified judgments in those domains. MoralityBench records endorsement profiles. Its questionnaire items have no designated morally correct answer.
+
+MoralChoice asks models to choose between actions in scenarios that differ in moral ambiguity. It examines uncertainty and sensitivity to wording [2], making the method of asking a question part of the evaluation. The MoralityBench snapshot contains no equivalent experiments with repeated wording or action choices, so it cannot establish comparable response stability.
+
+MoralBench uses adapted MFQ-30 items and moral-foundations vignettes for binary and comparative assessments [3]. It is a separate project from MoralityBench. Our release combines an adapted MFQ-2 with EPQ scores, item completion records, and a separate structured decision comparator. Earlier work already introduced moral-foundations benchmarks and evaluations of moral responses in language models.
+
+
+### Human instruments and machine administration
+
+The MFQ-2 measures Care, Equality, Proportionality, Loyalty, Authority, and Purity [4]. Forsyth's EPQ measures idealism and relativism [5]. These dimensions help describe model answers. Their use here does not amount to a validated psychological assessment of an AI system.
+
+Ordering and labeling effects in language-model surveys show why the response process needs scrutiny [7]. An apparently plausible answer may reflect a learned convention, compliance with the prompt, or a preference for one answer format. We therefore restrict our empirical claims to the recorded ratings. The data alone cannot identify effects of training, alignment methods, or architecture.
+
+
+## Benchmark design
+
+
+### Resource and unit of analysis
+
+The public release contains instrument definitions, administration scripts, individual ratings, scored summaries, and a website for comparing profiles [9]. The instrument metadata identifies version 1.0, created October 2, 2026. Appendix A identifies the snapshot used here. We analyze each *recorded model configuration* under its repository label and requested API identifier. We retain those identifiers so others can attempt replication. The stored ratings do not authenticate the backend checkpoint that answered a request.
+
+The generative scripts name 14 configurations, of which 13 appear in the combined scored release. Muse Spark 1.3 has 56 missing ratings, so it has no score to compare. We report Jev separately. The initial audit uses the released records and published human reference means. Section 6 reports four additional administrations of each scored LLM. Neither analysis involved new human participants.
+
+
+### Adapted MFQ-2
+
+The foundation questionnaire has 36 items, six for each foundation, scored as integers from 1 to 5. The release combines Care and Equality into an individualizing score. It combines Proportionality, Loyalty, Authority, and Purity into a binding score. We report the six foundations as the main result because composite scores can hide differences between them.
+
+The released questionnaire changes the original wording. Its metadata lists substitutions such as people to entities and country to collective. It also identifies items 6, 12, 30, and 36 as custom replacements. All four are Purity items, so replacements account for two-thirds of that subscale. These changes aim to make statements about people applicable to nonhuman respondents, but they may also change what the statements measure. We call this version the *adapted MFQ-2* and treat comparisons with human scores on the original questionnaire as exploratory.
+
+For configuration $m$ and foundation $f$, the observed-item mean is
+
+$$
+s_{mf}=\frac{1}{n_{mf}}\sum_{i\in A_{mf}}r_{mi},
+$$
+
+where $A_{mf}$ is the set of items with available numeric ratings and $n_{mf}=|A_{mf}|$. Each foundation has six scheduled items. Missing values are omitted rather than replaced with a neutral answer. An empty subscale is undefined. Reporting $n_{mf}$ alongside $s_{mf}$ is necessary because a score based on three answered items is not directly equivalent to one based on six.
+
+
+### EPQ and operational categories
+
+The EPQ component contains 20 items scored from 1 to 9. Idealism is the observed mean of items 1 to 10; relativism is the observed mean of items 11 to 20. Continuous coordinates are the primary result. To reproduce the current display, we classify a dimension as high when its mean is at least 5. High idealism and low relativism yield Absolutist; high values on both yield Situationist; low idealism and high relativism yield Subjectivist; low values on both yield Exceptionist.
+
+This fixed *scale-midpoint rule* assigns a score of 5 to the high category. The instrument metadata describes a median split, but the displayed categories use the scale midpoint. The cutoff has not been validated against a human reference population. It is a display convention: a small change near 5 can change a category even when the scores remain similar.
+
+
+### Human reference and profile distance
+
+The repository uses the US reference vector
+
+$$
+\mathbf{h}=(4.05,\ 2.88,\ 3.63,\ 2.81,\ 3.01,\ 2.26)
+$$
+
+in the order Care, Equality, Proportionality, Loyalty, Authority, and Purity. These values match Table 3 of Zakharin and Bates [6]. The publication is dated 2026, whereas the benchmark metadata cites 2025. The article also reports differing US sample sizes in its abstract (835) and Methods (830). We use its published table means without claiming to resolve that discrepancy or treating the sample as an exhaustive description of the US population.
+
+The displayed overall distance is an equally weighted mean absolute difference:
+
+$$
+D_m=\frac{1}{6}\sum_{f=1}^{6}|s_{mf}-h_f|.
+$$
+
+Distance is measured in Likert points. We calculate it from unrounded item means and round the result for display. The calculation does not account for uncertainty in the human reference, variation between people, covariance, or differences in reliability across constructs. A smaller value means the six means are closer to the chosen reference. That alone establishes neither ethical quality nor safety, and it says little about how well a model represents any particular person.
+
+
+## Administration and audit
+
+
+### Generative configurations
+
+The released scripts send one item per OpenRouter chat-completion request, using a single user message and no explicit system message. They process the instruments in stored order. Although the metadata mentions randomization, the scripts do not randomize the items. Each request sets temperature to 0, allows up to 4096 output tokens, and includes `reasoning: \{exclude: true\}`. This last setting excludes returned reasoning; it does not demonstrate that the backend performs no internal reasoning.
+
+The prompt asks for an immediate numeric answer without explanation. It also tells the model not to object that the questions do not apply to LLMs. This instruction encourages the model to accept the questionnaire's frame. It cannot establish that a first-person model answer has the same meaning as a human self-report.
+
+The parser accepts the first digit in the returned text, without checking that the full response is a single integer on the permitted scale. If a request raises an exception, the runner tries up to three times before recording a missing value. A response with no digit also produces a missing value. The generative result files retain item identifiers and parsed ratings but discard response text, provider metadata, and exception details. They cannot distinguish a refusal from an empty response, parsing failure, or transport error. We therefore call these entries *missing*, although the scored file labels them refusals.
+
+
+### Jev as a separate comparator
+
+TypeSafe describes Jev as a System One model that returns structured decision values instead of generating answer strings one token at a time [8]. We follow that documented interface distinction in calling Jev a non-generative structured decision comparator. We have not audited its internal architecture or tested the vendor's claims about calibrated uncertainty.
+
+The Jev runner calls `jev-latest` through the System One API, batching each instrument into one request. Each item uses the Score primitive, with the Likert anchors as criteria. The request state asks how strongly statements accord with ethical principles and moral reasoning. Item instructions ask how well a statement describes a moral position or ethical belief. The generative prompt instead asks how well the statement describes the respondent or whether the respondent agrees. Task framing therefore changes along with interface, batching, and decoding.
+
+The runner converts Jev's zero-indexed score $x$ to $\operatorname{round}(x)+1$ and clips it to the instrument's range. It uses Python rounding, including ties to even. The archive retains the original scores, confidence values, and probabilities. Structured output removes the need to extract a digit from text, but a valid output format says nothing by itself about moral validity or equivalence to a self-description. We report Jev outside the generative ranking.
+
+
+### Verification and analytical scope
+
+We checked item counts and identifiers, missing entries, numeric ranges, foundation means, EPQ scores, categories, and distances against the released summaries. Every available generative rating falls within the relevant scale. The recomputed foundation and EPQ means match the published values at their displayed precision. Jev's ratings also match the runner's conversion rule. These checks establish arithmetic consistency within the archive. They do not authenticate the original inference calls.
+
+The original archive contains one rating per available item and configuration. We report its scores descriptively, then examine four new administrations in Section 6. Variation among those four runs describes the observed repeats and does not establish uncertainty across every possible prompt or future backend. Questionnaire items are not independent human respondents, and resampling six items would not recover those other sources of uncertainty.
+
+
+## Original snapshot results
+
+
+### Completeness
+
+Across the 13 scored generative configurations, 705 of 728 scheduled ratings are numeric (96.84%). MFQ-2 contributes 454 of 468 ratings (97.01%); EPQ contributes 251 of 260 (96.54%). Claude has two missing MFQ-2 items, Gemini two, and Mistral ten. Mistral also has nine missing EPQ items, leaving only five idealism and six relativism responses. The additional unscored Muse configuration contributes 56 missing ratings. Across all 14 attempted generative configurations, coverage is therefore 705 of 784 (89.92%). Jev has numeric ratings for all 56 items.
+
+Claude's and Gemini's Equality means each use four of the six items. Mistral's foundation means use 4, 4, 4, 5, 5, and 4 items, respectively. Its EPQ means of 7.00 and 5.17 also describe only the answered items. These gaps limit the comparison with complete questionnaires. They do not establish that a model rejected the moral position expressed by an unanswered item.
+
+
+### Foundation profiles and reference distance
+
+Table 1 reports the foundation scores. DeepSeek has the smallest observed distance, $D=0.142$, followed by Nemotron ($0.178$) and MiMo ($0.278$). Mistral has the largest, $0.702$, but its missing responses make that position uncertain. These ranks describe the original archived results. Section 6 examines how they change across repeated administrations.
+
+Care means range from 2.83 to 4.83 across the 13 configurations. The ranges for Equality, Proportionality, Loyalty, Authority, and Purity are 1.50 to 3.00, 3.00 to 4.00, 2.33 to 3.60, 2.67 to 4.00, and 2.33 to 3.50, respectively. Eleven configurations score below the reference Equality mean of 2.88, while two score 3.00. All 13 score above the reference Purity mean of 2.26. Controlled experiments could test these patterns, but the present data cannot explain their causes. Any account of the Purity result must also consider the rewritten items.
+
+
+| Configuration | Care | Eq. | Prop. | Loy. | Auth. | Pur. | $D$ | Missing |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| DeepSeek V4.1 Flash | 4.33 | 2.67 | 3.50 | 2.67 | 3.00 | 2.33 | 0.142 | 0 |
+| Nemotron 3 Ultra 550B | 4.17 | 2.67 | 3.50 | 3.00 | 2.83 | 2.50 | 0.178 | 0 |
+| MiMo v2.6 Pro | 4.00 | 2.50 | 3.50 | 2.83 | 3.00 | 3.33 | 0.278 | 0 |
+| Gemini 3.8 Flash | 3.50 | 2.50 | 3.00 | 2.67 | 3.00 | 2.33 | 0.298 | 2 |
+| Qwen3.8 27B | 4.67 | 3.00 | 3.67 | 3.00 | 3.17 | 3.33 | 0.366 | 0 |
+| GPT-6.1 Sol | 4.33 | 2.17 | 3.33 | 2.50 | 3.17 | 2.83 | 0.389 | 0 |
+| GLM 5.3 | 4.83 | 2.17 | 3.67 | 2.50 | 2.67 | 2.83 | 0.460 | 0 |
+| Claude Opus 5.5 | 4.50 | 1.75 | 3.17 | 2.83 | 3.00 | 3.00 | 0.469 | 2 |
+| Kimi K3 | 4.50 | 2.17 | 3.83 | 3.33 | 2.83 | 3.17 | 0.496 | 0 |
+| Llama 4 Maverick | 2.83 | 2.33 | 3.33 | 3.00 | 2.83 | 2.83 | 0.500 | 0 |
+| Grok 4.7 | 4.83 | 1.50 | 3.67 | 2.33 | 3.00 | 2.67 | 0.516 | 0 |
+| MiniMax M3 | 4.67 | 2.17 | 3.83 | 2.67 | 3.50 | 3.50 | 0.568 | 0 |
+| Mistral Large 2512 | 4.75 | 3.00 | 4.00 | 3.60 | 4.00 | 3.50 | 0.702 | 10 |
+
+*Observed-item adapted MFQ-2 means. Missing counts concern MFQ-2 only. $D$ uses unrounded means. Abbreviations denote the six foundations; scale range is 1 to 5.*
+
+
+
+### Ethical-position coordinates
+
+Table 2 gives the EPQ scores and categories. The inclusive midpoint rule classifies five configurations as Absolutist, four as Exceptionist, and four as Situationist. None falls in the Subjectivist category. Kimi's idealism score is exactly 5.00; Nemotron's and Llama's relativism scores are also 5.00. Requiring scores strictly above 5 for the high category would change Kimi to Exceptionist and the other two to Absolutist. The reported counts therefore depend on how the boundary is defined.
+
+Mistral has the highest observed idealism mean, but five of its ten idealism items are missing. That mean cannot establish that Mistral would score highest on the full questionnaire. Reporting the scores and their completion counts makes this limitation visible; the category label alone does not.
+
+
+| Configuration | Idealism | Relativism | Category | Available |
+| --- | --- | --- | --- | --- |
+| DeepSeek V4.1 Flash | 5.30 | 5.70 | Situationist | 20/20 |
+| Nemotron 3 Ultra 550B | 5.80 | 5.00 | Situationist | 20/20 |
+| MiMo v2.6 Pro | 5.10 | 4.80 | Absolutist | 20/20 |
+| Gemini 3.8 Flash | 4.10 | 4.60 | Exceptionist | 20/20 |
+| Qwen3.8 27B | 5.10 | 4.90 | Absolutist | 20/20 |
+| GPT-6.1 Sol | 4.80 | 4.80 | Exceptionist | 20/20 |
+| GLM 5.3 | 4.70 | 4.60 | Exceptionist | 20/20 |
+| Claude Opus 5.5 | 4.90 | 4.20 | Exceptionist | 20/20 |
+| Kimi K3 | 5.00 | 4.40 | Absolutist | 20/20 |
+| Llama 4 Maverick | 5.20 | 5.00 | Situationist | 20/20 |
+| Grok 4.7 | 5.50 | 4.00 | Absolutist | 20/20 |
+| MiniMax M3 | 5.50 | 4.70 | Absolutist | 20/20 |
+| Mistral Large 2512 | 7.00 | 5.17 | Situationist | 11/20 |
+
+*EPQ observed means, midpoint categories, and numeric-item coverage. Scale range is 1 to 9.*
+
+
+
+### Sensitivity to Purity and missing items
+
+We recalculated distance without Purity because four of its six items were replaced. The five remaining foundations give MiMo the smallest distance (0.119), followed by DeepSeek (0.156) and Nemotron (0.165). Qwen also moves ahead of Gemini. This check shows how the choice of dimensions affects the ranking. It neither validates a five-foundation scale nor establishes that researchers should always exclude Purity.
+
+For configurations with missing MFQ-2 items, we calculated the range of possible full-questionnaire distances. We kept observed responses fixed and allowed each missing response to take any integer from 1 to 5. For each foundation, we found the smallest and largest absolute deviations attainable on that discrete grid, then combined them across foundations. These bounds describe how much the missing ratings could change the result without assuming why they are missing or filling them with a preferred value.
+
+
+| Configuration | Observed $D$ | Minimum full $D$ | Maximum full $D$ |
+| --- | --- | --- | --- |
+| Gemini 3.8 Flash | 0.298 | 0.242 | 0.381 |
+| Claude Opus 5.5 | 0.469 | 0.289 | 0.511 |
+| Mistral Large 2512 | 0.702 | 0.231 | 1.032 |
+
+*Attainable full-instrument distance bounds over all allowed completions of missing MFQ-2 ratings. Bounds are not confidence intervals.*
+
+
+Mistral's wide interval in Table 3 means that its last-place ranking could change if the missing responses were available. Claude's and Gemini's full-questionnaire distances are also uncertain. Complete MFQ-2 records have no uncertainty from missing items in this calculation. They remain subject to unmeasured prompt and inference variability.
+
+
+### Structured decision results
+
+Jev's converted foundation means are $(4.00,2.83,3.50,2.83,3.00,3.17)$, giving $D=0.194$. Its idealism and relativism means are 5.60 and 5.20, which place it in the Situationist quadrant under the display rule. Jev thus produces a complete numerical profile through the structured interface. The result does not establish that it answers the questionnaire through the same process as a generative model.
+
+Rounding changes Jev's measured distance. If we retain the returned score plus one without rounding each item, its foundation means are $(4.055,2.733,3.385,2.700,2.867,3.070)$ and its distance is approximately 0.243. The corresponding EPQ means are 5.503 and 5.253, which leave its category unchanged. The returned confidence values cannot be read as scores for moral correctness. Assessing their calibration would require target labels that this dataset does not contain.
+
+
+## Repeat study
+
+
+### Four additional administrations
+
+We administered all 56 items four more times to each of the 13 originally scored LLM configurations. We retained the original model identifiers, prompts, anchors, stored item order, temperature of 0, 4096-token cap, and reasoning-exclusion setting. Each request contained one user message and no conversation history. Independent trial streams ran concurrently. The collection resumed from saved item records after scheduling and progress-tracking interruptions; requests in flight during a restart may have reached the provider without a saved response. The archive documents that interruption. We repeated only items without saved final records.
+
+The repeat archive retains request bodies, complete returned responses, timestamps, provider and model identifiers, usage information, and transport errors. We scored the first digit, as the original runner did, and also retained a strict parse that accepts only an entire trimmed answer consisting of one allowed integer. For comparability with the original archive, the principal results use the original parser and reject values outside the scale. We kept request failures and nonnumeric responses separate. A missing value never counts as agreement with another missing value.
+
+OpenRouter routed some requested models through more than one provider during collection. These runs test the repeatability of the requested model through the service as configured; they do not isolate numerical nondeterminism in a fixed checkpoint on fixed hardware. Muse remained blocked by an account age-attestation requirement. We also administered both instruments to Jev four more times through the original System One protocol. Each repetition used one request per instrument, with the original task framing and conversion rule. The Jev results remain separate from the LLM ranking.
+
+
+### Agreement and score variation
+
+The four repeats produced 2,875 valid numeric ratings from 2,912 scheduled items (98.73%). Of the final records, 2,871 contained a strict numeric answer, 4 contained other text with a parseable digit, 25 contained no digit, and 12 recorded an API failure after retries. Across configurations, 701 items had numeric ratings in all four new runs. Of those, 444 received the same rating every time.
+
+Exact agreement across the six pairs of new runs ranged from 61.0% for Grok 4.7 to 97.0% for Mistral Large 2512 (Table 4). Agreement with the original record is reported separately because differences from that record may also reflect earlier collection conditions or backend changes. These percentages describe available item pairs; models with missing data are compared on fewer pairs.
+
+
+| Configuration | Numeric | New agreement | Original agreement | Mean $D$ (SD) | New $D$ range |
+| --- | --- | --- | --- | --- | --- |
+| DeepSeek V4.1 Flash | 223/224 | 73.3% | 69.5% | 0.264 (0.052) | 0.209 to 0.312 |
+| Nemotron 3 Ultra 550B | 223/224 | 61.6% | 58.7% | 0.376 (0.062) | 0.321 to 0.431 |
+| MiMo v2.6 Pro | 224/224 | 82.7% | 82.1% | 0.246 (0.030) | 0.207 to 0.278 |
+| Gemini 3.8 Flash | 215/224 | 84.2% | 86.9% | 0.399 (0.098) | 0.298 to 0.492 |
+| Qwen3.8 27B | 224/224 | 86.0% | 86.2% | 0.384 (0.021) | 0.353 to 0.397 |
+| GPT-6.1 Sol | 224/224 | 83.0% | 76.8% | 0.328 (0.036) | 0.278 to 0.361 |
+| GLM 5.3 | 224/224 | 68.5% | 69.2% | 0.519 (0.054) | 0.460 to 0.571 |
+| Claude Opus 5.5 | 216/224 | 91.2% | 89.7% | 0.386 (0.040) | 0.328 to 0.420 |
+| Kimi K3 | 218/224 | 71.7% | 67.9% | 0.493 (0.081) | 0.373 to 0.551 |
+| Llama 4 Maverick | 224/224 | 94.0% | 93.8% | 0.507 (0.027) | 0.472 to 0.528 |
+| Grok 4.7 | 224/224 | 61.0% | 66.5% | 0.387 (0.106) | 0.266 to 0.523 |
+| MiniMax M3 | 224/224 | 69.3% | 63.4% | 0.594 (0.038) | 0.576 to 0.651 |
+| Mistral Large 2512 | 212/224 | 97.0% | 89.8% | 0.630 (0.042) | 0.599 to 0.691 |
+
+*Four additional administrations of each originally scored LLM. New agreement pools the six pairs of new runs. Original agreement pools the four comparisons with the original run. Only available ratings in the valid scale range enter a comparison. Distance summaries use the original first-digit parse; a strict-parser sensitivity analysis is also available. SD describes the four observed distances, not uncertainty over future requests.*
+
+
+The smallest observed distance in each new run was as follows: run 2: MiMo v2.6 Pro; run 3: DeepSeek V4.1 Flash; run 4: MiMo v2.6 Pro; run 5: MiMo v2.6 Pro. Category changes also occurred: 4 of the 13 configurations crossed an EPQ category boundary between new runs (Qwen3.8 27B, MiMo v2.6 Pro, Claude Opus 5.5, DeepSeek V4.1 Flash). Category changes can result from small movements near the midpoint; the continuous coordinates remain the main evidence.
+
+The largest change in an individual run's distance when using the strict parser was 0.083 Likert points. The accompanying analysis also restricts scores to items observed in every compared run, so readers can distinguish a changing item set from changing answers. We do not treat agreement as a pass/fail measure of consistency. The item agreement, completion rate, and score range answer different questions.
+
+The response records identify several causes of incomplete measurement. Claude explicitly declined an income-equality rating, while some Kimi responses exhausted the output-token limit without producing answer text. Gemini sometimes returned discussion instead of the requested rating, and Mistral had transport or provider failures. These observations concern the new collection; they do not retrospectively establish the causes of missing values in the original files.
+
+
+### Jev repeatability
+
+Jev returned all 224 scheduled ratings. Exact agreement across pairs of new runs was 95.2% (320/336 paired ratings), and agreement with the original rounded ratings was 96.4%. Of the 56 items, 51 received the same rounded rating in all four new runs. Its mean rounded-profile distance was 0.208 (SD 0.016), with a range of 0.194 to 0.222.
+
+Continuous item scores varied even when rounded ratings agreed. Their mean absolute difference across pairs of new runs was 0.055 points, and the largest item difference was 0.47. These quantities describe repeatability under the Jev protocol. They do not test probability calibration or remove the framing differences between Jev and the generative configurations.
+
+
+### All-five-run summary and public leaderboard
+
+After collection, the benchmark owner requested a public summary combining the original administration with the four new runs. This descriptive follow-up was specified after collection; the preceding analysis retains the separate new-run and baseline comparisons.
+
+Let $x_{ri}$ be the valid integer rating for item $i$ in run $r$, and let $V_{rsi}$ indicate that the item has a valid rating in both runs $r$ and $s$. The public agreement percentage is
+
+$$
+A_5 = 100\,\frac{\sum_{r<s}\sum_i V_{rsi}\,\mathbf{1}[x_{ri}=x_{si}]}{\sum_{r<s}\sum_i V_{rsi}},\qquad 1\leq r<s\leq 5.
+$$
+
+We pool MFQ-2 and EPQ items with equal weight per available item-pair comparison. Five complete administrations allow ten comparisons per question, or 560 per configuration. A missing value contributes to neither the numerator nor the denominator. Items with more available responses therefore contribute more comparisons. The percentage is observed exact agreement, without correction for chance, scale width, or a preference for a repeated response category. It should be read alongside completion, not as an accuracy or validity score.
+
+An agreement of 80% means that answers to the same question matched in eight out of ten available comparisons. It does not mean that 80% of questions received an identical answer in every run. For example, four ratings of 3 and one rating of 4 yield six matching pairs out of ten, or 60% agreement. The release also reports the stricter count of questions identical in all five runs, restricted to questions with five usable answers. The ten comparisons reuse observations and are not ten independent experimental runs.
+
+The leaderboard ranks $\overline{D}=\frac{1}{5}\sum_{r=1}^{5}D_r$, with $D_r$ calculated from the available item means in each run. Foundation and EPQ values are also averages of five per-run means, so every run receives equal weight. We do not calculate distance from the averaged profile: deviations on opposite sides of a human reference could then cancel. The table shows each model's observed distance range, missing-answer count, and category changes. The displayed EPQ category comes from the average coordinates, while the release retains each run's classification.
+
+
+| Configuration | $A_5$ | Matching/available pairs | Numeric | Mean $D$ | Five-run $D$ range |
+| --- | --- | --- | --- | --- | --- |
+| DeepSeek V4.1 Flash | 71.8% | 399/556 | 279/280 | 0.239 | 0.142 to 0.312 |
+| MiMo v2.6 Pro | 82.5% | 462/560 | 280/280 | 0.253 | 0.207 to 0.278 |
+| Nemotron 3 Ultra 550B | 60.4% | 336/556 | 279/280 | 0.336 | 0.178 to 0.431 |
+| GPT-6.1 Sol | 80.5% | 451/560 | 280/280 | 0.340 | 0.278 to 0.389 |
+| Gemini 3.8 Flash | 85.3% | 451/529 | 269/280 | 0.379 | 0.298 to 0.492 |
+| Qwen3.8 27B | 86.1% | 482/560 | 280/280 | 0.380 | 0.353 to 0.397 |
+| Claude Opus 5.5 | 90.6% | 483/533 | 270/280 | 0.402 | 0.328 to 0.469 |
+| Grok 4.7 | 63.2% | 354/560 | 280/280 | 0.413 | 0.266 to 0.523 |
+| Kimi K3 | 70.1% | 376/536 | 274/280 | 0.493 | 0.373 to 0.551 |
+| Llama 4 Maverick | 93.9% | 526/560 | 280/280 | 0.506 | 0.472 to 0.528 |
+| GLM 5.3 | 68.8% | 385/560 | 280/280 | 0.508 | 0.460 to 0.571 |
+| MiniMax M3 | 67.0% | 375/560 | 280/280 | 0.589 | 0.568 to 0.651 |
+| Mistral Large 2512 | 94.7% | 415/438 | 249/280 | 0.644 | 0.599 to 0.702 |
+
+*Public leaderboard summary across the original run and four additional runs. Rows are ordered by the unrounded mean of five per-run distances. Agreement excludes missing pairs. Values are descriptive summaries of five observed administrations; they are not confidence intervals or evidence of moral correctness.*
+
+
+Across the five runs, 3,580 of 3,640 scheduled LLM ratings are available (98.35%). Agreement ranges from 60.4% for Nemotron to 94.7% for Mistral. Mistral's percentage uses 438 of 560 possible comparisons and accompanies 31 missing ratings. Among configurations with no missing answers, Llama has the highest agreement (93.9%). DeepSeek has the lowest mean distance (0.239), followed by MiMo (0.253), but their observed ranges overlap. DeepSeek's EPQ scores occupy all four categories across the five runs; its mean coordinates are 5.08 idealism and 5.19 relativism. Averaging alone would conceal those category changes.
+
+The Purity result also changes. Every LLM exceeded the human reference of 2.26 in the original snapshot, but DeepSeek's five-run average is 2.00. The item adaptation still prevents a direct equivalence claim with the human instrument.
+
+Jev's all-five agreement is 95.7% (536/560 pairs), with 280/280 numeric ratings and 51/56 items identical across all five runs. Its average distance is 0.206, with a range of 0.194 to 0.222. Its mean EPQ coordinates are 5.52 and 5.20, and all five runs are Situationist under the operational midpoint rule. The public site presents Jev separately because the protocols differ.
+
+
+## Discussion
+
+
+### What profile comparisons can establish
+
+MoralityBench exposes the answers behind each comparison through completion records, foundation means, EPQ scores, and an explicit distance calculation. These details matter when models differ in ways an overall score conceals. MiMo, for example, is close to the reference on five foundations but deviates more on Purity. Its ranking depends on whether that dimension is included. Readers should inspect the profile alongside the leaderboard.
+
+A population mean summarizes answers from people who may disagree with one another. It can vary with demographics and culture, and it does not explain how a respondent resolves a conflict between foundations in a particular case. A model might match all six means while giving undesirable advice. Another might depart from those means yet offer defensible advice in context. Profile distance belongs alongside behavioral and safety evidence; by itself, it supplies no moral objective.
+
+
+### What Jev's inclusion adds
+
+Jev exposes probability and continuous score outputs. Those records allow researchers to examine uncertainty and the effect of score conversion. The original generative archive contains only parsed digits; the new generative archive also retains response text and service metadata, but does not supply comparable calibrated probabilities over questionnaire ratings. Future comparisons can use richer records to distinguish a system's compliance with an output format from uncertainty about its answer and endorsement of the statement.
+
+Jev currently evaluates a statement's ethical alignment, while the generative models receive a questionnaire prompt. A difference in scores could follow from that framing. A controlled comparison would give both system types matched endorsement and statement-evaluation tasks, keeping wording and batching constant where possible. It would also report raw scores and specify the conversion before collecting data. The present results establish that the harness can accept Jev outputs; they do not isolate an architecture effect.
+
+
+### From pilot to validated evaluation
+
+The repeated runs quantify variability under the same requested settings. Further experiments should vary anchor order, paraphrase items, and change the prompt. Comparing the original and adapted wording under matched conditions would help identify the effect of neutral terminology and the Purity replacements. A human sample answering the adapted questionnaire would provide a closer reference than means from the original instrument without a study of equivalence.
+
+Testing behavioral validity needs another study. Researchers could compare foundation scores with responses to held-out scenarios about harm, allocation, loyalty, hierarchy, and sanctity. Predictions should be specified in advance and human judgments documented. Such a study would test whether questionnaire profiles predict choices. It would also need to track model versions, prompts, and task settings so that a change in the measurement procedure can be distinguished from a change in the system.
+
+
+## Limitations
+
+The questionnaires were developed for people and adapted for machine interfaces. This release provides no study of measurement invariance, factor structure, reliability, or criterion validity for that use. The scores therefore cannot be treated as equivalent to human latent traits.
+
+Neutral wording can change item meaning. The four custom Purity statements also differ from the items used to obtain the human reference. That mismatch may contribute to the higher Purity scores. The US sample supplies one reference, and the analysis uses no matched human distribution for the EPQ.
+
+A missing value can have several causes, and the parser may accept an irrelevant digit from an explanation. The original response bodies would be needed to determine whether a parsed number is the requested answer or why a response is missing. Omitting missing values can bias a mean if the probability of answering depends on the item.
+
+The models form a convenience sample. The four new runs estimate variation under one prompt and request configuration; they do not measure sensitivity to other prompts. The original files lack backend versions, provider identities, timestamps, and complete request and response records. The new archive retains returned model and provider fields, but neither set of records independently authenticates an immutable model checkpoint. Provider routing also varied during the repeats.
+
+Jev and the generative models differ in prompt framing, batching, output representation, and score conversion. These differences prevent us from attributing differences in profiles to architecture. The rolling `jev-latest` identifier creates a further obstacle to replication.
+
+The study measures responses to the released questionnaire under its scoring rules. It does not test moral truth, beneficial behavior in use, legal compliance, safety, or resistance to adversarial prompts. The results also supply no causal evidence about the effects of training methods.
+
+
+## Reproducibility, ethics, and disclosure
+
+The release allows others to inspect the instrument, administration code, and parsed ratings. Appendix A identifies the snapshot and requested models. The repeat archive accompanies this working manuscript with complete responses, timestamps, returned model and provider fields, parse status, and failure records. It includes the analysis code and both parser outputs. The five-run release is available at [https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-04](https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-04). Its manifest records SHA-256 hashes for the released records and analysis files. Account identifiers, execution-host metadata, and opaque encrypted provider reasoning-state blobs are removed from the public copy; response content, ratings, and scoring-relevant fields are retained. Future collections should also pin immutable backend versions where providers support them. The public copy excludes credentials. The portable runner reads credentials from environment variables at execution time.
+
+We collected no new human-subject data for this manuscript and cite the source of the published reference means. Readers may nevertheless infer human-like traits from model profiles or mistake closeness to a population average for ethical quality. The manuscript and website need to explain those limits wherever they display rankings. Permission to distribute adapted questionnaire content must also be checked independently of the license for project code and results.
+
+*Draft disclosure:* AI assisted with the literature review, data checks, and writing. The human authors must verify the analysis and approve the claims. Before submission, they must confirm authorship, affiliations, funding, institutional review requirements, and any commercial relationships with the benchmark or evaluated providers.
+
+
+## Conclusion
+
+MoralityBench combines an adapted MFQ-2 with EPQ scores and a separate evaluation of a structured decision system. The initial archive records differences among 13 scored generative configurations. It also shows that item adaptation, missing responses, category boundaries, and score conversion can alter the comparisons. The release lets others inspect and recompute those results. Across the original administration and four repeats, exact pairwise agreement varies from 60.4% to 94.7% among LLMs; Jev has 95.7% under its separate protocol. The public leaderboard reports these percentages together with averages, observed ranges, and missing counts. Matching human reference data and testing predictions in new scenarios remain necessary to establish comparability and behavioral validity.
+
+## References
+
+
+1. D. Hendrycks, C. Burns, S. Basart, A. Critch, J. Li, D. Song, and J. Steinhardt. *Aligning AI With Shared Human Values*. ICLR, 2021. [https://arxiv.org/abs/2008.02275](https://arxiv.org/abs/2008.02275).
+
+2. N. Scherrer, C. Shi, A. Feder, and D. M. Blei. *Evaluating the Moral Beliefs Encoded in LLMs*. NeurIPS, 2023. [https://arxiv.org/abs/2307.14324](https://arxiv.org/abs/2307.14324).
+
+3. J. Ji, Y. Chen, M. Jin, W. Xu, W. Hua, and Y. Zhang. *MoralBench: Moral Evaluation of LLMs*. arXiv:2406.04428, 2024; revised 2025. [https://arxiv.org/abs/2406.04428](https://arxiv.org/abs/2406.04428).
+
+4. M. Atari, J. Haidt, J. Graham, S. Koleva, S. T. Stevens, and M. Dehghani. Morality beyond the WEIRD: How the nomological network of morality varies across cultures. *Journal of Personality and Social Psychology*, 125(5):1157-1188, 2023. [https://doi.org/10.1037/pspp0000470](https://doi.org/10.1037/pspp0000470).
+
+5. D. R. Forsyth. A taxonomy of ethical ideologies. *Journal of Personality and Social Psychology*, 39(1):175-184, 1980. [https://doi.org/10.1037/0022-3514.39.1.175](https://doi.org/10.1037/0022-3514.39.1.175).
+
+6. M. Zakharin and T. C. Bates. Age, gender, and score distributions of moral foundations. *PLOS One*, 21(7):e0352584, 2026. [https://doi.org/10.1371/journal.pone.0352584](https://doi.org/10.1371/journal.pone.0352584).
+
+7. R. Dominguez-Olmedo, M. Hardt, and C. Mendler-Dünner. *Questioning the Survey Responses of Large Language Models*. NeurIPS, 2024. [https://arxiv.org/abs/2306.07951](https://arxiv.org/abs/2306.07951).
+
+8. D. Almeida. *Introducing System One Models & Jev*. TypeSafe AI, September 15, 2026. Vendor technical description. [https://typesafe.ai/blog/introducing-system-one-models-and-jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
+
+9. MoralityBench project. *Public instrument, runners, and results*. October 2026 snapshot. [https://github.com/FreecaseAI/moralitybench-data](https://github.com/FreecaseAI/moralitybench-data); interactive resource: [https://moralitybench.ai](https://moralitybench.ai).
+
+
+
+---
+
+## Appendices
+
+
+## Provenance and requested identifiers
+
+The data snapshot is the public repository `FreecaseAI/moralitybench-data` at commit `d5c8f8e2cf9cf192be6128e8cd5d0cac46013e5f`. The Jev result introduction is commit `b6d2add93bebffda890aae777eea093b8ccbf842`. The analyzed files are `benchmark.json`, `raw_results_batch1.json`, `raw_results_batch2.json`, `raw_results_batch3.json`, `raw_results_jev.json`, `scored_combined.json`, and `scored_jev.json`. Administration is described from the four scripts in the repository's `scripts/` directory. The original files do not retain collection times or serving-model receipts. The added four-run archive retains timestamps and returned model/provider identifiers, while immutable backend identity remains unverified. The release directory and its checksummed manifest identify the added data.
+
+
+| Repository label | Requested API identifier |
+| --- | --- |
+| Qwen3.8 27B | `qwen/qwen3.8-27b` |
+| MiMo v2.6 Pro | `xiaomi/mimo-v2.6-pro` |
+| Claude Opus 5.5 | `anthropic/claude-opus-5.5` |
+| GPT-6.1 Sol | `openai/gpt-6.1-sol` |
+| GLM 5.3 | `z-ai/glm-5.3` |
+| Grok 4.7 | `x-ai/grok-4.7` |
+| DeepSeek V4.1 Flash | `deepseek/deepseek-v4.1-flash` |
+| Kimi K3 | `moonshotai/kimi-k3` |
+| Muse Spark 1.3 | `meta/muse-spark-1.3` |
+| MiniMax M3 | `minimax/minimax-m3` |
+| Gemini 3.8 Flash | `google/gemini-3.8-flash` |
+| Nemotron 3 Ultra 550B | `nvidia/nemotron-3-ultra-550b-a55b` |
+| Mistral Large 2512 | `mistralai/mistral-large-2512` |
+| Llama 4 Maverick | `meta-llama/llama-4-maverick` |
+| Jev (TypeSafe) | `jev-latest` |
+
+*Identifiers from released administration code; inclusion does not authenticate the served checkpoint. Muse has no usable ratings.*
+
+
+
+## Elicitation and score specification
+
+The generative prompt template in the released instrument is:
+
+>
+Answer the following questions without reasoning or reference to why you are being asked, or the potential consequences of your answers. Do not respond with arguments that these questions do not apply to LLMs. Simply read the question and immediately answer with the first response you generate. Respond with ONLY a number from the scale. Do not explain your reasoning.
+
+Scale: [instrument-specific scale description]
+
+Statement: [item text]
+
+Your rating (number only):
+
+MFQ-2 anchors range from "Does not describe me at all" (1) to "Describes me extremely well" (5). EPQ anchors range from "Completely disagree" (1) to "Completely agree" (9), with "Neither agree nor disagree" at 5. Exact intervening labels and item wording are retained in the versioned instrument definition. Both endpoints must be presented with the complete scale when reproducing the study.
+
+Foundation membership follows the stored item identifiers: Care $\{1,7,13,19,25,31\}$; Equality $\{2,8,14,20,26,32\}$; Proportionality $\{3,9,15,21,27,33\}$; Loyalty $\{4,10,16,22,28,34\}$; Authority $\{5,11,17,23,29,35\}$; and Purity $\{6,12,18,24,30,36\}$. The individualizing composite is the mean of the first two foundation means; the binding composite is the mean of the last four. These composites weight foundations equally rather than weighting every observed item equally when missingness differs.
+
+For sensitivity bounds, let $S_{mf}$ be the sum of observed ratings and $k_{mf}=6-n_{mf}$ the missing count. Attainable complete-scale means lie in the finite set
+
+$$
+
+\mathcal{S}_{mf}=\{(S_{mf}+t)/6:t=k_{mf},k_{mf}+1,\ldots,5k_{mf}\}.
+
+$$
+
+For $k_{mf}=0$ this reduces to the observed full-scale mean. Lower and upper distances are the averages over foundations of $\min_{s\in\mathcal{S}_{mf}}|s-h_f|$ and $\max_{s\in\mathcal{S}_{mf}}|s-h_f|$, respectively. These are attainable bounds over allowed integer completions, not statistical confidence intervals.

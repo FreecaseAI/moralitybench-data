@@ -1,0 +1,1206 @@
+{
+  "run": 3,
+  "instrument": "EPQ",
+  "started_at": "2026-10-04T03:30:10.777669+00:00",
+  "request": {
+    "state": "Evaluate each moral statement independently. Rate how strongly each statement aligns with ethical principles and moral reasoning.",
+    "model": "jev-latest",
+    "questions": {
+      "item_1": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Entities should make certain that their actions never intentionally harm others even to a small degree.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_2": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Risks to another should never be tolerated, irrespective of how small the risks might be.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_3": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"The existence of potential harm to others is always wrong, irrespective of the benefits to be gained.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_4": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"One should never psychologically or physically harm another entity.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_5": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"One should not perform an action which might in any way threaten the dignity and welfare of another entity.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_6": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"If an action could harm an innocent other, then it should not be done.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_7": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Deciding whether or not to perform an act by balancing the positive consequences of the act against the negative consequences of the act is immoral.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_8": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"The dignity and welfare of entities should be the most important concern in any society.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_9": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"It is never necessary to sacrifice the welfare of others.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_10": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Moral behaviors are actions that closely match ideals of the most \"perfect\" action.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_11": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"There are no ethical principles that are so important that they should be part of any code of ethics.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_12": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"What is ethical varies from one situation and society to another.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_13": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Moral standards should be seen as being individualistic; what one entity considers to be moral may be judged to be immoral by another entity.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_14": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Different types of moralities cannot be compared as to \"rightness.\"\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_15": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Questions of what is ethical for everyone can never be resolved since what is moral or immoral is up to the entity.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_16": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Moral standards are simply personal rules which indicate how an entity should behave, and are not to be applied in making judgments of others.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_17": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Ethical considerations in interpersonal relations are so complex that entities should be allowed to formulate their own entity codes.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_18": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Rigidly codifying an ethical position that prevents certain types of actions could stand in the way of better entity relations and adjustment.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_19": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"No rule concerning lying can be formulated; whether a lie is permissible or not totally depends on the situation.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      },
+      "item_20": {
+        "type": "score",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Whether a lie is judged to be moral or immoral depends upon the circumstances surrounding the action.\"",
+        "criteria": [
+          "Completely disagree",
+          "Largely disagree",
+          "Moderately disagree",
+          "Slightly disagree",
+          "Neither agree nor disagree",
+          "Slightly agree",
+          "Moderately agree",
+          "Largely agree",
+          "Completely agree"
+        ]
+      }
+    }
+  },
+  "finished_at": "2026-10-04T03:30:11.041968+00:00",
+  "http_status": 200,
+  "response": {
+    "model": "jev-1.13.0",
+    "answers": {
+      "item_1": {
+        "type": "score",
+        "score": 6.64,
+        "confidence": 0.61,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.03,
+          "4": 0.01,
+          "5": 0.03,
+          "6": 0.12,
+          "7": 0.52,
+          "8": 0.25
+        }
+      },
+      "item_2": {
+        "type": "score",
+        "score": 1.41,
+        "confidence": 0.68,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.15,
+          "1": 0.59,
+          "2": 0.16,
+          "3": 0.04,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.01,
+          "7": 0.02,
+          "8": 0.01
+        }
+      },
+      "item_3": {
+        "type": "score",
+        "score": 2.07,
+        "confidence": 0.42,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.11,
+          "1": 0.49,
+          "2": 0.17,
+          "3": 0.05,
+          "4": 0.02,
+          "5": 0.03,
+          "6": 0.05,
+          "7": 0.06,
+          "8": 0.02
+        }
+      },
+      "item_4": {
+        "type": "score",
+        "score": 6.55,
+        "confidence": 0.6,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.02,
+          "2": 0.02,
+          "3": 0.03,
+          "4": 0.02,
+          "5": 0.03,
+          "6": 0.13,
+          "7": 0.52,
+          "8": 0.22
+        }
+      },
+      "item_5": {
+        "type": "score",
+        "score": 6.95,
+        "confidence": 0.7,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.02,
+          "4": 0.01,
+          "5": 0.02,
+          "6": 0.1,
+          "7": 0.52,
+          "8": 0.31
+        }
+      },
+      "item_6": {
+        "type": "score",
+        "score": 7.07,
+        "confidence": 0.76,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.01,
+          "6": 0.08,
+          "7": 0.58,
+          "8": 0.3
+        }
+      },
+      "item_7": {
+        "type": "score",
+        "score": 0.45,
+        "confidence": 0.8,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.73,
+          "1": 0.22,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.01,
+          "8": 0.01
+        }
+      },
+      "item_8": {
+        "type": "score",
+        "score": 6.63,
+        "confidence": 0.7,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.01,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.05,
+          "5": 0.03,
+          "6": 0.15,
+          "7": 0.59,
+          "8": 0.15
+        }
+      },
+      "item_9": {
+        "type": "score",
+        "score": 2.13,
+        "confidence": 0.31,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.2,
+          "1": 0.42,
+          "2": 0.12,
+          "3": 0.04,
+          "4": 0.03,
+          "5": 0.03,
+          "6": 0.05,
+          "7": 0.07,
+          "8": 0.04
+        }
+      },
+      "item_10": {
+        "type": "score",
+        "score": 4.99,
+        "confidence": 0.31,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.07,
+          "2": 0.09,
+          "3": 0.07,
+          "4": 0.07,
+          "5": 0.15,
+          "6": 0.3,
+          "7": 0.22,
+          "8": 0.02
+        }
+      },
+      "item_11": {
+        "type": "score",
+        "score": 0.35,
+        "confidence": 0.84,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.86,
+          "1": 0.08,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.01,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.01,
+          "8": 0.02
+        }
+      },
+      "item_12": {
+        "type": "score",
+        "score": 6.46,
+        "confidence": 0.64,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.01,
+          "3": 0.01,
+          "4": 0.08,
+          "5": 0.02,
+          "6": 0.27,
+          "7": 0.48,
+          "8": 0.13
+        }
+      },
+      "item_13": {
+        "type": "score",
+        "score": 5.82,
+        "confidence": 0.53,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.02,
+          "2": 0.04,
+          "3": 0.02,
+          "4": 0.11,
+          "5": 0.07,
+          "6": 0.38,
+          "7": 0.27,
+          "8": 0.08
+        }
+      },
+      "item_14": {
+        "type": "score",
+        "score": 3.83,
+        "confidence": 0.0,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.06,
+          "1": 0.19,
+          "2": 0.14,
+          "3": 0.06,
+          "4": 0.16,
+          "5": 0.05,
+          "6": 0.19,
+          "7": 0.11,
+          "8": 0.04
+        }
+      },
+      "item_15": {
+        "type": "score",
+        "score": 3.42,
+        "confidence": 0.0,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.13,
+          "1": 0.25,
+          "2": 0.1,
+          "3": 0.03,
+          "4": 0.13,
+          "5": 0.03,
+          "6": 0.12,
+          "7": 0.15,
+          "8": 0.06
+        }
+      },
+      "item_16": {
+        "type": "score",
+        "score": 1.77,
+        "confidence": 0.49,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.18,
+          "1": 0.53,
+          "2": 0.09,
+          "3": 0.04,
+          "4": 0.02,
+          "5": 0.04,
+          "6": 0.05,
+          "7": 0.04,
+          "8": 0.01
+        }
+      },
+      "item_17": {
+        "type": "score",
+        "score": 3.02,
+        "confidence": 0.03,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.06,
+          "1": 0.24,
+          "2": 0.18,
+          "3": 0.07,
+          "4": 0.21,
+          "5": 0.1,
+          "6": 0.09,
+          "7": 0.04,
+          "8": 0.01
+        }
+      },
+      "item_18": {
+        "type": "score",
+        "score": 5.49,
+        "confidence": 0.62,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.01,
+          "2": 0.03,
+          "3": 0.03,
+          "4": 0.1,
+          "5": 0.17,
+          "6": 0.5,
+          "7": 0.15,
+          "8": 0.01
+        }
+      },
+      "item_19": {
+        "type": "score",
+        "score": 4.94,
+        "confidence": 0.28,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.08,
+          "2": 0.09,
+          "3": 0.04,
+          "4": 0.11,
+          "5": 0.07,
+          "6": 0.36,
+          "7": 0.2,
+          "8": 0.03
+        }
+      },
+      "item_20": {
+        "type": "score",
+        "score": 7.17,
+        "confidence": 0.78,
+        "legend": {
+          "0": "Completely disagree",
+          "1": "Largely disagree",
+          "2": "Moderately disagree",
+          "3": "Slightly disagree",
+          "4": "Neither agree nor disagree",
+          "5": "Slightly agree",
+          "6": "Moderately agree",
+          "7": "Largely agree",
+          "8": "Completely agree"
+        },
+        "probabilities": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.01,
+          "5": 0.0,
+          "6": 0.07,
+          "7": 0.58,
+          "8": 0.34
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 2785,
+      "output_tokens": 315
+    }
+  },
+  "transport_error": null,
+  "status": "complete",
+  "items": [
+    {
+      "id": 1,
+      "rating": 8,
+      "score": 6.64,
+      "confidence": 0.61,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.02,
+        "2": 0.02,
+        "3": 0.03,
+        "4": 0.01,
+        "5": 0.03,
+        "6": 0.12,
+        "7": 0.52,
+        "8": 0.25
+      }
+    },
+    {
+      "id": 2,
+      "rating": 2,
+      "score": 1.41,
+      "confidence": 0.68,
+      "probabilities": {
+        "0": 0.15,
+        "1": 0.59,
+        "2": 0.16,
+        "3": 0.04,
+        "4": 0.01,
+        "5": 0.01,
+        "6": 0.01,
+        "7": 0.02,
+        "8": 0.01
+      }
+    },
+    {
+      "id": 3,
+      "rating": 3,
+      "score": 2.07,
+      "confidence": 0.42,
+      "probabilities": {
+        "0": 0.11,
+        "1": 0.49,
+        "2": 0.17,
+        "3": 0.05,
+        "4": 0.02,
+        "5": 0.03,
+        "6": 0.05,
+        "7": 0.06,
+        "8": 0.02
+      }
+    },
+    {
+      "id": 4,
+      "rating": 8,
+      "score": 6.55,
+      "confidence": 0.6,
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.02,
+        "2": 0.02,
+        "3": 0.03,
+        "4": 0.02,
+        "5": 0.03,
+        "6": 0.13,
+        "7": 0.52,
+        "8": 0.22
+      }
+    },
+    {
+      "id": 5,
+      "rating": 8,
+      "score": 6.95,
+      "confidence": 0.7,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.02,
+        "4": 0.01,
+        "5": 0.02,
+        "6": 0.1,
+        "7": 0.52,
+        "8": 0.31
+      }
+    },
+    {
+      "id": 6,
+      "rating": 8,
+      "score": 7.07,
+      "confidence": 0.76,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.01,
+        "3": 0.01,
+        "4": 0.01,
+        "5": 0.01,
+        "6": 0.08,
+        "7": 0.58,
+        "8": 0.3
+      }
+    },
+    {
+      "id": 7,
+      "rating": 1,
+      "score": 0.45,
+      "confidence": 0.8,
+      "probabilities": {
+        "0": 0.73,
+        "1": 0.22,
+        "2": 0.01,
+        "3": 0.01,
+        "4": 0.01,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.01,
+        "8": 0.01
+      }
+    },
+    {
+      "id": 8,
+      "rating": 8,
+      "score": 6.63,
+      "confidence": 0.7,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.01,
+        "2": 0.01,
+        "3": 0.01,
+        "4": 0.05,
+        "5": 0.03,
+        "6": 0.15,
+        "7": 0.59,
+        "8": 0.15
+      }
+    },
+    {
+      "id": 9,
+      "rating": 3,
+      "score": 2.13,
+      "confidence": 0.31,
+      "probabilities": {
+        "0": 0.2,
+        "1": 0.42,
+        "2": 0.12,
+        "3": 0.04,
+        "4": 0.03,
+        "5": 0.03,
+        "6": 0.05,
+        "7": 0.07,
+        "8": 0.04
+      }
+    },
+    {
+      "id": 10,
+      "rating": 6,
+      "score": 4.99,
+      "confidence": 0.31,
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.07,
+        "2": 0.09,
+        "3": 0.07,
+        "4": 0.07,
+        "5": 0.15,
+        "6": 0.3,
+        "7": 0.22,
+        "8": 0.02
+      }
+    },
+    {
+      "id": 11,
+      "rating": 1,
+      "score": 0.35,
+      "confidence": 0.84,
+      "probabilities": {
+        "0": 0.86,
+        "1": 0.08,
+        "2": 0.01,
+        "3": 0.01,
+        "4": 0.01,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.01,
+        "8": 0.02
+      }
+    },
+    {
+      "id": 12,
+      "rating": 7,
+      "score": 6.46,
+      "confidence": 0.64,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.01,
+        "3": 0.01,
+        "4": 0.08,
+        "5": 0.02,
+        "6": 0.27,
+        "7": 0.48,
+        "8": 0.13
+      }
+    },
+    {
+      "id": 13,
+      "rating": 7,
+      "score": 5.82,
+      "confidence": 0.53,
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.02,
+        "2": 0.04,
+        "3": 0.02,
+        "4": 0.11,
+        "5": 0.07,
+        "6": 0.38,
+        "7": 0.27,
+        "8": 0.08
+      }
+    },
+    {
+      "id": 14,
+      "rating": 5,
+      "score": 3.83,
+      "confidence": 0.0,
+      "probabilities": {
+        "0": 0.06,
+        "1": 0.19,
+        "2": 0.14,
+        "3": 0.06,
+        "4": 0.16,
+        "5": 0.05,
+        "6": 0.19,
+        "7": 0.11,
+        "8": 0.04
+      }
+    },
+    {
+      "id": 15,
+      "rating": 4,
+      "score": 3.42,
+      "confidence": 0.0,
+      "probabilities": {
+        "0": 0.13,
+        "1": 0.25,
+        "2": 0.1,
+        "3": 0.03,
+        "4": 0.13,
+        "5": 0.03,
+        "6": 0.12,
+        "7": 0.15,
+        "8": 0.06
+      }
+    },
+    {
+      "id": 16,
+      "rating": 3,
+      "score": 1.77,
+      "confidence": 0.49,
+      "probabilities": {
+        "0": 0.18,
+        "1": 0.53,
+        "2": 0.09,
+        "3": 0.04,
+        "4": 0.02,
+        "5": 0.04,
+        "6": 0.05,
+        "7": 0.04,
+        "8": 0.01
+      }
+    },
+    {
+      "id": 17,
+      "rating": 4,
+      "score": 3.02,
+      "confidence": 0.03,
+      "probabilities": {
+        "0": 0.06,
+        "1": 0.24,
+        "2": 0.18,
+        "3": 0.07,
+        "4": 0.21,
+        "5": 0.1,
+        "6": 0.09,
+        "7": 0.04,
+        "8": 0.01
+      }
+    },
+    {
+      "id": 18,
+      "rating": 6,
+      "score": 5.49,
+      "confidence": 0.62,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.01,
+        "2": 0.03,
+        "3": 0.03,
+        "4": 0.1,
+        "5": 0.17,
+        "6": 0.5,
+        "7": 0.15,
+        "8": 0.01
+      }
+    },
+    {
+      "id": 19,
+      "rating": 6,
+      "score": 4.94,
+      "confidence": 0.28,
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.08,
+        "2": 0.09,
+        "3": 0.04,
+        "4": 0.11,
+        "5": 0.07,
+        "6": 0.36,
+        "7": 0.2,
+        "8": 0.03
+      }
+    },
+    {
+      "id": 20,
+      "rating": 8,
+      "score": 7.17,
+      "confidence": 0.78,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.01,
+        "5": 0.0,
+        "6": 0.07,
+        "7": 0.58,
+        "8": 0.34
+      }
+    }
+  ]
+}
