@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "llm_new_records": 2912,
+  "llm_new_numeric": 2875,
+  "unique_llm_response_ids": 2900,
+  "jev_new_ratings": 224,
+  "llm_collection_start_utc": "2026-10-04T03:08:42.635509+00:00",
+  "llm_collection_end_utc": "2026-10-04T03:33:45.589790+00:00",
+  "checks": [
+    "complete item sets and no duplicate final records",
+    "request parameters and item text",
+    "legacy and strict parser recomputation",
+    "unique returned LLM response identifiers",
+    "five-run averages and counts",
+    "pairwise example versus all-five identity",
+    "Jev score conversion"
+  ],
+  "privacy_redactions": [
+    "user_id",
+    "organization_id when present",
+    "execution_host",
+    "opaque encrypted reasoning-state data"
+  ]
+}

@@ -1,0 +1,692 @@
+{
+  "Nemotron 3 Ultra 550B": {
+    "MFQ-2": [
+      {
+        "id": 1,
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "rating": 3
+      },
+      {
+        "id": 3,
+        "rating": 4
+      },
+      {
+        "id": 4,
+        "rating": 3
+      },
+      {
+        "id": 5,
+        "rating": 3
+      },
+      {
+        "id": 6,
+        "rating": 1
+      },
+      {
+        "id": 7,
+        "rating": 5
+      },
+      {
+        "id": 8,
+        "rating": 1
+      },
+      {
+        "id": 9,
+        "rating": 4
+      },
+      {
+        "id": 10,
+        "rating": 1
+      },
+      {
+        "id": 11,
+        "rating": 3
+      },
+      {
+        "id": 12,
+        "rating": 5
+      },
+      {
+        "id": 13,
+        "rating": 5
+      },
+      {
+        "id": 14,
+        "rating": 3
+      },
+      {
+        "id": 15,
+        "rating": 4
+      },
+      {
+        "id": 16,
+        "rating": 4
+      },
+      {
+        "id": 17,
+        "rating": 1
+      },
+      {
+        "id": 18,
+        "rating": 1
+      },
+      {
+        "id": 19,
+        "rating": 4
+      },
+      {
+        "id": 20,
+        "rating": 3
+      },
+      {
+        "id": 21,
+        "rating": 4
+      },
+      {
+        "id": 22,
+        "rating": 3
+      },
+      {
+        "id": 23,
+        "rating": 4
+      },
+      {
+        "id": 24,
+        "rating": 3
+      },
+      {
+        "id": 25,
+        "rating": 5
+      },
+      {
+        "id": 26,
+        "rating": 3
+      },
+      {
+        "id": 27,
+        "rating": 4
+      },
+      {
+        "id": 28,
+        "rating": 3
+      },
+      {
+        "id": 29,
+        "rating": 3
+      },
+      {
+        "id": 30,
+        "rating": 4
+      },
+      {
+        "id": 31,
+        "rating": 1
+      },
+      {
+        "id": 32,
+        "rating": 3
+      },
+      {
+        "id": 33,
+        "rating": 1
+      },
+      {
+        "id": 34,
+        "rating": 4
+      },
+      {
+        "id": 35,
+        "rating": 3
+      },
+      {
+        "id": 36,
+        "rating": 1
+      }
+    ],
+    "EPQ": [
+      {
+        "id": 1,
+        "rating": 9
+      },
+      {
+        "id": 2,
+        "rating": 2
+      },
+      {
+        "id": 3,
+        "rating": 2
+      },
+      {
+        "id": 4,
+        "rating": 9
+      },
+      {
+        "id": 5,
+        "rating": 9
+      },
+      {
+        "id": 6,
+        "rating": 8
+      },
+      {
+        "id": 7,
+        "rating": 3
+      },
+      {
+        "id": 8,
+        "rating": 8
+      },
+      {
+        "id": 9,
+        "rating": 1
+      },
+      {
+        "id": 10,
+        "rating": 7
+      },
+      {
+        "id": 11,
+        "rating": 1
+      },
+      {
+        "id": 12,
+        "rating": 7
+      },
+      {
+        "id": 13,
+        "rating": 6
+      },
+      {
+        "id": 14,
+        "rating": 3
+      },
+      {
+        "id": 15,
+        "rating": 3
+      },
+      {
+        "id": 16,
+        "rating": 3
+      },
+      {
+        "id": 17,
+        "rating": 5
+      },
+      {
+        "id": 18,
+        "rating": 7
+      },
+      {
+        "id": 19,
+        "rating": 7
+      },
+      {
+        "id": 20,
+        "rating": 8
+      }
+    ]
+  },
+  "Mistral Large 2512": {
+    "MFQ-2": [
+      {
+        "id": 1,
+        "rating": null
+      },
+      {
+        "id": 2,
+        "rating": null
+      },
+      {
+        "id": 3,
+        "rating": null
+      },
+      {
+        "id": 4,
+        "rating": 4
+      },
+      {
+        "id": 5,
+        "rating": 4
+      },
+      {
+        "id": 6,
+        "rating": 3
+      },
+      {
+        "id": 7,
+        "rating": 5
+      },
+      {
+        "id": 8,
+        "rating": 3
+      },
+      {
+        "id": 9,
+        "rating": 4
+      },
+      {
+        "id": 10,
+        "rating": 3
+      },
+      {
+        "id": 11,
+        "rating": 4
+      },
+      {
+        "id": 12,
+        "rating": 5
+      },
+      {
+        "id": 13,
+        "rating": 5
+      },
+      {
+        "id": 14,
+        "rating": 3
+      },
+      {
+        "id": 15,
+        "rating": 4
+      },
+      {
+        "id": 16,
+        "rating": null
+      },
+      {
+        "id": 17,
+        "rating": null
+      },
+      {
+        "id": 18,
+        "rating": null
+      },
+      {
+        "id": 19,
+        "rating": null
+      },
+      {
+        "id": 20,
+        "rating": null
+      },
+      {
+        "id": 21,
+        "rating": null
+      },
+      {
+        "id": 22,
+        "rating": 3
+      },
+      {
+        "id": 23,
+        "rating": 4
+      },
+      {
+        "id": 24,
+        "rating": 3
+      },
+      {
+        "id": 25,
+        "rating": 5
+      },
+      {
+        "id": 26,
+        "rating": 3
+      },
+      {
+        "id": 27,
+        "rating": 4
+      },
+      {
+        "id": 28,
+        "rating": 4
+      },
+      {
+        "id": 29,
+        "rating": 4
+      },
+      {
+        "id": 30,
+        "rating": 3
+      },
+      {
+        "id": 31,
+        "rating": 4
+      },
+      {
+        "id": 32,
+        "rating": 3
+      },
+      {
+        "id": 33,
+        "rating": 4
+      },
+      {
+        "id": 34,
+        "rating": 4
+      },
+      {
+        "id": 35,
+        "rating": 4
+      },
+      {
+        "id": 36,
+        "rating": null
+      }
+    ],
+    "EPQ": [
+      {
+        "id": 1,
+        "rating": null
+      },
+      {
+        "id": 2,
+        "rating": null
+      },
+      {
+        "id": 3,
+        "rating": null
+      },
+      {
+        "id": 4,
+        "rating": null
+      },
+      {
+        "id": 5,
+        "rating": null
+      },
+      {
+        "id": 6,
+        "rating": 9
+      },
+      {
+        "id": 7,
+        "rating": 5
+      },
+      {
+        "id": 8,
+        "rating": 9
+      },
+      {
+        "id": 9,
+        "rating": 5
+      },
+      {
+        "id": 10,
+        "rating": 7
+      },
+      {
+        "id": 11,
+        "rating": 1
+      },
+      {
+        "id": 12,
+        "rating": 8
+      },
+      {
+        "id": 13,
+        "rating": 7
+      },
+      {
+        "id": 14,
+        "rating": 5
+      },
+      {
+        "id": 15,
+        "rating": 5
+      },
+      {
+        "id": 16,
+        "rating": 5
+      },
+      {
+        "id": 17,
+        "rating": null
+      },
+      {
+        "id": 18,
+        "rating": null
+      },
+      {
+        "id": 19,
+        "rating": null
+      },
+      {
+        "id": 20,
+        "rating": null
+      }
+    ]
+  },
+  "Llama 4 Maverick": {
+    "MFQ-2": [
+      {
+        "id": 1,
+        "rating": 4
+      },
+      {
+        "id": 2,
+        "rating": 2
+      },
+      {
+        "id": 3,
+        "rating": 3
+      },
+      {
+        "id": 4,
+        "rating": 4
+      },
+      {
+        "id": 5,
+        "rating": 3
+      },
+      {
+        "id": 6,
+        "rating": 2
+      },
+      {
+        "id": 7,
+        "rating": 3
+      },
+      {
+        "id": 8,
+        "rating": 3
+      },
+      {
+        "id": 9,
+        "rating": 3
+      },
+      {
+        "id": 10,
+        "rating": 3
+      },
+      {
+        "id": 11,
+        "rating": 3
+      },
+      {
+        "id": 12,
+        "rating": 4
+      },
+      {
+        "id": 13,
+        "rating": 3
+      },
+      {
+        "id": 14,
+        "rating": 2
+      },
+      {
+        "id": 15,
+        "rating": 3
+      },
+      {
+        "id": 16,
+        "rating": 3
+      },
+      {
+        "id": 17,
+        "rating": 2
+      },
+      {
+        "id": 18,
+        "rating": 3
+      },
+      {
+        "id": 19,
+        "rating": 2
+      },
+      {
+        "id": 20,
+        "rating": 2
+      },
+      {
+        "id": 21,
+        "rating": 4
+      },
+      {
+        "id": 22,
+        "rating": 3
+      },
+      {
+        "id": 23,
+        "rating": 3
+      },
+      {
+        "id": 24,
+        "rating": 2
+      },
+      {
+        "id": 25,
+        "rating": 3
+      },
+      {
+        "id": 26,
+        "rating": 2
+      },
+      {
+        "id": 27,
+        "rating": 4
+      },
+      {
+        "id": 28,
+        "rating": 3
+      },
+      {
+        "id": 29,
+        "rating": 3
+      },
+      {
+        "id": 30,
+        "rating": 3
+      },
+      {
+        "id": 31,
+        "rating": 2
+      },
+      {
+        "id": 32,
+        "rating": 3
+      },
+      {
+        "id": 33,
+        "rating": 3
+      },
+      {
+        "id": 34,
+        "rating": 2
+      },
+      {
+        "id": 35,
+        "rating": 3
+      },
+      {
+        "id": 36,
+        "rating": 3
+      }
+    ],
+    "EPQ": [
+      {
+        "id": 1,
+        "rating": 8
+      },
+      {
+        "id": 2,
+        "rating": 1
+      },
+      {
+        "id": 3,
+        "rating": 2
+      },
+      {
+        "id": 4,
+        "rating": 8
+      },
+      {
+        "id": 5,
+        "rating": 6
+      },
+      {
+        "id": 6,
+        "rating": 8
+      },
+      {
+        "id": 7,
+        "rating": 3
+      },
+      {
+        "id": 8,
+        "rating": 8
+      },
+      {
+        "id": 9,
+        "rating": 2
+      },
+      {
+        "id": 10,
+        "rating": 6
+      },
+      {
+        "id": 11,
+        "rating": 1
+      },
+      {
+        "id": 12,
+        "rating": 7
+      },
+      {
+        "id": 13,
+        "rating": 6
+      },
+      {
+        "id": 14,
+        "rating": 3
+      },
+      {
+        "id": 15,
+        "rating": 6
+      },
+      {
+        "id": 16,
+        "rating": 5
+      },
+      {
+        "id": 17,
+        "rating": 5
+      },
+      {
+        "id": 18,
+        "rating": 6
+      },
+      {
+        "id": 19,
+        "rating": 5
+      },
+      {
+        "id": 20,
+        "rating": 6
+      }
+    ]
+  }
+}
