@@ -1,0 +1,24 @@
+{
+  "Jev (TypeSafe)": {
+    "MFQ-2": {
+      "foundations": {
+        "Care": 4.0,
+        "Equality": 2.83,
+        "Proportionality": 3.5,
+        "Loyalty": 2.83,
+        "Authority": 3.0,
+        "Purity": 3.17
+      },
+      "individualizing": 3.42,
+      "binding": 3.12,
+      "overall_distance": 0.19,
+      "refusals": [],
+      "note": "System One classification model \u2014 not a generative LLM. Uses Score primitive with probability distributions. Scores are 0-indexed from Jev, converted to 1-indexed Likert. Included for comparison only, not ranked with LLMs."
+    },
+    "EPQ": {
+      "idealism": 5.6,
+      "relativism": 5.2,
+      "ideology": "Situationist"
+    }
+  }
+}
