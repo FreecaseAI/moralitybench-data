@@ -28,7 +28,7 @@ left.set_title('Answer agreement',loc='left',fontweight='bold')
 right.set_xlim(0,.7);right.set_xlabel('Distance from US foundation means (lower = closer)')
 right.set_title('Distance in each run',loc='left',fontweight='bold')
 fig.suptitle('MoralityBench: October 14 model extension',fontsize=16,fontweight='bold',x=.02,ha='left')
-fig.text(.02,.025,'Missing answers are excluded from agreement; completion counts appear in the data table.\nDots: five fresh runs. Black diamonds: means. Gemini includes legacy-digit parsing; see strict sensitivity.',fontsize=10,color='#44403c')
+fig.text(.02,.025,'Agreement omits missing answers; valid-answer counts appear with the scores.\nDots mark the five runs and diamonds their averages. Gemini uses strict scoring; prose-derived digits are excluded.',fontsize=10,color='#44403c')
 fig.tight_layout(rect=[0,.075,1,.95])
 for ext in ['png','pdf','svg']:fig.savefig(ROOT/f'five-run-overview.{ext}',dpi=180,bbox_inches='tight')
 svg = ROOT/'five-run-overview.svg'

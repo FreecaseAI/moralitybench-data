@@ -2,6 +2,7 @@
 
 ## 2026-10-14
 
+- Applied the requested Humanizer skill to the working paper and response-viewer prose, preserving quoted answers, calculations and citations; rebuilt the paper PDF and release hashes.
 - Added five fresh administrations for GPT-6 Astra, Muse Wonder and Gemini 4 Argon: 840 response records.
 - Published strict numeric primary scores (715 valid/840), archived first-digit diagnostics, raw responses, payload verification and file hashes.
 - Preserved all earlier model/Jev observations; combined 16-model display labels cohort dates and parser policies.
