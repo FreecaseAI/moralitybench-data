@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-14
+
+- Added five fresh administrations for GPT-6 Astra, Muse Wonder and Gemini 4 Argon: 840 response records.
+- Published strict numeric primary scores (715 valid/840), archived first-digit diagnostics, raw responses, payload verification and file hashes.
+- Preserved all earlier model/Jev observations; combined 16-model display labels cohort dates and parser policies.
+- Added the Gemini instruction-following addendum and standalone 280-answer HTML viewer, as directed by Jim.
+- Updated working manuscript Markdown/LaTeX and compiled PDF; retained the original cohort findings and disclosed sparse-response/cross-time limits.
+
 ## 2026-10-04
 
 - Added four further administrations for each of the 13 originally scored LLMs and Jev, preserving original baselines.

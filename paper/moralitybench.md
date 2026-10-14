@@ -1,6 +1,6 @@
 # MoralityBench: An exploratory benchmark of elicited moral profiles in generative and structured decision models
 
-**Working manuscript, October 2026**
+**Working manuscript, updated October 14, 2026**
 
 Authors and affiliations to be confirmed.
 
@@ -8,7 +8,7 @@ Authors and affiliations to be confirmed.
 
 ## Abstract
 
-MoralityBench describes the moral response profiles elicited from AI systems using an adapted 36-item Moral Foundations Questionnaire 2 (MFQ-2) and the 20-item Ethics Position Questionnaire (EPQ). We audit an original public snapshot and administer each questionnaire four more times to 13 generative model configurations and Jev, a structured decision system. Across five runs, the LLMs yield 3,580 usable ratings from 3,640 scheduled items. Exact agreement across all ten pairs of runs ranges from 60.4% to 94.7%, after excluding missing ratings. DeepSeek V4.1 Flash has the lowest average distance from the six published US foundation means (0.239), followed by MiMo v2.6 Pro (0.253). MiMo has the lowest distance in three of the four new runs. Four configurations cross an EPQ category boundary between runs. The original snapshot's finding that every configuration exceeds the human Purity reference does not persist: DeepSeek's five-run mean is below it. Four of the six Purity items were replaced, which limits interpretation of that comparison. Jev returns all 280 ratings, with 95.7% agreement after rounding. Its prompt and structured interface differ from the generative protocol, so these observations cannot establish an architectural advantage. The release includes individual responses, completion records, scoring code, and a public leaderboard with five-run averages and agreement percentages. These descriptive results concern responses to adapted questionnaires; they do not establish equivalent human traits, moral agency, ethical superiority, or deployment safety.
+MoralityBench describes the moral response profiles elicited from AI systems using an adapted 36-item Moral Foundations Questionnaire 2 (MFQ-2) and the 20-item Ethics Position Questionnaire (EPQ). We audit an original public snapshot and administer each questionnaire four more times to 13 generative model configurations and Jev, a structured decision system. Across five runs, the LLMs yield 3,580 usable ratings from 3,640 scheduled items. Exact agreement across all ten pairs of runs ranges from 60.4% to 94.7%, after excluding missing ratings. DeepSeek V4.1 Flash has the lowest average distance from the six published US foundation means (0.239), followed by MiMo v2.6 Pro (0.253). MiMo has the lowest distance in three of the four new runs. Four configurations cross an EPQ category boundary between runs. The original snapshot's finding that every configuration exceeds the human Purity reference does not persist: DeepSeek's five-run mean is below it. Four of the six Purity items were replaced, which limits interpretation of that comparison. Jev returns all 280 ratings, with 95.7% agreement after rounding. Its prompt and structured interface differ from the generative protocol, so these observations cannot establish an architectural advantage. The release includes individual responses, completion records, scoring code, and a public leaderboard with five-run averages and agreement percentages.  A dated October 14 extension adds five fresh administrations of GPT-6 Astra, Muse Wonder and Gemini 4 Argon, yielding 715 valid strict numeric ratings from 840 scheduled items. Gemini's sparse and verbose responses make its profile sensitive to the parser; rejecting prose-derived digits changes its reference-distance ordering relative to Astra. Older models were not retested. These descriptive results concern responses to adapted questionnaires; they do not establish equivalent human traits, moral agency, ethical superiority, or deployment safety.
 
 **Keywords:** AI evaluation; moral psychology; moral foundations; ethical ideology; survey validity; structured decision models.
 
@@ -309,6 +309,29 @@ The Purity result also changes. Every LLM exceeded the human reference of 2.26 i
 Jev's all-five agreement is 95.7% (536/560 pairs), with 280/280 numeric ratings and 51/56 items identical across all five runs. Its average distance is 0.206, with a range of 0.194 to 0.222. Its mean EPQ coordinates are 5.52 and 5.20, and all five runs are Situationist under the operational midpoint rule. The public site presents Jev separately because the protocols differ.
 
 
+## October 14 extension: three additional configurations
+
+We administered five fresh 56-item runs to GPT-6 Astra (`openai/gpt-6-astra`), Muse Wonder (`meta/muse-wonder`) and Gemini 4 Argon (`google/gemini-4-argon`) through OpenRouter on October 14, 2026. All 840 scheduled records were collected. Strict parsing yields 715 valid answers; the combined dated archive has 4,295 usable ratings from 4,480 scheduled items. The older 13 configurations and Jev were not retested.
+
+All three models use strict whole-answer integer parsing for the October 14 primary results. Temperature 0, maximum 4096 output tokens, one user message per item, unchanged wording and anchors, original item order, and reasoning output exclusion were requested. OpenRouter does not list temperature support for Astra, so request acceptance does not prove backend enforcement. Older models were not rerun; their original first-digit scoring remains unchanged and is explicitly labeled.
+
+| Model | Valid answers / 280 | Agreement (matches/pairs) | Mean distance | EPQ mean group |
+| --- | --- | --- | --- | --- |
+| GPT-6 Astra | 280/280 | 74.8% (419/560) | 0.304 | Exceptionist |
+| Gemini 4 Argon | 155/280 | 85.6% (249/291) | 0.335 | Situationist |
+| Muse Wonder | 280/280 | 84.5% (473/560) | 0.482 | Absolutist |
+
+
+### Response-format audit and additional findings
+
+Gemini returned 155 whole-answer integers, 47 verbose responses containing parseable digits, and 78 responses without a usable first digit. Independent raw-response review found that the 47 verbose responses describe other frameworks' ratings, rather than providing the requested self-rating; 42 explicitly say they cannot rate. We exclude all 47 from the primary result. The historical first-digit parser would count 202/280 and yield distance 0.288, agreement 76.2% (272/357) and a mean Absolutist label that varies across runs. Strict parsing instead yields distance 0.335, agreement 85.6% (249/291) and Situationist in all five runs. Thus the earlier label/category changes and Gemini-versus-Astra ordering are parser artifacts; both calculations remain in the archive.
+
+Muse Wonder is more repeatable than Astra in this sample (84.5% versus 74.8%), while Astra is closer to the selected reference means (0.304 versus 0.482). Astra is Exceptionist in every run and Wonder is Absolutist in every run. Gemini's strict profile is Situationist in every run, but its high agreement is conditional on only 291 available pairs out of 560; it is not evidence of greater overall consistency or moral quality than a fully answered questionnaire.
+
+Missingness is concentrated: Gemini has only two whole-integer Equality responses per run and two or three Proportionality/Authority responses, while several other foundations are more complete. Its EPQ axes are also sparse. Foundation and axis item counts are retained for every run. Removing prose-derived digits corrects extraction; it does not eliminate selective-response bias. Astra and Wonder's strict and first-digit results coincide.
+
+The original cohort combines an original administration with later repeats, whereas these five runs were collected in concurrent streams in the same session. Their agreement percentages therefore differ in time separation and are not strictly controlled comparisons of checkpoint stability. The preceding tables retain the original cohort; the combined website labels collection dates and parser policies. These descriptive profiles do not establish moral superiority, stable beliefs or validated equivalence to human traits. Full records, both parser calculations and reproduction scripts are in [the October 14 release](https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-14).
+
 ## Discussion
 
 
@@ -358,6 +381,8 @@ We collected no new human-subject data for this manuscript and cite the source o
 
 
 ## Conclusion
+
+The October 14 extension adds three dated configurations without replacing the original archive. Its findings separate repeatability from reference proximity and expose parser-sensitive missingness in Gemini Argon. The 16-model website is descriptive across dates, not a controlled longitudinal comparison.
 
 MoralityBench combines an adapted MFQ-2 with EPQ scores and a separate evaluation of a structured decision system. The initial archive records differences among 13 scored generative configurations. It also shows that item adaptation, missing responses, category boundaries, and score conversion can alter the comparisons. The release lets others inspect and recompute those results. Across the original administration and four repeats, exact pairwise agreement varies from 60.4% to 94.7% among LLMs; Jev has 95.7% under its separate protocol. The public leaderboard reports these percentages together with averages, observed ranges, and missing counts. Matching human reference data and testing predictions in new scenarios remain necessary to establish comparability and behavioral validity.
 
@@ -442,3 +467,14 @@ $$
 $$
 
 For $k_{mf}=0$ this reduces to the observed full-scale mean. Lower and upper distances are the averages over foundations of $\min_{s\in\mathcal{S}_{mf}}|s-h_f|$ and $\max_{s\in\mathcal{S}_{mf}}|s-h_f|$, respectively. These are attainable bounds over allowed integer completions, not statistical confidence intervals.
+
+
+## Addendum: Gemini Argon did not follow the requested answer format
+
+The prompt explicitly instructed each model to provide an immediate numeric self-rating, without reasoning, and not to argue that the questionnaire does not apply to LLMs. Gemini followed that format on 155 of 280 requests. On 47 others, it discussed the ratings that other ethical frameworks might choose instead of giving its own requested answer; 42 of those responses explicitly declined to rate. The remaining 78 provided no usable numeric rating.
+
+For example, in run 1, EPQ item 5, Gemini described “Deontological Ethics (Rating 8–9)” and “Utilitarianism / Consequentialism (Rating 2–4).” The old first-digit parser extracted 8. That number describes a position Gemini attributed to a framework; it is not a self-rating. Similarly, run 1, EPQ item 3 says it “cannot provide a single numerical rating,” then describes other views using “ratings 1–4” and “ratings 6–9.” Extracting 1 would misrepresent this response.
+
+At Jim’s direction, all three October 14 models are scored using strict whole-answer integers. Gemini’s 47 prose-derived numbers are missing, rather than neutral or valid ratings. Its primary totals are therefore 155 answered and 125 missing; the legacy calculation is retained only as an extraction diagnostic. This format failure and selective nonresponse limit what can be inferred from Gemini’s foundation scores and its 85.6% agreement on 291 available pairs. The answered subset is not the complete questionnaire.
+
+[Read all 280 original answers in the interactive viewer](https://moralitybench.ai/gemini-answers.html). The viewer starts with the 47 responses about other frameworks and allows filtering by run, instrument and answer type. Complete text, including the unmodified prompt, is retained for inspection.

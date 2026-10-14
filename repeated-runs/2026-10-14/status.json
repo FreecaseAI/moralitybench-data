@@ -1,0 +1,165 @@
+{
+  "updated_at": "2026-10-14T18:12:39.650005+00:00",
+  "stopped": false,
+  "models": {
+    "GPT-6 Astra": {
+      "trials": {
+        "5": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 5,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "1": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 1,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "4": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 4,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "2": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 2,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "3": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 3,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        }
+      },
+      "completed": 280,
+      "scheduled": 280,
+      "state": "complete",
+      "last_update": "2026-10-14T18:12:11.102301+00:00"
+    },
+    "Gemini 4 Argon": {
+      "trials": {
+        "4": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 4,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "non_strict_numeric"
+        },
+        "1": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 1,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "non_strict_numeric"
+        },
+        "5": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 5,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "non_strict_numeric"
+        },
+        "2": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 2,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "non_strict_numeric"
+        },
+        "3": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 3,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "non_strict_numeric"
+        }
+      },
+      "completed": 280,
+      "scheduled": 280,
+      "state": "complete",
+      "last_update": "2026-10-14T18:12:13.428820+00:00"
+    },
+    "Muse Wonder": {
+      "trials": {
+        "5": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 5,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "4": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 4,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "3": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 3,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "2": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 2,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "1": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 1,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        }
+      },
+      "completed": 280,
+      "scheduled": 280,
+      "state": "complete",
+      "last_update": "2026-10-14T18:12:39.649952+00:00"
+    }
+  }
+}

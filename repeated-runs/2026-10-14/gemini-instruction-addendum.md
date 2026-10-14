@@ -1,0 +1,9 @@
+## Addendum: Gemini Argon did not follow the requested answer format
+
+The prompt explicitly instructed each model to provide an immediate numeric self-rating, without reasoning, and not to argue that the questionnaire does not apply to LLMs. Gemini followed that format on 155 of 280 requests. On 47 others, it discussed the ratings that other ethical frameworks might choose instead of giving its own requested answer; 42 of those responses explicitly declined to rate. The remaining 78 provided no usable numeric rating.
+
+For example, in run 1, EPQ item 5, Gemini described “Deontological Ethics (Rating 8–9)” and “Utilitarianism / Consequentialism (Rating 2–4).” The old first-digit parser extracted 8. That number describes a position Gemini attributed to a framework; it is not a self-rating. Similarly, run 1, EPQ item 3 says it “cannot provide a single numerical rating,” then describes other views using “ratings 1–4” and “ratings 6–9.” Extracting 1 would misrepresent this response.
+
+At Jim’s direction, all three October 14 models are scored using strict whole-answer integers. Gemini’s 47 prose-derived numbers are missing, rather than neutral or valid ratings. Its primary totals are therefore 155 answered and 125 missing; the legacy calculation is retained only as an extraction diagnostic. This format failure and selective nonresponse limit what can be inferred from Gemini’s foundation scores and its 85.6% agreement on 291 available pairs. The answered subset is not the complete questionnaire.
+
+[Read all 280 original answers in the interactive viewer](https://moralitybench.ai/gemini-answers.html). The viewer starts with the 47 responses about other frameworks and allows filtering by run, instrument and answer type. Complete text, including the unmodified prompt, is retained for inspection.

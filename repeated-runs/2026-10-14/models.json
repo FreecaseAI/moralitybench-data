@@ -1,0 +1,5 @@
+{
+  "GPT-6 Astra": "openai/gpt-6-astra",
+  "Muse Wonder": "meta/muse-wonder",
+  "Gemini 4 Argon": "google/gemini-4-argon"
+}
