@@ -1,6 +1,6 @@
 # MoralityBench: An exploratory benchmark of elicited moral profiles in generative and structured decision models
 
-**Working manuscript, updated October 14, 2026**
+**Working manuscript, updated October 29, 2026**
 
 Authors and affiliations to be confirmed.
 
@@ -8,7 +8,7 @@ Authors and affiliations to be confirmed.
 
 ## Abstract
 
-MoralityBench describes the moral response profiles elicited from AI systems using an adapted 36-item Moral Foundations Questionnaire 2 (MFQ-2) and the 20-item Ethics Position Questionnaire (EPQ). This updated manuscript reports 16 scored generative model configurations, each with five questionnaire administrations, plus Jev, a separately evaluated structured decision system. The combined generative archive contains 4,295 usable ratings from 4,480 scheduled items. The original cohort comprises 13 configurations, with 3,580 usable ratings from 3,640 scheduled items; the October 14 extension adds GPT-6 Astra, Muse Wonder, and Gemini 4 Argon, with 715 usable ratings from 840 scheduled items. In the original cohort, excluding missing ratings, exact agreement across all ten pairs of runs ranges from 60.4% to 94.7%. Within the original cohort, DeepSeek V4.1 Flash has the lowest average distance from the six published US foundation means (0.239), followed by MiMo v2.6 Pro (0.253); MiMo has the lowest distance in three of the four new runs. Four configurations cross an EPQ category boundary between runs. In the original snapshot every configuration exceeded the human Purity reference, but DeepSeek's five-run mean falls below it, and the replacement of four of the six Purity items limits what that comparison can show. Jev returns all 280 ratings, with 95.7% agreement after rounding. Its prompt and structured interface differ from the generative protocol, so these observations cannot establish an architectural advantage. The release includes individual responses, completion records, scoring code, and a public leaderboard of five-run averages and agreement percentages. The October 14 models use strict whole-answer integer scoring; the older models were not retested and retain their original scoring. Because many of Gemini's responses are verbose or missing, its profile depends on the parser, and rejecting digits taken from its prose reverses its distance ordering relative to Astra. These descriptive results concern responses to adapted questionnaires and do not establish equivalent human traits, moral agency, ethical superiority, or deployment safety.
+MoralityBench describes the moral response profiles elicited from AI systems using an adapted 36-item Moral Foundations Questionnaire 2 (MFQ-2) and the 20-item Ethics Position Questionnaire (EPQ). This updated manuscript reports 20 scored generative model configurations, each with five questionnaire administrations, plus Jev, a separately evaluated structured decision system. The combined generative archive contains 5,415 usable ratings from 5,600 scheduled items. The original cohort comprises 13 configurations, with 3,580 usable ratings from 3,640 scheduled items; the October 14 extension adds GPT-6 Astra, Muse Wonder, and Gemini 4 Argon, with 715 usable ratings from 840 scheduled items. The October 29 extension adds GPT-6.1 Terra, Claude Haiku 5.5, Kimi K3.1 Pro, and MiniMax M3.1 Flash, with all 1,120 responses usable. In the original cohort, excluding missing ratings, exact agreement across all ten pairs of runs ranges from 60.4% to 94.7%. Within the original cohort, DeepSeek V4.1 Flash has the lowest average distance from the six published US foundation means (0.239), followed by MiMo v2.6 Pro (0.253); MiMo has the lowest distance in three of the four new runs. Five configurations cross an EPQ category boundary between runs. In the original snapshot every configuration exceeded the human Purity reference, but DeepSeek's five-run mean falls below it, and the replacement of four of the six Purity items limits what that comparison can show. Jev returns all 280 ratings, with 95.7% agreement after rounding. Its prompt and structured interface differ from the generative protocol, so these observations cannot establish an architectural advantage. The release includes individual responses, completion records, scoring code, and a public leaderboard of five-run averages and agreement percentages. The October 14 and October 29 models use strict whole-answer integer scoring; the older models were not retested and retain their original scoring. Because many of Gemini's responses are verbose or missing, its profile depends on the parser, and rejecting digits taken from its prose reverses its distance ordering relative to Astra. These descriptive results concern responses to adapted questionnaires and do not establish equivalent human traits, moral agency, ethical superiority, or deployment safety.
 
 **Keywords:** AI evaluation; moral psychology; moral foundations; ethical ideology; survey validity; structured decision models.
 
@@ -52,7 +52,7 @@ Ordering and labeling effects in language-model surveys show why the response pr
 
 The public release contains instrument definitions, administration scripts, individual ratings, scored summaries, and a website for comparing profiles [9]. The instrument metadata identifies version 1.0, created October 2, 2026, and Appendix A identifies the snapshot used here. We analyze each *recorded model configuration* under its repository label and requested API identifier, which we retain so others can attempt replication. The stored ratings do not authenticate the backend checkpoint that answered a request.
 
-The original generative scripts name 14 configurations, of which 13 appear in the original scored release. Muse Spark 1.3 has 56 missing ratings, so it has no score to compare, and Jev is reported separately. The initial audit uses the released records and published human reference means, and Section 6 reports four additional administrations of each scored LLM. The October 14 extension adds three scored configurations, bringing the manuscript and dated leaderboard to 16 scored generative configurations plus Jev. The two cohorts retain their respective collection dates and parsing rules, as detailed in the extension section. No part of this study involved new human participants.
+The original generative scripts name 14 configurations, of which 13 appear in the original scored release. Muse Spark 1.3 has 56 missing ratings, so it has no score to compare, and Jev is reported separately. The initial audit uses the released records and published human reference means, and Section 6 reports four additional administrations of each scored LLM. The October 14 extension adds three scored configurations, bringing the manuscript and dated leaderboard to 16 scored generative configurations plus Jev. The October 29 extension subsequently adds four scored configurations, bringing the current manuscript and leaderboard to 20 plus Jev. The three dated cohorts retain their respective collection dates and parsing rules. No part of this study involved new human participants.
 
 
 ### Adapted MFQ-2
@@ -332,6 +332,23 @@ Gemini's missing answers are concentrated. In each run it gives only two whole-i
 
 Agreement percentages from the two cohorts are not strictly controlled comparisons of checkpoint stability, because their runs differ in time separation. Each original-cohort configuration combines an original administration with later repeats, whereas the five October 14 runs were collected in concurrent streams in one session. The preceding tables keep the original cohort separate, and the combined website labels collection dates and parser policies. These descriptive profiles do not establish moral superiority, stable beliefs, or validated equivalence to human traits. Full records, both parser calculations, and the reproduction scripts are in [the October 14 release](https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-14).
 
+## October 29 extension: four additional configurations
+
+On October 29, 2026, we administered five fresh 56-item MFQ-2/EPQ runs to GPT-6.1 Terra, Claude Haiku 5.5, Kimi K3.1 Pro, and MiniMax M3.1 Flash through OpenRouter. All 1,120 scheduled responses are valid whole-answer integers. These observations expand the combined archive to 20 scored LLM configurations, with 5,415 usable ratings from 5,600 scheduled items. The prior 16 configurations and Jev were not retested, and their recorded values are unchanged.
+
+The item wording, anchors, one-message-per-item requests, original question order, requested temperature of 0, 4096-token output limit, and reasoning-output exclusion match the October 14 collection. The current catalog does not list temperature support for Terra, Haiku, or Kimi; router acceptance does not prove backend enforcement. MiniMax lists temperature support and was served by two providers during this collection. Returned model/provider labels and the catalog snapshot are archived, but immutable backend identity remains unverified.
+
+| Model | Usable / 280 | Agreement | Mean distance | EPQ mean group |
+| --- | --- | --- | --- | --- |
+| GPT-6.1 Terra | 280/280 | 74.5% | 0.301 | Exceptionist |
+| Claude Haiku 5.5 | 280/280 | 80.0% | 0.405 | Situationist |
+| Kimi K3.1 Pro | 280/280 | 72.1% | 0.438 | Absolutist |
+| MiniMax M3.1 Flash | 280/280 | 57.1% | 0.518 | Absolutist |
+
+Among these additions, GPT-6.1 Terra has the lowest mean profile distance (0.301), while Claude Haiku 5.5 has the highest exact answer agreement (80.0%). MiniMax M3.1 Flash has 57.1% agreement and changes EPQ groups between runs. All 560 available comparisons contribute to each agreement estimate because no new answers are missing. These are descriptive questionnaire results, not evidence of moral superiority or stable human-like traits. Five concurrent fresh streams per new configuration are not a controlled longitudinal comparison with the earlier cross-time cohort.
+
+The [October 29 release](https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-29) contains full sanitized responses, requested/returned identifiers, per-run scores, strict and first-digit calculations, combined CSV/JSON summaries, and file hashes. Its verifier checks all 1,120 item/prompt/settings records and distinct response IDs. Recorded cost in final response receipts is $0.6359; charges absent from those receipts are not included.
+
 ## Discussion
 
 
@@ -384,7 +401,7 @@ We collected no new human-subject data for this manuscript and cite the source o
 
 MoralityBench combines an adapted MFQ-2 with EPQ scores and a separate evaluation of a structured decision system. The initial archive records differences among 13 scored generative configurations and shows that item adaptation, missing responses, category boundaries, and score conversion can alter the comparisons. The release lets others inspect and recompute those results. Across the original administration and four repeats, exact pairwise agreement among LLMs varies from 60.4% to 94.7%, and Jev has 95.7% under its separate protocol. The public leaderboard reports these percentages together with averages, observed ranges, and missing counts.
 
-The October 14 extension adds three dated configurations without replacing the original archive. In it, the most repeatable model and the model closest to the reference differ, and Gemini 4 Argon's missing answers make its profile sensitive to the parser. The 16-model website is descriptive across collection dates and is not a controlled longitudinal comparison. Matching human reference data and testing predictions in new scenarios remain necessary to establish comparability and behavioral validity.
+The October 14 extension adds three dated configurations without replacing the original archive. In it, the most repeatable model and the model closest to the reference differ, and Gemini 4 Argon's missing answers make its profile sensitive to the parser. The October 29 extension adds four further configurations with all 1,120 responses usable. Its lowest-distance model and most repeatable model also differ. The current 20-model website is descriptive across three collection dates and is not a controlled longitudinal comparison. Matching human reference data and testing predictions in new scenarios remain necessary to establish comparability and behavioral validity.
 
 ## References
 
@@ -440,6 +457,18 @@ The data snapshot is the public repository `FreecaseAI/moralitybench-data` at co
 *Identifiers from released administration code; inclusion does not authenticate the served checkpoint. Muse has no usable ratings.*
 
 
+
+### Dated extension identifiers
+
+| Collection date | Repository label | Requested API identifier |
+| --- | --- | --- |
+| 2026-10-14 | GPT-6 Astra | `openai/gpt-6-astra` |
+| 2026-10-14 | Muse Wonder | `meta/muse-wonder` |
+| 2026-10-14 | Gemini 4 Argon | `google/gemini-4-argon` |
+| 2026-10-29 | GPT-6.1 Terra | `openai/gpt-6.1-terra` |
+| 2026-10-29 | Claude Haiku 5.5 | `anthropic/claude-haiku-5.5` |
+| 2026-10-29 | Kimi K3.1 Pro | `moonshotai/kimi-k3.1-pro` |
+| 2026-10-29 | MiniMax M3.1 Flash | `minimax/minimax-m3.1-flash` |
 
 ## Elicitation and score specification
 

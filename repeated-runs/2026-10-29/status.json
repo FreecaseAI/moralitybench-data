@@ -1,0 +1,218 @@
+{
+  "updated_at": "2026-10-29T19:36:41.466017+00:00",
+  "stopped": false,
+  "models": {
+    "Claude Haiku 5.5": {
+      "trials": {
+        "2": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 2,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "5": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 5,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "1": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 1,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "4": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 4,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "3": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 3,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        }
+      },
+      "completed": 280,
+      "scheduled": 280,
+      "state": "complete",
+      "last_update": "2026-10-29T19:30:30.651236+00:00"
+    },
+    "GPT-6.1 Terra": {
+      "trials": {
+        "1": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 1,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "3": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 3,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "5": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 5,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "4": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 4,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "2": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 2,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        }
+      },
+      "completed": 280,
+      "scheduled": 280,
+      "state": "complete",
+      "last_update": "2026-10-29T19:31:07.011996+00:00"
+    },
+    "MiniMax M3.1 Flash": {
+      "trials": {
+        "1": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 1,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "2": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 2,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "4": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 4,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "5": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 5,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "3": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 3,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        }
+      },
+      "completed": 280,
+      "scheduled": 280,
+      "state": "complete",
+      "last_update": "2026-10-29T19:33:21.433292+00:00"
+    },
+    "Kimi K3.1 Pro": {
+      "trials": {
+        "2": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 2,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "5": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 5,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "1": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 1,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "3": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 3,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        },
+        "4": {
+          "state": "complete",
+          "completed": 56,
+          "scheduled": 280,
+          "run": 4,
+          "instrument": "EPQ",
+          "item": 20,
+          "last_status": "numeric"
+        }
+      },
+      "completed": 280,
+      "scheduled": 280,
+      "state": "complete",
+      "last_update": "2026-10-29T19:36:41.465974+00:00"
+    }
+  }
+}
