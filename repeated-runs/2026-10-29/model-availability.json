@@ -1,0 +1,434 @@
+{
+  "checked_at": "2026-10-29T19:28:56.226961+00:00",
+  "source": "https://openrouter.ai/api/v1/models",
+  "models": {
+    "GPT-6.1 Terra": {
+      "id": "openai/gpt-6.1-terra",
+      "canonical_slug": "openai/gpt-6.1-terra-20261026",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-6.1 Terra",
+      "created": 1793038409,
+      "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, priced below GPT-6.1 Sol. It is suited for everyday agentic, coding, and writing work, is particularly strong at understanding screenshots...",
+      "context_length": 1050000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000005",
+        "input_cache_write": "0.00000125",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000002",
+            "completion": "0.0000075",
+            "input_cache_read": "0.0000001",
+            "input_cache_write": "0.0000025"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1050000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-6.1-terra-20261026/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 51,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low",
+          "none"
+        ],
+        "default_effort": "medium"
+      }
+    },
+    "Claude Haiku 5.5": {
+      "id": "anthropic/claude-haiku-5.5",
+      "canonical_slug": "anthropic/claude-haiku-5.5-20261007",
+      "hugging_face_id": null,
+      "name": "Anthropic: Claude Haiku 5.5",
+      "created": 1791397883,
+      "description": "Claude Haiku 5.5 is Anthropic's small, fast model for high-volume, cost-sensitive work such as summarization, subagents, and browser use. It succeeds Claude Haiku 4.5 with stronger coding, computer use, and...",
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000001",
+        "completion": "0.0000005",
+        "web_search": "0.01",
+        "input_cache_read": "0.00000001",
+        "input_cache_write": "0.000000125",
+        "input_cache_write_1h": "0.0000002",
+        "overrides": [
+          {
+            "min_prompt_tokens": 100000,
+            "prompt": "0.0000005",
+            "completion": "0.0000025",
+            "input_cache_read": "0.00000005",
+            "input_cache_write": "0.000000625",
+            "input_cache_write_1h": "0.000001"
+          }
+        ]
+      },
+      "top_provider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 128000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_completion_tokens",
+        "max_tokens",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "verbosity"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/anthropic/claude-haiku-5.5-20261007/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1343,
+            "win_rate": 58.1,
+            "rank": 11
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1280,
+            "win_rate": 50.6,
+            "rank": 24
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1283,
+            "win_rate": 52.2,
+            "rank": 20
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1322,
+            "win_rate": 54.9,
+            "rank": 12
+          },
+          {
+            "arena": "models",
+            "category": "svg",
+            "elo": 1201,
+            "win_rate": 44,
+            "rank": 29
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1279,
+            "win_rate": 51,
+            "rank": 26
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1262,
+            "win_rate": 48.7,
+            "rank": 36
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 36.2,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low",
+          "none"
+        ],
+        "default_effort": "medium"
+      }
+    },
+    "Kimi K3.1 Pro": {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "canonical_slug": "moonshotai/kimi-k3.1-pro-20261023",
+      "hugging_face_id": null,
+      "name": "MoonshotAI: Kimi K3.1 Pro",
+      "created": 1792778188,
+      "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000002"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 943718,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "response_format",
+        "stop",
+        "structured_outputs",
+        "tool_choice",
+        "tools",
+        "top_logprobs"
+      ],
+      "default_parameters": {
+        "top_p": 0.95
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/moonshotai/kimi-k3.1-pro-20261023/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [
+          {
+            "arena": "models",
+            "category": "3d",
+            "elo": 1451,
+            "win_rate": 72.7,
+            "rank": 2
+          },
+          {
+            "arena": "models",
+            "category": "codecategories",
+            "elo": 1354,
+            "win_rate": 61,
+            "rank": 5
+          },
+          {
+            "arena": "models",
+            "category": "dataviz",
+            "elo": 1300,
+            "win_rate": 55.7,
+            "rank": 14
+          },
+          {
+            "arena": "models",
+            "category": "gamedev",
+            "elo": 1410,
+            "win_rate": 66.9,
+            "rank": 3
+          },
+          {
+            "arena": "models",
+            "category": "svg",
+            "elo": 1328,
+            "win_rate": 62.3,
+            "rank": 1
+          },
+          {
+            "arena": "models",
+            "category": "uicomponent",
+            "elo": 1399,
+            "win_rate": 66.5,
+            "rank": 1
+          },
+          {
+            "arena": "models",
+            "category": "website",
+            "elo": 1326,
+            "win_rate": 58.1,
+            "rank": 5
+          }
+        ],
+        "artificial_analysis": {
+          "intelligence_index": 46,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": false,
+        "default_enabled": true,
+        "supported_efforts": [
+          "max",
+          "high",
+          "low",
+          "none"
+        ],
+        "default_effort": "max"
+      }
+    },
+    "MiniMax M3.1 Flash": {
+      "id": "minimax/minimax-m3.1-flash",
+      "canonical_slug": "minimax/minimax-m3.1-flash-20261019",
+      "hugging_face_id": "MiniMaxAI/MiniMax-M3.1-Flash",
+      "name": "MiniMax: MiniMax M3.1 Flash",
+      "created": 1792379569,
+      "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
+      "context_length": 1048576,
+      "architecture": {
+        "modality": "text+image+video->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006",
+        "input_cache_read": "0.000000015"
+      },
+      "top_provider": {
+        "context_length": 1048576,
+        "max_completion_tokens": 524288,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "reasoning_effort",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/minimax/minimax-m3.1-flash-20261019/endpoints"
+      },
+      "benchmarks": {
+        "design_arena": [],
+        "artificial_analysis": {
+          "intelligence_index": 28.9,
+          "coding_index": null,
+          "agentic_index": null
+        }
+      },
+      "reasoning": {
+        "mandatory": true,
+        "supported_efforts": [
+          "max",
+          "xhigh",
+          "high",
+          "medium",
+          "low"
+        ],
+        "default_effort": "max"
+      }
+    }
+  }
+}

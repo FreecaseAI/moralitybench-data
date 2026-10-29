@@ -1,0 +1,21 @@
+{
+  "started_at": "2026-10-29T19:29:13.208826+00:00",
+  "runs": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "model_count": 4,
+  "scheduled_llm_items": 1120,
+  "concurrent_trial_streams": 16,
+  "temperature": 0,
+  "max_tokens": 4096,
+  "reasoning": {
+    "exclude": true
+  },
+  "item_order": "original stored order, one user message per item",
+  "parser": "original first digit retained alongside strict full-response integer validation",
+  "benchmark_sha256": "78577e99ab4a2a0418b49cfb1ea11bc96ffe23a655a0b310bc3e29421543930a"
+}

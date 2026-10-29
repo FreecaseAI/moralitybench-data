@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-29
+
+- Added five fresh MFQ-2/EPQ administrations for GPT-6.1 Terra, Claude Haiku 5.5, Kimi K3.1 Pro and MiniMax M3.1 Flash: all 1,120 responses are valid whole-answer integers.
+- Published raw receipts, model catalog metadata, strict scores, first-digit diagnostics, CSV/JSON summaries, figures and verification hashes.
+- Expanded the combined archive to 20 LLM configurations plus the unchanged Jev comparison; preserved all prior observations and cohort/parser labels.
+- Updated the working paper and downloadable PDF for the three dated cohorts.
+
 ## 2026-10-14
 
 - Applied the requested Humanizer skill to the working paper and response-viewer prose, preserving quoted answers, calculations and citations; rebuilt the paper PDF and release hashes.

@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "records": 1120,
+  "distinct_response_ids": 1120,
+  "all_item_sets_settings_prompts_checked": true,
+  "full_answer_parser_recomputed": true,
+  "models_ranked": 4,
+  "unscored_models": 0,
+  "previous_summary_sha256": "a73d039b8d9c3df48c915e1763413376b82a2c3a6d886cc922aa3db472e1af13",
+  "historical_values_preserved_except_combined_rank": true,
+  "jev_preserved": true
+}

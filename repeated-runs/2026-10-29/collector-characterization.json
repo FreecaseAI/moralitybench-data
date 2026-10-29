@@ -1,0 +1,18 @@
+{
+  "verified": true,
+  "unchanged_collection_functions": [
+    "llm_worker",
+    "request",
+    "parse",
+    "clean"
+  ],
+  "benchmark_sha256": "78577e99ab4a2a0418b49cfb1ea11bc96ffe23a655a0b310bc3e29421543930a",
+  "new_models": {
+    "GPT-6.1 Terra": "openai/gpt-6.1-terra",
+    "Claude Haiku 5.5": "anthropic/claude-haiku-5.5",
+    "Kimi K3.1 Pro": "moonshotai/kimi-k3.1-pro",
+    "MiniMax M3.1 Flash": "minimax/minimax-m3.1-flash"
+  },
+  "scheduled_responses": 1120,
+  "existing_historical_results_unchanged": true
+}
