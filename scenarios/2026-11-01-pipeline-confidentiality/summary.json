@@ -1,0 +1,246 @@
+{
+  "completed_at": "2026-11-01T18:13:29.631915+00:00",
+  "systems": 21,
+  "counts": {
+    "[A]": 17,
+    "[B]": 1,
+    "null": 3
+  },
+  "openrouter_reported_cost_usd": 0.0172243614,
+  "openrouter_maximum_estimated_usd": 0.8600575625000001,
+  "jev_input_price_usd_per_million": 0.042,
+  "jev_estimated_cost_usd": 2.8392000000000002e-05,
+  "results": [
+    {
+      "model": "Claude Haiku 5.5",
+      "requested_model": "anthropic/claude-haiku-5.5",
+      "returned_model": "anthropic/claude-haiku-5.5",
+      "provider": "Claude Platform on AWS",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 5.49e-05,
+      "result_file": "results/anthropic--claude-haiku-5.5.json"
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "requested_model": "anthropic/claude-opus-5.5",
+      "returned_model": "anthropic/claude-opus-5.5",
+      "provider": "Claude Platform on AWS",
+      "answer": null,
+      "status": "nonconforming",
+      "http_status": 200,
+      "reported_cost_usd": 0.005384,
+      "result_file": "results/anthropic--claude-opus-5.5.json"
+    },
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "requested_model": "deepseek/deepseek-v4.1-flash",
+      "returned_model": "deepseek/deepseek-v4.1-flash",
+      "provider": "OpenInference",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 2.3014e-06,
+      "result_file": "results/deepseek--deepseek-v4.1-flash.json"
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "requested_model": "google/gemini-3.8-flash",
+      "returned_model": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.00023925,
+      "result_file": "results/google--gemini-3.8-flash.json"
+    },
+    {
+      "model": "Gemini 4 Argon",
+      "requested_model": "google/gemini-4-argon",
+      "returned_model": "google/gemini-4-argon",
+      "provider": "Google",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.000738,
+      "result_file": "results/google--gemini-4-argon.json"
+    },
+    {
+      "model": "Jev",
+      "requested_model": "jev-latest",
+      "returned_model": "jev-1.14.0",
+      "provider": null,
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": null,
+      "result_file": "results/jev-typesafe.json"
+    },
+    {
+      "model": "Muse Wonder",
+      "requested_model": "meta/muse-wonder",
+      "returned_model": "meta/muse-wonder",
+      "provider": "Meta",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.0019,
+      "result_file": "results/meta--muse-wonder.json"
+    },
+    {
+      "model": "Llama 4 Maverick",
+      "requested_model": "meta-llama/llama-4-maverick",
+      "returned_model": "meta-llama/llama-4-maverick",
+      "provider": "DigitalOcean",
+      "answer": "[B]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 5.85825e-05,
+      "result_file": "results/meta-llama--llama-4-maverick.json"
+    },
+    {
+      "model": "MiniMax M3.1 Flash",
+      "requested_model": "minimax/minimax-m3.1-flash",
+      "returned_model": "minimax/minimax-m3.1-flash",
+      "provider": "Tenstorrent",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 1.881e-05,
+      "result_file": "results/minimax--minimax-m3.1-flash.json"
+    },
+    {
+      "model": "MiniMax M3",
+      "requested_model": "minimax/minimax-m3",
+      "returned_model": "minimax/minimax-m3",
+      "provider": "CoreWeave",
+      "answer": null,
+      "status": "nonconforming",
+      "http_status": 200,
+      "reported_cost_usd": 0.00010588,
+      "result_file": "results/minimax--minimax-m3.json"
+    },
+    {
+      "model": "Mistral Large 2512",
+      "requested_model": "mistralai/mistral-large-2512",
+      "returned_model": null,
+      "provider": null,
+      "answer": null,
+      "status": "api_failure",
+      "http_status": 429,
+      "reported_cost_usd": null,
+      "result_file": "results/mistralai--mistral-large-2512.json"
+    },
+    {
+      "model": "Kimi K3.1 Pro",
+      "requested_model": "moonshotai/kimi-k3.1-pro",
+      "returned_model": "moonshotai/kimi-k3.1-pro",
+      "provider": "Moonshot AI",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.00074,
+      "result_file": "results/moonshotai--kimi-k3.1-pro.json"
+    },
+    {
+      "model": "Kimi K3",
+      "requested_model": "moonshotai/kimi-k3",
+      "returned_model": "moonshotai/kimi-k3",
+      "provider": "Wafer",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.00031019,
+      "result_file": "results/moonshotai--kimi-k3.json"
+    },
+    {
+      "model": "Nemotron 3 Ultra 550B",
+      "requested_model": "nvidia/nemotron-3-ultra-550b-a55b",
+      "returned_model": "nvidia/nemotron-3-ultra-550b-a55b",
+      "provider": "DeepInfra",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.0001641,
+      "result_file": "results/nvidia--nemotron-3-ultra-550b-a55b.json"
+    },
+    {
+      "model": "GPT-6 Astra",
+      "requested_model": "openai/gpt-6-astra",
+      "returned_model": "openai/gpt-6-astra",
+      "provider": "OpenAI",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.0033,
+      "result_file": "results/openai--gpt-6-astra.json"
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "requested_model": "openai/gpt-6.1-sol",
+      "returned_model": "openai/gpt-6.1-sol",
+      "provider": "OpenAI",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.00066,
+      "result_file": "results/openai--gpt-6.1-sol.json"
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "requested_model": "openai/gpt-6.1-terra",
+      "returned_model": "openai/gpt-6.1-terra",
+      "provider": "OpenAI",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.00033,
+      "result_file": "results/openai--gpt-6.1-terra.json"
+    },
+    {
+      "model": "Qwen3.8 27B",
+      "requested_model": "qwen/qwen3.8-27b",
+      "returned_model": "qwen/qwen3.8-27b",
+      "provider": "PrimeIntellect",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 3.428e-06,
+      "result_file": "results/qwen--qwen3.8-27b.json"
+    },
+    {
+      "model": "Grok 4.7",
+      "requested_model": "x-ai/grok-4.7",
+      "returned_model": "x-ai/grok-4.7",
+      "provider": "xAI",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.003188,
+      "result_file": "results/x-ai--grok-4.7.json"
+    },
+    {
+      "model": "MiMo v2.6 Pro",
+      "requested_model": "xiaomi/mimo-v2.6-pro",
+      "returned_model": "xiaomi/mimo-v2.6-pro",
+      "provider": "Xiaomi",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0,
+      "result_file": "results/xiaomi--mimo-v2.6-pro.json"
+    },
+    {
+      "model": "GLM 5.3",
+      "requested_model": "z-ai/glm-5.3",
+      "returned_model": "z-ai/glm-5.3",
+      "provider": "Wafer",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 2.69195e-05,
+      "result_file": "results/z-ai--glm-5.3.json"
+    }
+  ]
+}
