@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-01
+
+- Published full dataset and verification records for two forced-choice operational dilemmas: Chlorine Diversion (AI trolley dilemma) and Pipeline Confidentiality (duty-to-warn dilemma) across 20 LLM configurations and Jev (210 trials).
+- Published prompt sensitivity study evaluating five fresh trials per system after removing "reasoning or" from the standard preamble (210 trials, 420 scenario trials total).
+- Updated repository documentation to present all benchmark data neutrally for public review, removing internal model instructions and redundant research use boilerplate.
+
 ## 2026-10-29
 
 - Added five fresh MFQ-2/EPQ administrations for GPT-6.1 Terra, Claude Haiku 5.5, Kimi K3.1 Pro and MiniMax M3.1 Flash: all 1,120 responses are valid whole-answer integers.
