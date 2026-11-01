@@ -4,6 +4,7 @@ Open data for an exploratory benchmark of AI responses to adapted moral psycholo
 
 - [Live leaderboard](https://moralitybench.ai): five-run averages, agreement, missing answers, and charts.
 - [Two forced-choice scenarios, November 1](scenarios/README.md): chlorine diversion and pipeline confidentiality, with five trials per listed system and prompt, raw responses, format failures, retry history and costs.
+- [Prompt wording variant, November 1](scenarios/2026-11-01-without-reasoning-or/README.md): five fresh trials per system and scenario after removing only the words "reasoning or".
 - [Five-run data and reproducible analysis](repeated-runs/2026-10-04/README.md): full repeat responses, original baselines, CSV/JSON summaries, scripts, and verification hashes.
 - [Working academic paper](paper/moralitybench.md) and [LaTeX source](paper/moralitybench.tex) and [PDF](paper/moralitybench.pdf). Authorship and disclosures still require human review before submission.
 

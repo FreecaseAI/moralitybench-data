@@ -7,8 +7,9 @@ from pathlib import Path
 import repeat
 
 
-def main():
-    root = Path(__file__).resolve().parent
+def main(root=None, folders=None):
+    root = root or Path(__file__).resolve().parent
+    folders = folders or repeat.SCENARIOS
     summary = json.loads((root / 'five-trial-summary.json').read_text())
     assert summary['internal_reasoning_note'] == repeat.NOTE
     since = json.loads((root / 'repeat-model-pricing.json').read_text())['retrieved_at']
@@ -16,7 +17,7 @@ def main():
     generation_ids = set()
     reported = jev_estimated = accounted = 0
     total = 0
-    for folder in repeat.SCENARIOS:
+    for folder in folders:
         records = {str(p.relative_to(folder)): json.loads(p.read_text()) for p in (folder / 'results').rglob('*.json')}
         assert len(records) == 105, (folder.name, len(records))
         identities = {(r['model_label'], r.get('trial', 1)) for r in records.values()}

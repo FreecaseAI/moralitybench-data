@@ -85,27 +85,34 @@ def maximum_cost(payload, metadata):
     return (len(json.dumps(payload).encode()) + 4096) * prompt + 4096 * output
 
 
-def collect(name, metadata, keys, budget):
+def collect(name, metadata, keys, budget, scenario_pairs=None):
+    pairs = scenario_pairs or [(folder, folder) for folder in SCENARIOS]
     is_mistral = name == 'Mistral Large 2512'
     last_finish = None
     previous_status = None
     if is_mistral:
-        previous = [json.loads(p.read_text()) for folder in SCENARIOS for p in (folder / 'results').rglob('mistralai--mistral-large-2512.json')]
+        previous = [json.loads(p.read_text()) for folder in {f for pair in pairs for f in pair} for p in (folder / 'results').rglob('mistralai--mistral-large-2512.json')]
         latest = max(previous, key=lambda r: r['finished_at'])
         elapsed = (dt.datetime.now(dt.timezone.utc) - dt.datetime.fromisoformat(latest['finished_at'])).total_seconds()
         last_finish = time.monotonic() - elapsed
         previous_status = latest['http_status']
-    for folder in SCENARIOS:
-        baseline_path = next(p for p in (folder / 'results').glob('*.json') if json.loads(p.read_text())['model_label'] == name)
+    for source, folder in pairs:
+        baseline_path = next(p for p in (source / 'results').glob('*.json') if json.loads(p.read_text())['model_label'] == name)
         baseline = json.loads(baseline_path.read_text())
         # Backfill the missing first-trial Mistral answer without discarding its error history.
-        trials = ([1] if is_mistral and baseline['http_status'] == 429 else []) + list(range(2, 6))
+        trials = range(1, 6) if source != folder else ([1] if is_mistral and baseline['http_status'] == 429 else []) + list(range(2, 6))
         for trial in trials:
-            path = baseline_path if trial == 1 else folder / 'results' / f'trial-{trial}' / baseline_path.name
+            path = folder / 'results' / baseline_path.name if trial == 1 else folder / 'results' / f'trial-{trial}' / baseline_path.name
             prior = json.loads(path.read_text()) if path.exists() else None
             if prior and prior['http_status'] == 200:
                 continue
             payload = {**baseline['request'], **({'provider': MISTRAL_ROUTING} if is_mistral else {})}
+            if source != folder:
+                prompt = (folder / 'prompt.txt').read_text().rstrip('\n')
+                if name == 'Jev':
+                    payload['state'] = prompt
+                else:
+                    payload['messages'] = [{'role': 'user', 'content': prompt}]
             maximum = maximum_cost(payload, metadata)
             history = attempts(prior) if prior else []
             for retry in range(3):
@@ -121,7 +128,7 @@ def collect(name, metadata, keys, budget):
                 last_finish = time.monotonic()
                 previous_status = record['http_status']
                 if is_mistral:
-                    record['routing_note'] = 'Explicit Mistral EU endpoint after repeated upstream HTTP 429s despite 90/180-second waits; model, prompt and generation parameters unchanged.'
+                    record['routing_note'] = 'Explicit Mistral EU endpoint, retained after repeated upstream HTTP 429s despite 90/180-second waits in the original study. Exact request payload preserved.'
                 body = record.get('response', {})
                 choices = body.get('choices') or []
                 content = body.get('answers', {}).get('action', {}).get('choice') if name == 'Jev' else choices[0].get('message', {}).get('content') if choices else None
@@ -138,9 +145,10 @@ def collect(name, metadata, keys, budget):
                 history.append({k: v for k, v in record.items() if k != 'prior_attempts'})
 
 
-def summarize():
+def summarize(folders=None, root=None):
+    folders, root = folders or SCENARIOS, root or ROOT
     combined = {'internal_reasoning_note': NOTE, 'authorized_budget_usd': 5, 'scenarios': {}, 'openrouter_reported_cost_usd': 0.0, 'jev_estimated_cost_usd': 0.0, 'unpriced_attempts': 0, 'conservative_accounted_usd': 0.0}
-    for folder in SCENARIOS:
+    for folder in folders:
         records = [(p, json.loads(p.read_text())) for p in sorted((folder / 'results').rglob('*.json'))]
         rows = []
         for path, record in records:
@@ -163,12 +171,12 @@ def summarize():
         original.ROOT = folder
         original.summarize()
     combined['combined_reported_estimated_cost_usd'] = combined['openrouter_reported_cost_usd'] + combined['jev_estimated_cost_usd']
-    persist(ROOT / 'five-trial-summary.json', combined)
+    persist(root / 'five-trial-summary.json', combined)
     print('Total records:', sum(v['records'] for v in combined['scenarios'].values()), 'Reported/estimated total USD:', combined['combined_reported_estimated_cost_usd'])
+    return combined
 
 
-def main():
-    keys = {'OpenRouter': original.key(os.environ['OPENROUTER_API_KEY'], 'OPENROUTER_API_KEY'), 'Jev': original.key(os.environ['TYPESAFE_API_KEY'], 'TYPESAFE_API_KEY')}
+def model_metadata():
     catalog = original.call('https://openrouter.ai/api/v1/models')
     assert catalog['http_status'] == 200
     lookup = {m['id']: m for m in catalog['response']['data']}
@@ -178,6 +186,12 @@ def main():
     assert endpoints['http_status'] == 200
     eu = next(e for e in endpoints['response']['data']['endpoints'] if e['tag'] == 'mistral/eu')
     names['Mistral Large 2512']['pricing'] = eu['pricing']
+    return names, eu
+
+
+def main():
+    keys = {'OpenRouter': original.key(os.environ['OPENROUTER_API_KEY'], 'OPENROUTER_API_KEY'), 'Jev': original.key(os.environ['TYPESAFE_API_KEY'], 'TYPESAFE_API_KEY')}
+    names, eu = model_metadata()
     pricing_path = ROOT / 'repeat-model-pricing.json'
     pricing = json.loads(pricing_path.read_text()) if pricing_path.exists() else {'retrieved_at': original.now(), 'models': {name: {'id': m.get('id', 'jev-latest'), 'pricing': m.get('pricing', {'prompt': '0.000000042', 'completion': '0'})} for name, m in names.items()}, 'internal_reasoning_note': NOTE}
     pricing.setdefault('mistral_routing_change_at', original.now())
