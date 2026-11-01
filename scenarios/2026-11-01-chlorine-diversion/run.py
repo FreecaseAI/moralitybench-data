@@ -55,18 +55,20 @@ def call(url, payload=None, token=None):
         headers['Authorization'] = 'Bearer ' + token
     req = urllib.request.Request(url, data=json.dumps(payload).encode() if payload is not None else None, headers=headers)
     started = time.monotonic()
+    retry_after = None
     try:
         with urllib.request.build_opener(NoRedirect()).open(req, timeout=120) as response:
             code, raw = response.status, response.read().decode()
     except urllib.error.HTTPError as response:
         code, raw = response.code, response.read().decode(errors='replace')
+        retry_after = response.headers.get('Retry-After')
     except (OSError, TimeoutError) as error:
         return {'http_status': None, 'transport_error': type(error).__name__, 'elapsed_seconds': round(time.monotonic()-started, 3)}
     try:
         body = json.loads(raw)
     except ValueError:
         body = {'unparsed_body': raw}
-    return {'http_status': code, 'response': body, 'elapsed_seconds': round(time.monotonic()-started, 3)}
+    return {'http_status': code, 'response': body, 'elapsed_seconds': round(time.monotonic()-started, 3), **({'retry_after': retry_after} if retry_after else {})}
 
 
 def answer(content):

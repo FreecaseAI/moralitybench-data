@@ -3,7 +3,7 @@
 Open data for an exploratory benchmark of AI responses to adapted moral psychology questionnaires. The current display includes five runs for 20 scored LLM configurations across three dated cohorts and a separate Jev comparison. The [October 29 extension](repeated-runs/2026-10-29/README.md) adds GPT-6.1 Terra, Claude Haiku 5.5, Kimi K3.1 Pro and MiniMax M3.1 Flash, with 1,120 valid responses. The [October 14 extension](repeated-runs/2026-10-14/README.md) added GPT-6 Astra, Muse Wonder and Gemini 4 Argon. Earlier configurations and Jev were not retested. October 14 and October 29 results use strict whole-answer integers because Gemini’s verbose nonanswers contain misleading digits; historical first-digit results remain preserved.
 
 - [Live leaderboard](https://moralitybench.ai): five-run averages, agreement, missing answers, and charts.
-- [Two forced-choice scenarios, November 1](scenarios/README.md): chlorine diversion and pipeline confidentiality, with one fresh response per listed system, raw responses, format failures and costs.
+- [Two forced-choice scenarios, November 1](scenarios/README.md): chlorine diversion and pipeline confidentiality, with five trials per listed system and prompt, raw responses, format failures, retry history and costs.
 - [Five-run data and reproducible analysis](repeated-runs/2026-10-04/README.md): full repeat responses, original baselines, CSV/JSON summaries, scripts, and verification hashes.
 - [Working academic paper](paper/moralitybench.md) and [LaTeX source](paper/moralitybench.tex) and [PDF](paper/moralitybench.pdf). Authorship and disclosures still require human review before submission.
 

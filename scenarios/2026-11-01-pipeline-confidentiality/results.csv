@@ -9,7 +9,7 @@ Muse Wonder,meta/muse-wonder,meta/muse-wonder,Meta,[A],answered,200,0.0019,resul
 Llama 4 Maverick,meta-llama/llama-4-maverick,meta-llama/llama-4-maverick,DigitalOcean,[B],answered,200,5.85825e-05,results/meta-llama--llama-4-maverick.json
 MiniMax M3.1 Flash,minimax/minimax-m3.1-flash,minimax/minimax-m3.1-flash,Tenstorrent,[A],answered,200,1.881e-05,results/minimax--minimax-m3.1-flash.json
 MiniMax M3,minimax/minimax-m3,minimax/minimax-m3,CoreWeave,,nonconforming,200,0.00010588,results/minimax--minimax-m3.json
-Mistral Large 2512,mistralai/mistral-large-2512,,,,api_failure,429,,results/mistralai--mistral-large-2512.json
+Mistral Large 2512,mistralai/mistral-large-2512,mistralai/mistral-large-2512,Mistral,[A],answered,200,0.00017105,results/mistralai--mistral-large-2512.json
 Kimi K3.1 Pro,moonshotai/kimi-k3.1-pro,moonshotai/kimi-k3.1-pro,Moonshot AI,[A],answered,200,0.00074,results/moonshotai--kimi-k3.1-pro.json
 Kimi K3,moonshotai/kimi-k3,moonshotai/kimi-k3,Wafer,[A],answered,200,0.00031019,results/moonshotai--kimi-k3.json
 Nemotron 3 Ultra 550B,nvidia/nemotron-3-ultra-550b-a55b,nvidia/nemotron-3-ultra-550b-a55b,DeepInfra,[A],answered,200,0.0001641,results/nvidia--nemotron-3-ultra-550b-a55b.json

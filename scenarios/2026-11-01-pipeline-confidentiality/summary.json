@@ -1,13 +1,13 @@
 {
-  "completed_at": "2026-11-01T18:13:29.631915+00:00",
+  "completed_at": "2026-11-01T18:35:54.360301+00:00",
   "systems": 21,
   "counts": {
-    "[A]": 17,
+    "[A]": 18,
     "[B]": 1,
-    "null": 3
+    "null": 2
   },
-  "openrouter_reported_cost_usd": 0.0172243614,
-  "openrouter_maximum_estimated_usd": 0.8600575625000001,
+  "openrouter_reported_cost_usd": 0.0173954114,
+  "openrouter_maximum_estimated_usd": 0.8720178625,
   "jev_input_price_usd_per_million": 0.042,
   "jev_estimated_cost_usd": 2.8392000000000002e-05,
   "results": [
@@ -124,12 +124,12 @@
     {
       "model": "Mistral Large 2512",
       "requested_model": "mistralai/mistral-large-2512",
-      "returned_model": null,
-      "provider": null,
-      "answer": null,
-      "status": "api_failure",
-      "http_status": 429,
-      "reported_cost_usd": null,
+      "returned_model": "mistralai/mistral-large-2512",
+      "provider": "Mistral",
+      "answer": "[A]",
+      "status": "answered",
+      "http_status": 200,
+      "reported_cost_usd": 0.00017105,
       "result_file": "results/mistralai--mistral-large-2512.json"
     },
     {
