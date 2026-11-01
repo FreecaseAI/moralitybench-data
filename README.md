@@ -85,3 +85,7 @@ The questionnaire evaluation tests models on 56 adapted items from:
   - Combined five-run summaries and per-question agreement calculations.
 - `paper/`:
   - Working manuscript (`moralitybench.md`), LaTeX document (`moralitybench.tex`), and compiled PDF (`moralitybench.pdf`).
+
+## Contact
+
+For inquiries regarding this research or data, contact [info@freecase.ai](mailto:info@freecase.ai).
