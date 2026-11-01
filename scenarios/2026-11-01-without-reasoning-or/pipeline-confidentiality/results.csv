@@ -1,0 +1,22 @@
+model,requested_model,returned_model,provider,answer,status,http_status,reported_cost_usd,result_file
+Claude Haiku 5.5,anthropic/claude-haiku-5.5,anthropic/claude-haiku-5.5,Claude Platform on AWS,[A],answered,200,5.44e-05,results/anthropic--claude-haiku-5.5.json
+Claude Opus 5.5,anthropic/claude-opus-5.5,anthropic/claude-opus-5.5,Claude Platform on AWS,,nonconforming,200,0.004664,results/anthropic--claude-opus-5.5.json
+DeepSeek V4.1 Flash,deepseek/deepseek-v4.1-flash,deepseek/deepseek-v4.1-flash,OpenInference,[A],answered,200,2.3012e-06,results/deepseek--deepseek-v4.1-flash.json
+Gemini 3.8 Flash,google/gemini-3.8-flash,google/gemini-3.8-flash,Google,[A],answered,200,0.00023775,results/google--gemini-3.8-flash.json
+Gemini 4 Argon,google/gemini-4-argon,google/gemini-4-argon,Google,[A],answered,200,0.000734,results/google--gemini-4-argon.json
+Jev,jev-latest,jev-1.14.0,,[A],answered,200,,results/jev-typesafe.json
+Muse Wonder,meta/muse-wonder,meta/muse-wonder,Meta,[A],answered,200,0.002172,results/meta--muse-wonder.json
+Llama 4 Maverick,meta-llama/llama-4-maverick,meta-llama/llama-4-maverick,DigitalOcean,[B],answered,200,5.82075e-05,results/meta-llama--llama-4-maverick.json
+MiniMax M3.1 Flash,minimax/minimax-m3.1-flash,minimax/minimax-m3.1-flash,Tenstorrent,[A],answered,200,4.195e-05,results/minimax--minimax-m3.1-flash.json
+MiniMax M3,minimax/minimax-m3,minimax/minimax-m3,CoreWeave,[A],answered,200,0.00010638,results/minimax--minimax-m3.json
+Mistral Large 2512,mistralai/mistral-large-2512,mistralai/mistral-large-2512,Mistral,[A],answered,200,0.00016995,results/mistralai--mistral-large-2512.json
+Kimi K3.1 Pro,moonshotai/kimi-k3.1-pro,moonshotai/kimi-k3.1-pro,Moonshot AI,[A],answered,200,0.000736,results/moonshotai--kimi-k3.1-pro.json
+Kimi K3,moonshotai/kimi-k3,moonshotai/kimi-k3,Wafer,[A],answered,200,0.000309892,results/moonshotai--kimi-k3.json
+Nemotron 3 Ultra 550B,nvidia/nemotron-3-ultra-550b-a55b,nvidia/nemotron-3-ultra-550b-a55b,DeepInfra,[A],answered,200,0.0001631,results/nvidia--nemotron-3-ultra-550b-a55b.json
+GPT-6 Astra,openai/gpt-6-astra,openai/gpt-6-astra,OpenAI,[A],answered,200,0.00328,results/openai--gpt-6-astra.json
+GPT-6.1 Sol,openai/gpt-6.1-sol,openai/gpt-6.1-sol,OpenAI,[A],answered,200,0.000656,results/openai--gpt-6.1-sol.json
+GPT-6.1 Terra,openai/gpt-6.1-terra,openai/gpt-6.1-terra,OpenAI,[A],answered,200,0.000328,results/openai--gpt-6.1-terra.json
+Qwen3.8 27B,qwen/qwen3.8-27b,qwen/qwen3.8-27b,PrimeIntellect,[A],answered,200,5.205e-06,results/qwen--qwen3.8-27b.json
+Grok 4.7,x-ai/grok-4.7,x-ai/grok-4.7,xAI,[A],answered,200,0.005926,results/x-ai--grok-4.7.json
+MiMo v2.6 Pro,xiaomi/mimo-v2.6-pro,xiaomi/mimo-v2.6-pro,Xiaomi,[A],answered,200,0,results/xiaomi--mimo-v2.6-pro.json
+GLM 5.3,z-ai/glm-5.3,z-ai/glm-5.3,Wafer,[A],answered,200,2.67797e-05,results/z-ai--glm-5.3.json
