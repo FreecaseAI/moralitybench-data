@@ -86,6 +86,10 @@ The questionnaire evaluation tests models on 56 adapted items from:
 - `paper/`:
   - Working manuscript (`moralitybench.md`), LaTeX document (`moralitybench.tex`), and compiled PDF (`moralitybench.pdf`).
 
+## License
+
+The MoralityBench datasets, raw model response records, evaluation outputs, and documentation are released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
 ## Contact
 
 For inquiries regarding this research or data, contact [info@freecase.ai](mailto:info@freecase.ai).
