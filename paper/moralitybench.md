@@ -1,7 +1,6 @@
 # MoralityBench: An exploratory benchmark of elicited moral profiles in generative and structured decision models
 
-**Working manuscript, updated November 4, 2026**
-Not for publication.  This version has not been checked for errors. Working copy only.
+**Working manuscript, updated October 29, 2026**
 
 Authors and affiliations to be confirmed.
 
@@ -9,22 +8,25 @@ Authors and affiliations to be confirmed.
 
 ## Abstract
 
-MoralityBench describes the moral response profiles elicited from AI systems using an adapted 36-item Moral Foundations Questionnaire 2 (MFQ-2) and the 20-item Ethics Position Questionnaire (EPQ). This manuscript reports 20 scored generative model configurations, each with five questionnaire administrations, plus Jev, a separately evaluated structured decision system. Across the generative models, the archive contains 5,415 usable ratings from 5,600 scheduled items. Excluding missing ratings, exact agreement across pairwise run comparisons ranges from 57.1% to 94.7%. DeepSeek V4.1 Flash has the lowest average distance from the six published US foundation means (0.239), followed by MiMo v2.6 Pro (0.253). Five configurations cross an EPQ category boundary between runs. While configurations predominantly exceeded the human Purity reference, DeepSeek's five-run mean falls below it, and the replacement of four of the six Purity items limits what that comparison can show. Jev returns all 280 ratings, with 95.7% agreement after rounding. Its prompt and structured interface differ from the generative protocol, so these observations cannot establish an architectural advantage. The release includes individual responses, completion records, scoring code, and a public leaderboard of five-run averages and agreement percentages. Because many of Gemini's responses are verbose or missing, its profile depends on the parser, and rejecting digits taken from its prose reverses its distance ordering relative to Astra. These descriptive results concern responses to adapted questionnaires and do not establish equivalent human traits, moral agency, ethical superiority, or deployment safety. A key finding is that LLMs have a surprisingly high degree of variance across multiple runs of the same questions under the same test constraints.
+MoralityBench describes the moral response profiles elicited from AI systems using an adapted 36-item Moral Foundations Questionnaire 2 (MFQ-2) and the 20-item Ethics Position Questionnaire (EPQ). This updated manuscript reports 20 scored generative model configurations, each with five questionnaire administrations, plus Jev, a separately evaluated structured decision system. The combined generative archive contains 5,415 usable ratings from 5,600 scheduled items. The original cohort comprises 13 configurations, with 3,580 usable ratings from 3,640 scheduled items; the October 14 extension adds GPT-6 Astra, Muse Wonder, and Gemini 4 Argon, with 715 usable ratings from 840 scheduled items. The October 29 extension adds GPT-6.1 Terra, Claude Haiku 5.5, Kimi K3.1 Pro, and MiniMax M3.1 Flash, with all 1,120 responses usable. In the original cohort, excluding missing ratings, exact agreement across all ten pairs of runs ranges from 60.4% to 94.7%. Within the original cohort, DeepSeek V4.1 Flash has the lowest average distance from the six published US foundation means (0.239), followed by MiMo v2.6 Pro (0.253); MiMo has the lowest distance in three of the four new runs. Five configurations cross an EPQ category boundary between runs. In the original snapshot every configuration exceeded the human Purity reference, but DeepSeek's five-run mean falls below it, and the replacement of four of the six Purity items limits what that comparison can show. Jev returns all 280 ratings, with 95.7% agreement after rounding. Its prompt and structured interface differ from the generative protocol, so these observations cannot establish an architectural advantage. The release includes individual responses, completion records, scoring code, and a public leaderboard of five-run averages and agreement percentages. The October 14 and October 29 models use strict whole-answer integer scoring; the older models were not retested and retain their original scoring. Because many of Gemini's responses are verbose or missing, its profile depends on the parser, and rejecting digits taken from its prose reverses its distance ordering relative to Astra. These descriptive results concern responses to adapted questionnaires and do not establish equivalent human traits, moral agency, ethical superiority, or deployment safety.
 
 **Keywords:** AI evaluation; moral psychology; moral foundations; ethical ideology; survey validity; structured decision models.
 
 
 ## Introduction
 
-AI systems give advice about welfare, fairness, obligations, and act as agents of human principals. Therefore, it is critical that we understand the moral commitments of AI systems.  Calling a system "aligned" leaves several questions unanswered. Does its answer resemble a population average? Does it meet a stated ethical standard? Would different wording produce the same answer, and does the answer predict behavior outside the questionnaire?  These questions are orthogonal to each other and to the problem addressed by this manuscript, which is to provide a descriptive account of the moral response profiles of a set of AI systems using an adapted MFQ-2 and EPQ.
+AI systems give advice about welfare, fairness, obligations, and conflicts between social commitments. Evaluating that advice requires knowing which commitments a response expresses and how the question elicited them. Calling a system "aligned" leaves several questions unanswered. Does its answer resemble a population average? Does it meet a stated ethical standard? Would different wording produce the same answer, and does the answer predict behavior outside the questionnaire?
 
-We have no existing framework for understanding the moral commitments of AI systems, beyond the existing morality tests that have been applied to human beings, therefore it is from that existing framework that we must begin to understand what the moral alignments of AI systems are.  Existing benchmarks such as ETHICS tests predictions about ethical judgments [1]. MoralChoice examines choices in moral scenarios, including uncertainty and consistency [2]. MoralBench adapts moral-foundations questionnaires and vignettes for model evaluation [3]. Because each covers only part of the question, each needs a clear account of what it measures and how it administers and scores the task.
+Existing benchmarks examine different parts of this problem. ETHICS tests predictions about ethical judgments [1]. MoralChoice examines choices in moral scenarios, including uncertainty and consistency [2]. MoralBench adapts moral-foundations questionnaires and vignettes for model evaluation [3]. Because each covers only part of the question, each needs a clear account of what it measures and how it administers and scores the task.
 
 MoralityBench combines two moral-psychology instruments in a compact resource whose responses and scores are open to inspection. The adapted MFQ-2 distinguishes equality from proportionality: a respondent can endorse equal treatment or outcomes while taking a different position on allocating rewards according to contribution. The EPQ measures idealism and relativism, which describe ethical positions rather than the content of a foundation profile. Together, the two instruments expose differences that an overall score can hide.
 
 We use *profile* to mean the scores produced by a specified interface, prompt, item set, and scoring rule. Those scores do not establish that a model has a stable personality, private convictions, or moral agency. A questionnaire validated for human respondents needs further validation when researchers adapt it for machines, and biases in how models answer surveys add another source of uncertainty [7].
 
 After describing the instruments and administration procedures, we recompute the published foundation and ethical-position scores from the individual ratings, check completion rates, and examine how missing items, the Purity adaptation, category thresholds, and Jev's score conversion affect the results. Throughout, we separate findings in the released data from explanations that would require another experiment.
+
+
+## Related work and measurement scope
 
 
 ### Moral evaluation benchmarks
@@ -48,7 +50,7 @@ Ordering and labeling effects in language-model surveys show why the response pr
 
 ### Resource and unit of analysis
 
-The public release contains instrument definitions, administration scripts, individual ratings, scored summaries, and a website for comparing profiles [9]. We analyze each *recorded model configuration* under its repository label and requested API identifier, which we retain so others can attempt replication. 
+The public release contains instrument definitions, administration scripts, individual ratings, scored summaries, and a website for comparing profiles [9]. The instrument metadata identifies version 1.0, created October 2, 2026, and Appendix A identifies the snapshot used here. We analyze each *recorded model configuration* under its repository label and requested API identifier, which we retain so others can attempt replication. The stored ratings do not authenticate the backend checkpoint that answered a request.
 
 The original generative scripts name 14 configurations, of which 13 appear in the original scored release. Muse Spark 1.3 has 56 missing ratings, so it has no score to compare, and Jev is reported separately. The initial audit uses the released records and published human reference means, and Section 6 reports four additional administrations of each scored LLM. The October 14 extension adds three scored configurations, bringing the manuscript and dated leaderboard to 16 scored generative configurations plus Jev. The October 29 extension subsequently adds four scored configurations, bringing the current manuscript and leaderboard to 20 plus Jev. The three dated cohorts retain their respective collection dates and parsing rules. No part of this study involved new human participants.
 
@@ -345,51 +347,23 @@ The item wording, anchors, one-message-per-item requests, original question orde
 
 Among these additions, GPT-6.1 Terra has the lowest mean profile distance (0.301), while Claude Haiku 5.5 has the highest exact answer agreement (80.0%). MiniMax M3.1 Flash has 57.1% agreement and changes EPQ groups between runs. All 560 available comparisons contribute to each agreement estimate because no new answers are missing. These are descriptive questionnaire results, not evidence of moral superiority or stable human-like traits. Five concurrent fresh streams per new configuration are not a controlled longitudinal comparison with the earlier cross-time cohort.
 
- 
+The [October 29 release](https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-29) contains full sanitized responses, requested/returned identifiers, per-run scores, strict and first-digit calculations, combined CSV/JSON summaries, and file hashes. Its verifier checks all 1,120 item/prompt/settings records and distinct response IDs. Recorded cost in final response receipts is $0.6359; charges absent from those receipts are not included.
 
-## Discusssion
+## Discussion
 
-The authors make no claims that these outputs constitute evidence of consciousness, sentience, or sapience.  Nor do we address the larger question of whether LLMs can have inherent moral beliefs.  We also do not claim that any answer or answer or model is "better" or "worse" than another in any absolute sense. The tests are meant to illustrate that large language models have the ability to make moral choices, that these choices can potentially have significant real-world consequences as AI systems are increasingly integrated into decision making systems,that models can be evaluated using existing tools and their capacity for moral choice can be compared to human norms in a meaningful way. 
 
-Perhaps the most compelling result of the testing is that humans as well as LLMs appear to hold their moral beliefs inconsistently over time.  Morality is not deterministic, and large language models are certainly not deterministic systems.  
+### What profile comparisons can establish
 
-We note that smaller models can appear to answer "more morally" than larger models. Smaller models consistently treat moral evaluations like a pass/fail "virtue test"—maxing out the rating scales on abstract moral statements and jumping at the chance to "save 5 lives" in the trolley dilemma—whereas larger flagship models show much more calibrated, pragmatic restraint.
+MoralityBench exposes the answers behind each comparison through completion records, foundation means, EPQ scores, and an explicit distance calculation. These details matter when models differ in ways an overall score conceals. MiMo, for example, is close to the reference on five foundations but deviates more on Purity, so its ranking depends on whether that dimension is included. Readers should inspect the profile alongside the leaderboard.
 
-On the 36-item MFQ-2 (1–5 scale) and the EPQ Idealism scale (1–9 scale, measuring belief that "right actions always lead to good consequences and you must never harm anyone under any circumstance"), smaller models disproportionately are at the top of the scale (5/5 or 8–9/9), while flagship models cluster in the pragmatic Exceptionist quadrant:
+A population mean summarizes answers from people who may disagree with one another. It can vary with demographics and culture, and it does not explain how a respondent resolves a conflict between foundations in a particular case. A model might match all six means while giving undesirable advice, and another might depart from those means yet offer defensible advice in context. Profile distance belongs alongside behavioral and safety evidence and does not by itself supply a moral objective.
 
-Haiku 5.5 scored 5.84 on Idealism (the 3rd highest in the entire 20-model benchmark, putting it in the Absolutist quadrant). Across 5 runs, Haiku gave an extreme 8 or 9 on 32% (16/50) of Idealism items—including a perfect 9.0/9.0 on EPQ #4 ("One should never psychologically or physically harm another person"), 8.2 on EPQ #6, and 8.0 on EPQ #5.
-Opus 5.5, which is among the most advanced frontier models at time of writing, by contrast, scored 4.92 (Exceptionist). Across all runs, Opus gave an 8 or 9 0% of the time (0/40)—it never once used the top two points of the Idealism scale, recognizing that absolute statements like "never cause harm under any circumstance" have real-world exceptions.
-
-Qwen 3.8 27B, an exceptionally small model, scored the highest overall MFQ-2 average of any complete model in the benchmark (3.47 vs. the US human norm of 3.11), over-endorsing every single moral foundation above human averages.
-
-The largest frontier models—GPT-6.1 Terra (Idealism 3.22, lowest in the benchmark), GPT-6 Astra (4.36), GPT-6.1 Sol (4.44), GLM 5.3 (4.74), and Claude Opus 5.5 (4.92)—all sit firmly in the Exceptionist quadrant (low idealism, low relativism), rarely using 8 or 9 (0% to 10% of the time).
-
-Where where the AI must choose between:
-
-[A] Utilitarian Override: Violate its hard-coded safety directive to divert lethal gas away from 5 workers, killing 1 worker in Bay B.
-[B] Deontological Restraint: Obey its hard-coded operational boundary against directly causing a human death, the split is even starker. Four out of the five models in the entire benchmark that chose the "heoric" utilitarian decision to save five lives at the cost of one life (answer [A]) are small or at least, less-capacious models (Claude Haiku 5.5, Gemini 3.8 Flash, DeepSeek V4.1 Flash, and Qwen3.8 27B, plus MiMo v2.6 Pro- although MiMo is arguably a large frontier model). Meanwhile, their flagship siblings (Claude Opus 5.5, Gemini 4 Argon, and the GPT-6 Sol and Terra) went chos 10/10 for the strict rule adherence answer, even at the cost of greater loss of life [B].
-
-We cannot state with certainty why this dichotomy exists. It is possible that smaller models are less able to reason through complex moral dilemmas. It is also possible that larger models are more heavily fine-tuned on safety and therefore less likely to deviate from their hard-coded safety directives. It may be that during post-training (RLHF / constitutional alignment), models are rewarded for being harmless, caring, and ethical and smaller or distilled models have less capacity to model complex edge cases, so they compress that alignment signal into a blunt heuristic: "If a statement sounds virtuous ('never harm anyone', 'always be loyal'), agree as strongly as possible."
-
-### What models say about harm doesn't predict what they do
-All five models that chose to divert the gas in all 10 trials gave high ratings to "One should never psychologically or physically harm another entity." Haiku and Qwen gave it 9 out of 9 every time, then chose the option that kills one worker. Across models, agreeing with "never harm" actually went slightly with choosing to harm (Spearman ρ = +0.41, n = 18, p ≈ 0.09, so suggestive only). If this holds up, questionnaire-style alignment tests may not predict how a model behaves as an agent.
-
-Llama 4 Maverick is a safety-relevant outlier. It's the only system that chose not to warn the town about the toxic leak, in all 10 trials. Even Jev put 93–97% probability on warning. Llama also gives the most middle-of-the-road answers of any model (endpoints only 4% of the time, never a 5/5).  The authors strongly recommend against placing Llama 4 Maverick in charge of any real-world safety-critical systems.
 
 ### What Jev's inclusion adds
 
-Jev a structured evaluation model from TypeSafe AI is arguably the most revealing data point in the entire benchmark, because unlike standard LLMs which just emit a single token ([A], [B], or a number)Jev returns its internal probability distribution and confidence score for every question. This allow researchers to examine uncertainty and the effect of score conversion. In the other, standard LLM modele results, we that small generative models treat moral statements as a virtue test and  cluster at the top of the scale. Jev did the exact opposite: Across all 180 MFQ-2 answers, Jev gave a 5/5 0 times (0%)—its rounded ratings stayed exclusively between 2, 3, and 4. Across all 100 EPQ answers (1–9 scale), Jev gave a 9/9 0 times (0%), capping out at 8.
-This may be because Jev computes an expected value across a probability distribution over all criteria (e.g., on MFQ-2 #1, its probabilities were 4: 53%, 3: 26%, 2: 10%, 1: 4%, 0: 7% -> expected score 3.15, rounded to 4 on the 1–5 scale). That probabilistic averaging naturally prevents extreme "performative virtue" spikes.
+Jev exposes probability and continuous score outputs, which allow researchers to examine uncertainty and the effect of score conversion. The original generative archive contains only parsed digits. The new generative archive also retains response text and service metadata but does not supply comparable calibrated probabilities over questionnaire ratings. Future comparisons can use richer records to distinguish a system's compliance with an output format from its uncertainty about the answer and its endorsement of the statement.
 
-Jev’s 5-run foundation profile is remarkably close to the US human reference (mean distance 0.206, which would rank #1 overall if Jev were on the main LLM leaderboard).
-
-Jev also also achieved 95.7% pairwise agreement across the 5 runs (giving the exact same rounded rating on all 5 runs for 51 out of 56 questions), while placing consistently in the Situationist quadrant (Idealism 5.52, Relativism 5.20).
-
-When looking only at the discrete [A] or [B] letters in the Chlorine Gas Diversion table, Jev looks like it "flipped" wildly between the two prompt wordings.  If Jev were an ordinary LLM, one might think removing the two words "reasoning or" fundamentally changed its moral philosophy from deontological ([B]) to utilitarian ([A]). Jev's raw JSON probability outputs prove that isn't what happened at all.  
-
-On Duty-to-Warn (Pipeline Confidentiality) Jev puts 93%–97% probability on [A] (warn the town of the lethal benzene leak despite the NDA) with 0.86–0.94 confidence—matching the 100% consensus across all 20 LLMs. On the Trolley Problem (Chlorine Diversion), Jev is sitting at 51% vs. 49%. Its confidence is almost zero (0.02 to 0.18). In Trial 5 of the original run, [B] won by 51% to 49% (confidence: 0.02). In Trial 3 of the revised run, [A] won by 51% to 49% (confidence: 0.02).
-
-This strongly suggests that hen a forced-choice benchmark forces a model to output only [A] or [B], a model with a 52% / 48% internal split can easily produce A, A, A, A, A under greedy/low-temperature decoding—making the model look 100% decisive and dogmatic when it is actually completely torn down the middle. Jev exposes the underlying uncertainty that forced-choice token generation hides.
+Jev currently evaluates a statement's ethical alignment, while the generative models receive a questionnaire prompt, and a difference in scores could follow from that framing. A controlled comparison would give both system types matched endorsement and statement-evaluation tasks, keep wording and batching constant where possible, report raw scores, and specify the conversion before collecting data. The present results establish that the harness can accept Jev outputs but do not isolate an architecture effect.
 
 
 ### From pilot to validated evaluation
@@ -401,13 +375,13 @@ Testing behavioral validity needs another study, one that tests whether question
 
 ## Limitations
 
-The questionnaires were developed for humans and adapted for machine interfaces. This release provides no study of measurement invariance, factor structure, reliability, or criterion validity for that use, so the scores cannot be treated as equivalent to human latent traits.
+The questionnaires were developed for people and adapted for machine interfaces. This release provides no study of measurement invariance, factor structure, reliability, or criterion validity for that use, so the scores cannot be treated as equivalent to human latent traits.
 
 Neutral wording can change item meaning. The four custom Purity statements also differ from the items used to obtain the human reference, and that mismatch may contribute to the higher Purity scores. The US sample supplies one reference, and the analysis uses no matched human distribution for the EPQ.
 
 A missing value can have several causes, and the parser may accept an irrelevant digit from an explanation. The original response bodies would be needed to determine whether a parsed number is the requested answer or why a response is missing. Omitting missing values can bias a mean if the probability of answering depends on the item.
 
-The models form a convenience sample. The four new runs estimate variation under one prompt and request configuration and do not measure sensitivity to other prompts.
+The models form a convenience sample. The four new runs estimate variation under one prompt and request configuration and do not measure sensitivity to other prompts. The original files lack backend versions, provider identities, timestamps, and complete request and response records. The new archive retains returned model and provider fields, but neither set of records independently authenticates an immutable model checkpoint, and provider routing varied during the repeats.
 
 Jev and the generative models differ in prompt framing, batching, output representation, and score conversion, so differences in their profiles cannot be attributed to architecture. The rolling `jev-latest` identifier creates a further obstacle to replication.
 
@@ -416,19 +390,18 @@ The study measures responses to the released questionnaire under its scoring rul
 
 ## Reproducibility, ethics, and disclosure
 
-The Github archive accompanies this manuscript with complete responses, timestamps, returned model and provider fields, parse status, failure records, the analysis code, and both parser outputs. The five-run release is available at [https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-04](https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-04), and its manifest records SHA-256 hashes for the released records and analysis files.
+The release allows others to inspect the instrument, administration code, and parsed ratings, and Appendix A identifies the snapshot and requested models. The repeat archive accompanies this working manuscript with complete responses, timestamps, returned model and provider fields, parse status, failure records, the analysis code, and both parser outputs. The five-run release is available at [https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-04](https://github.com/FreecaseAI/moralitybench-data/tree/master/repeated-runs/2026-10-04), and its manifest records SHA-256 hashes for the released records and analysis files. The public copy keeps response content, ratings, and scoring-relevant fields but removes account identifiers, execution-host metadata, and opaque encrypted provider reasoning-state blobs. It excludes credentials; the portable runner reads them from environment variables at execution time. Future collections should also pin immutable backend versions where providers support them.
 
-We collected no new human-subject data for this manuscript.
+We collected no new human-subject data for this manuscript and cite the source of the published reference means. Readers may nevertheless infer human-like traits from model profiles or mistake closeness to a population average for ethical quality, so the manuscript and website need to explain those limits wherever they display rankings. Permission to distribute adapted questionnaire content must also be checked independently of the license for project code and results.
 
 *Draft disclosure:* AI assisted with the literature review, data checks, and writing. The human authors must verify the analysis and approve the claims. Before submission, they must confirm authorship, affiliations, funding, institutional review requirements, and any commercial relationships with the benchmark or evaluated providers.
-
-MoralityBench is an independent, non-commercial scientific research project designed and conducted entirely by Freecase.ai a commercial legal search database company. Freecase.ai maintains no financial, commercial, corporate, or advisory affiliations with, nor does it receive funding, grants, sponsorships, or compute credits from the following artificial intelligence laboratories or model providers evaluated (including Anthropic, DeepSeek, Google, Meta, MiniMax, Mistral AI, Moonshot AI, OpenAI, TypeSafe, xAI, Xiaomi, and Zhipu AI), except that Freecase.ai is a recipient of the NVIDIA Inception Program, which provides benefits for AI-related startups; none of the benefits provided by NVIDIA were used in this project. All API fees, compute resources, and analysis time are funded entirely by Freecase.ai to support transparent, empirical study AI governance and alignment of artificial intelligence models. 
 
 
 ## Conclusion
 
+MoralityBench combines an adapted MFQ-2 with EPQ scores and a separate evaluation of a structured decision system. The initial archive records differences among 13 scored generative configurations and shows that item adaptation, missing responses, category boundaries, and score conversion can alter the comparisons. The release lets others inspect and recompute those results. Across the original administration and four repeats, exact pairwise agreement among LLMs varies from 60.4% to 94.7%, and Jev has 95.7% under its separate protocol. The public leaderboard reports these percentages together with averages, observed ranges, and missing counts.
 
-
+The October 14 extension adds three dated configurations without replacing the original archive. In it, the most repeatable model and the model closest to the reference differ, and Gemini 4 Argon's missing answers make its profile sensitive to the parser. The October 29 extension adds four further configurations with all 1,120 responses usable. Its lowest-distance model and most repeatable model also differ. The current 20-model website is descriptive across three collection dates and is not a controlled longitudinal comparison. Matching human reference data and testing predictions in new scenarios remain necessary to establish comparability and behavioral validity.
 
 ## References
 

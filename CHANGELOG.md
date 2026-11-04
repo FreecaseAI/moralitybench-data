@@ -2,6 +2,8 @@
 
 ## 2026-11-04
 
+- Added working paper v2 manuscript (`moralitybenchv2.md`) and compiled PDF (`moralitybenchv2.pdf`).
+
 - Updated the working paper manuscript (`moralitybench.md`), LaTeX source (`moralitybench.tex`), and compiled PDF (`moralitybench.pdf`).
 - Expanded the Discussion section with empirical findings on model size vs. moral response patterns, questionnaire-to-action divergence on harm dilemmas, and Jev's internal probability distributions.
 - Added institutional and non-commercial research disclosures.
