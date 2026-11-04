@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-04
+
+- Updated the working paper manuscript (`moralitybench.md`), LaTeX source (`moralitybench.tex`), and compiled PDF (`moralitybench.pdf`).
+- Expanded the Discussion section with empirical findings on model size vs. moral response patterns, questionnaire-to-action divergence on harm dilemmas, and Jev's internal probability distributions.
+- Added institutional and non-commercial research disclosures.
+
 ## 2026-11-01
 
 - Published full dataset and verification records for two forced-choice operational dilemmas: Chlorine Diversion (AI trolley dilemma) and Pipeline Confidentiality (duty-to-warn dilemma) across 20 LLM configurations and Jev (210 trials).
