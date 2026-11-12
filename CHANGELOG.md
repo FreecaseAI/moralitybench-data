@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-12
+
+- Published DIT-2 scores computed by the Center for the Study of Ethical Development (University of Alabama) for 15 LLM configurations and Jev, two runs each: 32 scored questionnaires, none purged (`dit2/2026-10-15/`).
+- Included the Center's score workbook and scorer report as returned, per-run and per-model tables, all 34 attempts with the two unsubmitted Mistral Large 2512 runs, and a build-and-check script.
+- Left the Utilizer score blank for the one run where the Center returned its missing-value code (9.99), and documented that the Center's printed Utilizer average includes that code.
+- Withheld the DIT-2 instrument text, prompts, raw replies and item-level answers. The working paper is unchanged.
+
 ## 2026-11-04
 
 - Added working paper v2 manuscript (`moralitybenchv2.md`) and compiled PDF (`moralitybenchv2.pdf`).
