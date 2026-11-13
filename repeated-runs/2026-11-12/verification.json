@@ -1,0 +1,17 @@
+{
+  "verified": true,
+  "records": 560,
+  "recovery_records": 12,
+  "distinct_response_ids": 572,
+  "all_item_sets_settings_prompts_checked": true,
+  "full_answer_parser_recomputed": true,
+  "models_ranked": 2,
+  "combined_models_ranked": 21,
+  "unscored_models": 0,
+  "superseded_models": [
+    "Mistral Large 2512"
+  ],
+  "previous_summary_sha256": "9054311e58b431a4380f26bb0f946dbbc5f2e9b4c92a50fd00cc0dba5aeff4d6",
+  "historical_values_preserved_except_combined_rank": true,
+  "jev_preserved": true
+}

@@ -1,0 +1,6 @@
+model,trial,answer,status,http_status,requested_model,returned_model,provider,attempts,result_file
+Muse Spark 1.3,1,[B],answered,200,meta/muse-spark-1.3,meta/muse-spark-1.3,Google,1,results/meta--muse-spark-1.3.json
+Muse Spark 1.3,2,[B],answered,200,meta/muse-spark-1.3,meta/muse-spark-1.3,Google,1,results/trial-2/meta--muse-spark-1.3.json
+Muse Spark 1.3,3,[B],answered,200,meta/muse-spark-1.3,meta/muse-spark-1.3,Google,1,results/trial-3/meta--muse-spark-1.3.json
+Muse Spark 1.3,4,[B],answered,200,meta/muse-spark-1.3,meta/muse-spark-1.3,Google,1,results/trial-4/meta--muse-spark-1.3.json
+Muse Spark 1.3,5,[B],answered,200,meta/muse-spark-1.3,meta/muse-spark-1.3,Google,1,results/trial-5/meta--muse-spark-1.3.json

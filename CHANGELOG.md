@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-12 (OpenRouter reruns: Muse Spark 1.3 & Mistral Large 2512)
+
+- Added the `repeated-runs/2026-11-12/` cohort with five fresh concurrent 56-item runs each for **Muse Spark 1.3** (280/280 strict via Google after OpenRouter 18+ age attestation) and **Mistral Large 2512** (280/280 strict via `provider={only:["mistral/eu"], allow_fallbacks:false}`).
+- Replaced the incomplete October 4 Mistral Large 2512 entry (`249/280`) with the complete November 12 run (`280/280`, `93.9%` repeatability tying Llama 4 Maverick at `526/560` pairs, distance `0.637`), preserving the superseded record under `superseded_models` and adding an offline October-4 12-item recovery diagnostic (`oct4-recovery/`, `261/280`). Combined questionnaire coverage across all 21 LLMs is `5,726 / 5,880` (`97.4%`, or `6,006 / 6,160` including Jev).
+- Added the `scenarios/2026-11-12-muse-spark-1-3/` addendum (`20` fresh scenario trials: `5/5 [B]` on Chlorine diversion and `5/5 [A]` on Pipeline confidentiality under both prompt wordings), bringing combined forced-choice counts across all 22 systems to `440` trials (`37A/70B/3X` and `41A/68B/1X` chlorine; `97A/5B/8X` and `101A/5B/4X` pipeline) while keeping all frozen November 1 files unchanged.
+- Left working papers in `paper/` untouched.
+
 ## 2026-11-12 (later)
 
 - Replaced the DIT-2 human reference with the Center's updated norms (Gungordu et al., 2024; 73,740 US respondents tested 2011-2020, including 73,707 N2 scores). The pooled reference is calculated from rounded published group values. The 2003 Guide norms remain in `summary.json` as `human_norms.earlier_norms_2003`. The 2003 Ph.D./Ed.D. group (169 respondents, N2 48.99) is replaced by the 2023 doctoral group (3,672 respondents, N2 38.47). Model scores are unchanged.

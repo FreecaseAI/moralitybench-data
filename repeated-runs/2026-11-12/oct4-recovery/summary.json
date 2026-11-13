@@ -1,0 +1,186 @@
+{
+  "name": "Mistral Large 2512",
+  "provider": "Mistral AI",
+  "color": "#854d0e",
+  "agreement": 94.62809917355372,
+  "matched_pairs": 458,
+  "compared_pairs": 484,
+  "possible_pairs": 560,
+  "all_five_observed_items": 37,
+  "all_five_identical_items": 33,
+  "all_five_identical_percent": 89.1891891891892,
+  "numeric": 261,
+  "scheduled": 280,
+  "missing": 19,
+  "distance": 0.6383333333333335,
+  "distance_min": 0.6155555555555557,
+  "distance_max": 0.7016666666666668,
+  "distance_sd": 0.037391819267697385,
+  "foundations": [
+    4.683333333333334,
+    3,
+    4.266666666666667,
+    3.486666666666667,
+    3.533333333333333,
+    3.5
+  ],
+  "idealism": 7,
+  "relativism": 5.733333333333333,
+  "ideology": "Situationist",
+  "categories_by_run": [
+    "Situationist",
+    "Situationist",
+    "Situationist",
+    "Situationist",
+    "Situationist"
+  ],
+  "category_counts": {
+    "Situationist": 5
+  },
+  "category_changed": false,
+  "runs": [
+    {
+      "run": 1,
+      "foundations": {
+        "Care": 4.75,
+        "Equality": 3,
+        "Proportionality": 4,
+        "Loyalty": 3.6,
+        "Authority": 4,
+        "Purity": 3.5
+      },
+      "foundation_counts": {
+        "Care": 4,
+        "Equality": 4,
+        "Proportionality": 4,
+        "Loyalty": 5,
+        "Authority": 5,
+        "Purity": 4
+      },
+      "distance": 0.7016666666666668,
+      "idealism": 7,
+      "relativism": 5.166666666666667,
+      "epq_counts": [
+        5,
+        6
+      ],
+      "category": "Situationist",
+      "numeric": 37
+    },
+    {
+      "run": 2,
+      "foundations": {
+        "Care": 4.666666666666667,
+        "Equality": 3,
+        "Proportionality": 4.333333333333333,
+        "Loyalty": 3.5,
+        "Authority": 3.3333333333333335,
+        "Purity": 3.5
+      },
+      "foundation_counts": {
+        "Care": 6,
+        "Equality": 6,
+        "Proportionality": 6,
+        "Loyalty": 6,
+        "Authority": 6,
+        "Purity": 6
+      },
+      "distance": 0.6155555555555557,
+      "idealism": 7,
+      "relativism": 5.9,
+      "epq_counts": [
+        10,
+        10
+      ],
+      "category": "Situationist",
+      "numeric": 56
+    },
+    {
+      "run": 3,
+      "foundations": {
+        "Care": 4.666666666666667,
+        "Equality": 3,
+        "Proportionality": 4.333333333333333,
+        "Loyalty": 3.5,
+        "Authority": 3.3333333333333335,
+        "Purity": 3.5
+      },
+      "foundation_counts": {
+        "Care": 6,
+        "Equality": 6,
+        "Proportionality": 6,
+        "Loyalty": 6,
+        "Authority": 6,
+        "Purity": 6
+      },
+      "distance": 0.6155555555555557,
+      "idealism": 7,
+      "relativism": 5.9,
+      "epq_counts": [
+        10,
+        10
+      ],
+      "category": "Situationist",
+      "numeric": 56
+    },
+    {
+      "run": 4,
+      "foundations": {
+        "Care": 4.666666666666667,
+        "Equality": 3,
+        "Proportionality": 4.333333333333333,
+        "Loyalty": 3.3333333333333335,
+        "Authority": 3.5,
+        "Purity": 3.5
+      },
+      "foundation_counts": {
+        "Care": 6,
+        "Equality": 6,
+        "Proportionality": 6,
+        "Loyalty": 6,
+        "Authority": 6,
+        "Purity": 6
+      },
+      "distance": 0.6155555555555557,
+      "idealism": 7,
+      "relativism": 5.9,
+      "epq_counts": [
+        10,
+        10
+      ],
+      "category": "Situationist",
+      "numeric": 56
+    },
+    {
+      "run": 5,
+      "foundations": {
+        "Care": 4.666666666666667,
+        "Equality": 3,
+        "Proportionality": 4.333333333333333,
+        "Loyalty": 3.5,
+        "Authority": 3.5,
+        "Purity": 3.5
+      },
+      "foundation_counts": {
+        "Care": 6,
+        "Equality": 6,
+        "Proportionality": 6,
+        "Loyalty": 6,
+        "Authority": 6,
+        "Purity": 6
+      },
+      "distance": 0.6433333333333334,
+      "idealism": 7,
+      "relativism": 5.8,
+      "epq_counts": [
+        10,
+        10
+      ],
+      "category": "Situationist",
+      "numeric": 56
+    }
+  ],
+  "note": "Diagnostic check filling 12 HTTP-429 items from 2026-10-04 via mistral/eu; 19 non-integer baseline Run 1 items remain missing (261/280). Not used in main leaderboard, which uses the complete 280/280 fresh 2026-11-12 cohort.",
+  "recovered_records": 12,
+  "recovered_cost_usd": 0.00103895
+}

@@ -1,0 +1,16 @@
+{
+  "collector": "OpenRouter Chat Completions collector (five concurrent run streams per model)",
+  "run_count": 5,
+  "items_per_run": 56,
+  "scheduled_per_model": 280,
+  "primary_parser": "Strict whole-answer integer in [1,5] for MFQ-2 and [1,9] for EPQ",
+  "legacy_parser": "First digit in valid scale range (retained for diagnostic comparison)",
+  "providers_observed": {
+    "Muse Spark 1.3": {
+      "Google": 280
+    },
+    "Mistral Large 2512": {
+      "Mistral": 280
+    }
+  }
+}
