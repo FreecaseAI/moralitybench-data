@@ -7,8 +7,9 @@ Outputs:              scores-by-run.csv, scores-by-model.csv, summary.json
     python3 build_summary.py           # rewrite the outputs
     python3 build_summary.py --check   # fail if the outputs or source files differ
 
-The Center for the Study of Ethical Development computed every score. This
-script only reads its workbook, attaches model names, and averages the two runs.
+The Center for the Study of Ethical Development computed every model score.
+This script reads its workbook, attaches model names, averages the two runs,
+and pools the published human reference groups from rounded table values.
 Standard library only.
 """
 import csv
@@ -109,9 +110,13 @@ def human_norms():
     return {
         'source': "Gungordu, N., Nabizadehchianeh, G., O'Connor, E., Ma, W., & Walker, D. I. (2024). "
                   'Moral reasoning development: norms for Defining Issue Test-2 (DIT2). '
-                  'Ethics & Behavior, 34(4), 246-263. https://doi.org/10.1080/10508422.2023.2206573',
+                  'Ethics & Behavior, 34(4), 246-263, Tables 3 and 4. '
+                  'https://doi.org/10.1080/10508422.2023.2206573',
         'sample': 'US citizens with English as a primary language, tested 2011-2020 (N = 73,740); '
                   'published by the Center for the Study of Ethical Development as its updated DIT2 norms',
+        'pooling_note': 'Approximate pooled means and sample standard deviations reconstructed from '
+                        'the rounded values for twelve education groups. Schema scores use 73,740 '
+                        'respondents; N2 uses 73,707. Variance includes within-group and between-group variation.',
         'n2_75th_percentile_highest_group': 53.4,
         'groups': groups,
         'pooled': overall,

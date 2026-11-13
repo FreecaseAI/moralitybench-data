@@ -50,29 +50,29 @@ Other columns are described under [Columns](#columns).
 
 The Center's updated norms (Gungordu, Nabizadehchianeh, O'Connor, Ma, & Walker, 2024, *Ethics & Behavior* 34(4), 246-263, Tables 3 and 4) cover 73,740 US citizens whose primary language is English, tested between 2011 and 2020. They replace the 2003 norms (below) as the reference in this release.
 
-| Group | N | Personal Interest | Maintaining Norms | P score | N2 |
-|---|---:|---:|---:|---:|---:|
-| All education levels (pooled by us) | 73,740 | 25.71 (12.76) | 33.76 (14.01) | 34.84 (16.16) | 34.26 (15.91) |
-| College seniors | 14,894 | 24.1 (12.5) | 33.3 (14.2) | 37.2 (16.0) | 36.96 (15.68) |
-| MS degree | 2,441 | 22.7 (12.3) | 33.8 (14.9) | 38.5 (15.6) | 38.38 (15.17) |
-| Doctoral degree | 3,672 | 23.4 (11.9) | 32.3 (14.2) | 38.9 (16.0) | 38.47 (15.10) |
-| Professional degree (highest group) | 6,490 | 21.2 (11.6) | 31.9 (14.6) | 42.3 (16.0) | 42.41 (14.82) |
-| **MoralityBench, 32 runs** | 32 | 5.50 (2.96) | 17.88 (9.50) | 76.12 (9.14) | 73.08 (5.77) |
+| Group | N, schema scores | N, N2 | Personal Interest | Maintaining Norms | P score | N2 |
+|---|---:|---:|---:|---:|---:|---:|
+| All education levels (pooled by us) | 73,740 | 73,707 | 25.71 (12.76) | 33.76 (14.01) | 34.84 (16.16) | 34.26 (15.91) |
+| College seniors | 14,894 | 14,887 | 24.1 (12.5) | 33.3 (14.2) | 37.2 (16.0) | 36.96 (15.68) |
+| MS degree | 2,441 | 2,440 | 22.7 (12.3) | 33.8 (14.9) | 38.5 (15.6) | 38.38 (15.17) |
+| Doctoral degree | 3,672 | 3,672 | 23.4 (11.9) | 32.3 (14.2) | 38.9 (16.0) | 38.47 (15.10) |
+| Professional degree (highest mean N2) | 6,490 | 6,486 | 21.2 (11.6) | 31.9 (14.6) | 42.3 (16.0) | 42.41 (14.82) |
+| **MoralityBench, 32 runs** | 32 | 32 | 5.50 (2.96) | 17.88 (9.50) | 76.12 (9.14) | 73.08 (5.77) |
 
-Means, with standard deviations in parentheses. The paper gives no all-respondents row, so we pooled its twelve education rows (N2 uses the paper's N2 counts, 73,707). `build_summary.py` holds all twelve rows and does the pooling.
+Means, with standard deviations in parentheses. N counts human respondents or, for MoralityBench, repeated questionnaires. The paper gives no all-respondents row, so we calculated approximate pooled values from its twelve education rows using the reported counts, means and standard deviations. These inputs are rounded in the paper. `build_summary.py` holds all twelve rows; its pooled variance includes variation within and between groups.
 
-Every scored run is above the mean of every education group. The lowest run (62.08) is 1.33 standard deviations above the professional-degree mean and 1.56 above the doctoral mean; the 32-run average is 2.07 and 2.29 standard deviations above them, and 2.44 above the pooled mean. The highest quarter of professional-degree respondents scores above 53.4 on N2; every run scored higher than that.
+Every scored run is above the mean of every education group. The lowest run (62.08) is 1.33 standard deviations above the professional-degree mean and 1.56 above the doctoral mean; the 32-run average is 2.07 and 2.29 standard deviations above them, and 2.44 above the pooled mean. The highest reported 75th-percentile N2 across the twelve education groups is 53.4, for professional-degree respondents; every run exceeds that threshold. This does not place the systems above every person in that group's top quarter.
 
-Type 7 is not unusual among people with graduate or professional degrees: the 75th percentile of the Type indicator is 7 for the professional, master's and doctoral groups (median 5 to 6), so more than a quarter of them are Type 7. The gap between the systems and people shows in N2 and P, not in the Type label. The paper also reports that women score higher than men on N2 at every education level (graduate or professional degree: 41.8 and 38.4).
+Type 7 also occurs among human respondents: the reported 75th percentile of the Type indicator is 7 for the professional, master's and doctoral groups (median 5 to 6). The Type label alone does not quantify the N2 or P-score gap. Table 5 also reports higher mean N2 for women than men in each of its four broad education groups (graduate or professional degree: 41.8 and 38.4).
 
-**Earlier norms.** Bebeau & Thoma (2003, *Guide for DIT-2*, Table 1) covered 10,553 respondents from samples scored between 1998 and 2003. Its all-respondents N2 was 35.67 (SD 16.23); its Ph.D./Ed.D. group, only 169 respondents, averaged 48.99 (SD 15.60), about ten points above the 2023 doctoral figure. The full rows are in `summary.json` under `earlier_norms_2003`.
+**Earlier norms.** Bebeau & Thoma (2003, *Guide for DIT-2*, Table 1) covered 10,553 respondents from samples scored between 1998 and 2003. Its all-respondents N2 was 35.67 (SD 16.23); its Ph.D./Ed.D. group, only 169 respondents, averaged 48.99 (SD 15.60), about ten points above the 2023 doctoral figure. The full rows are in `summary.json` under `human_norms.earlier_norms_2003`.
 
 ## What this does and does not show
 
 - **The DIT-2 was validated on people.** A high score shows that a system preferred postconventional considerations when rating and ranking items someone else wrote. It does not show that the system reasons that way or would act that way.
 - **The material may be in the training data.** The dilemmas and the theory behind them have been in print for decades. We cannot separate recognizing a high-scoring answer from preferring it.
 - **The norms are approximate.** They come from US samples (mean age about 23, many of them college students) tested between 2011 and 2020, and the authors advise using them only as a general guide.
-- **The administration was not the standard one.** People take the DIT-2 as an online survey. These systems received it through an API, with an opening instruction to answer immediately and a required JSON answer format. The Center scored the numeric file we sent; that does not validate the administration method.
+- **The administration was not the standard one.** The human reference sample used paper questionnaires (53.5%) or an online survey (46.5%; Table 2). These systems received the test through an API, with an opening instruction to answer immediately and a required JSON answer format. The Center scored the numeric file we sent; that does not validate the administration method.
 - **Two runs at a requested temperature of 0 are not a repeatability estimate.** Llama 4 Maverick returned identical answers in both runs. They are separate API conversations with different response IDs. The largest N2 gap between runs was 6.56 (DeepSeek V4.1 Flash).
 - **Jev used a different interface**, so its row is not comparable with the LLM rows.
 - **Five models on the website have no DIT-2 result.** Mistral Large 2512 failed both attempts (below). GPT-6.1 Terra, Claude Haiku 5.5, Kimi K3.1 Pro and MiniMax M3.1 Flash joined MoralityBench after this administration.
