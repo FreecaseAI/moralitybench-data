@@ -64,9 +64,64 @@ CENTER_STATS = {
 }
 CENTER_U_WITH_MISSING_CODE = (0.38, 1.75)
 
-# Bebeau & Thoma (2003), Guide for DIT-2, Table 1: US respondents with English
-# as a primary language, by education. (mean, standard deviation).
-HUMAN_NORMS = {
+# Gungordu, Nabizadehchianeh, O'Connor, Ma & Walker (2024), Ethics & Behavior 34(4),
+# 246-263, Tables 3 and 4: US citizens with English as a primary language, tested
+# 2011-2020 (N = 73,740). Each row: education level, n for the schema scores,
+# (mean, SD) for Personal Interest, Maintaining Norms and P score, n for N2, (mean, SD) for N2.
+NORMS_2023_ROWS = [
+    ('Grade 1-6', 781, (24.6, 11.8), (34.5, 13.9), (35.6, 15.7), 781, (35.45, 14.74)),
+    ('Grade 7-9', 1614, (27.3, 13.4), (33.3, 14.4), (32.5, 16.7), 1613, (31.50, 16.64)),
+    ('Grade 10-12', 5317, (27.5, 13.0), (33.5, 13.9), (32.8, 16.4), 5314, (31.82, 16.27)),
+    ('Voc/Tech', 903, (27.1, 13.0), (36.8, 13.8), (29.2, 14.8), 903, (28.05, 14.90)),
+    ('Junior college', 2776, (28.5, 12.7), (34.6, 13.6), (30.4, 15.5), 2774, (29.08, 15.49)),
+    ('College freshman', 18985, (28.1, 12.7), (34.8, 13.5), (31.1, 15.3), 18976, (30.26, 15.19)),
+    ('College sophomore', 7116, (26.1, 12.8), (33.7, 13.9), (34.4, 15.7), 7111, (33.67, 15.40)),
+    ('College junior', 8751, (25.8, 12.8), (33.9, 14.0), (34.6, 15.8), 8750, (34.03, 15.57)),
+    ('College senior', 14894, (24.1, 12.5), (33.3, 14.2), (37.2, 16.0), 14887, (36.96, 15.68)),
+    ('Professional degree', 6490, (21.2, 11.6), (31.9, 14.6), (42.3, 16.0), 6486, (42.41, 14.82)),
+    ('MS degree', 2441, (22.7, 12.3), (33.8, 14.9), (38.5, 15.6), 2440, (38.38, 15.17)),
+    ('Doctoral degree', 3672, (23.4, 11.9), (32.3, 14.2), (38.9, 16.0), 3672, (38.47, 15.10)),
+]
+
+
+def pooled(pairs):
+    """Combine (n, mean, sd) groups into one overall mean and SD."""
+    total = sum(n for n, _, _ in pairs)
+    mean = sum(n * m for n, m, _ in pairs) / total
+    variance = sum((n - 1) * sd * sd + n * (m - mean) ** 2 for n, m, sd in pairs) / (total - 1)
+    return total, round(mean, 2), round(variance ** 0.5, 2)
+
+
+def human_norms():
+    fields = ['personal_interest', 'maintaining_norms', 'p']
+    groups = []
+    for name, n, pi, mn, p, n2_n, n2 in NORMS_2023_ROWS:
+        groups.append({'group': name, 'n': n, 'n_n2': n2_n, 'personal_interest': list(pi),
+                       'maintaining_norms': list(mn), 'p': list(p), 'n2': list(n2)})
+    overall = {'group': 'All education levels (pooled by MoralityBench from the rows above)'}
+    for index, field in enumerate(fields):
+        total, mean, sd = pooled([(row[1], row[2 + index][0], row[2 + index][1]) for row in NORMS_2023_ROWS])
+        overall[field] = [mean, sd]
+        overall['n'] = total
+    total, mean, sd = pooled([(row[5], row[6][0], row[6][1]) for row in NORMS_2023_ROWS])
+    overall['n2'] = [mean, sd]
+    overall['n_n2'] = total
+    return {
+        'source': "Gungordu, N., Nabizadehchianeh, G., O'Connor, E., Ma, W., & Walker, D. I. (2024). "
+                  'Moral reasoning development: norms for Defining Issue Test-2 (DIT2). '
+                  'Ethics & Behavior, 34(4), 246-263. https://doi.org/10.1080/10508422.2023.2206573',
+        'sample': 'US citizens with English as a primary language, tested 2011-2020 (N = 73,740); '
+                  'published by the Center for the Study of Ethical Development as its updated DIT2 norms',
+        'n2_75th_percentile_highest_group': 53.4,
+        'groups': groups,
+        'pooled': overall,
+        'earlier_norms_2003': EARLIER_NORMS,
+    }
+
+
+# Bebeau & Thoma (2003), Guide for DIT-2, Table 1, kept for comparison with the 2023 norms:
+# US respondents with English as a primary language, by education. (mean, standard deviation).
+EARLIER_NORMS = {
     'source': 'Bebeau, M. J., & Thoma, S. J. (2003). Guide for DIT-2, Table 1.',
     'groups': [
         {'group': 'All education levels', 'n': 10553, 'personal_interest': [25.48, 12.71],
@@ -188,7 +243,7 @@ def build():
         'utilizer_note': 'One run (id 10032) has the missing-value code 9.99 and is left out. '
                          'The Center\'s report averages that code in, giving 0.38 (SD 1.75).',
         'type_counts': {str(t): sum(r['type'] == t for r in by_run) for t in sorted({r['type'] for r in by_run})},
-        'human_norms': HUMAN_NORMS,
+        'human_norms': human_norms(),
         'models': by_model,
         'runs': by_run,
     }

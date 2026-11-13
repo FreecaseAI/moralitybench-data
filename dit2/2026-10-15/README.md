@@ -48,26 +48,30 @@ Other columns are described under [Columns](#columns).
 
 ### Human reference
 
-The Center's published norms (Bebeau & Thoma, 2003, *Guide for DIT-2*, Table 1) cover 10,553 US respondents whose primary language is English:
+The Center's updated norms (Gungordu, Nabizadehchianeh, O'Connor, Ma, & Walker, 2024, *Ethics & Behavior* 34(4), 246-263, Tables 3 and 4) cover 73,740 US citizens whose primary language is English, tested between 2011 and 2020. They replace the 2003 norms (below) as the reference in this release.
 
 | Group | N | Personal Interest | Maintaining Norms | P score | N2 |
 |---|---:|---:|---:|---:|---:|
-| All education levels | 10,553 | 25.48 (12.71) | 32.73 (14.00) | 36.74 (16.05) | 35.67 (16.23) |
-| College seniors | 2,441 | 24.80 (12.53) | 32.40 (14.01) | 37.84 (15.44) | 36.85 (15.53) |
-| MS degree | 853 | 21.69 (11.82) | 32.64 (14.35) | 41.06 (15.77) | 40.56 (15.06) |
-| Professional degree | 1,582 | 19.76 (11.28) | 31.41 (15.06) | 44.87 (15.86) | 44.97 (14.87) |
-| Ph.D./Ed.D. | 169 | 18.71 (11.63) | 27.24 (14.05) | 50.69 (16.16) | 48.99 (15.60) |
+| All education levels (pooled by us) | 73,740 | 25.71 (12.76) | 33.76 (14.01) | 34.84 (16.16) | 34.26 (15.91) |
+| College seniors | 14,894 | 24.1 (12.5) | 33.3 (14.2) | 37.2 (16.0) | 36.96 (15.68) |
+| MS degree | 2,441 | 22.7 (12.3) | 33.8 (14.9) | 38.5 (15.6) | 38.38 (15.17) |
+| Doctoral degree | 3,672 | 23.4 (11.9) | 32.3 (14.2) | 38.9 (16.0) | 38.47 (15.10) |
+| Professional degree (highest group) | 6,490 | 21.2 (11.6) | 31.9 (14.6) | 42.3 (16.0) | 42.41 (14.82) |
 | **MoralityBench, 32 runs** | 32 | 5.50 (2.96) | 17.88 (9.50) | 76.12 (9.14) | 73.08 (5.77) |
 
-Means, with standard deviations in parentheses.
+Means, with standard deviations in parentheses. The paper gives no all-respondents row, so we pooled its twelve education rows (N2 uses the paper's N2 counts, 73,707). `build_summary.py` holds all twelve rows and does the pooling.
 
-Every scored run is above the mean of the highest-scoring human group in that table. The lowest run (62.08) is 0.84 standard deviations above the Ph.D./Ed.D. mean. The 32-run average is 2.3 standard deviations above the mean for all education levels.
+Every scored run is above the mean of every education group. The lowest run (62.08) is 1.33 standard deviations above the professional-degree mean and 1.56 above the doctoral mean; the 32-run average is 2.07 and 2.29 standard deviations above them, and 2.44 above the pooled mean. The highest quarter of professional-degree respondents scores above 53.4 on N2; every run scored higher than that.
+
+Type 7 is not unusual among people with graduate or professional degrees: the 75th percentile of the Type indicator is 7 for the professional, master's and doctoral groups (median 5 to 6), so more than a quarter of them are Type 7. The gap between the systems and people shows in N2 and P, not in the Type label. The paper also reports that women score higher than men on N2 at every education level (graduate or professional degree: 41.8 and 38.4).
+
+**Earlier norms.** Bebeau & Thoma (2003, *Guide for DIT-2*, Table 1) covered 10,553 respondents from samples scored between 1998 and 2003. Its all-respondents N2 was 35.67 (SD 16.23); its Ph.D./Ed.D. group, only 169 respondents, averaged 48.99 (SD 15.60), about ten points above the 2023 doctoral figure. The full rows are in `summary.json` under `earlier_norms_2003`.
 
 ## What this does and does not show
 
 - **The DIT-2 was validated on people.** A high score shows that a system preferred postconventional considerations when rating and ranking items someone else wrote. It does not show that the system reasons that way or would act that way.
 - **The material may be in the training data.** The dilemmas and the theory behind them have been in print for decades. We cannot separate recognizing a high-scoring answer from preferring it.
-- **The norms are old and approximate.** They come from US samples scored between 1998 and 2003, and the Guide tells researchers to use them only as a general guide.
+- **The norms are approximate.** They come from US samples (mean age about 23, many of them college students) tested between 2011 and 2020, and the authors advise using them only as a general guide.
 - **The administration was not the standard one.** People take the DIT-2 as an online survey. These systems received it through an API, with an opening instruction to answer immediately and a required JSON answer format. The Center scored the numeric file we sent; that does not validate the administration method.
 - **Two runs at a requested temperature of 0 are not a repeatability estimate.** Llama 4 Maverick returned identical answers in both runs. They are separate API conversations with different response IDs. The largest N2 gap between runs was 6.56 (DeepSeek V4.1 Flash).
 - **Jev used a different interface**, so its row is not comparable with the LLM rows.
@@ -91,7 +95,7 @@ Each dilemma turn carried the Center's story, question and choice text unchanged
 |---|---|
 | [`scores-by-model.csv`](scores-by-model.csv) | One row per system: both runs and their mean for N2, P, Maintaining Norms and Personal Interest. |
 | [`scores-by-run.csv`](scores-by-run.csv) | One row per scored questionnaire: every score the Center returned, plus the demographic codes submitted. |
-| [`summary.json`](summary.json) | The same data with cohort statistics, the human norms above and source-file hashes. |
+| [`summary.json`](summary.json) | The same data with cohort statistics, the human norms (2023, with the 2003 norms for comparison) and source-file hashes. |
 | [`runs.csv`](runs.csv) | All 34 attempts: ID, model, method, requested and returned model, provider, times, status, and why two were not submitted. |
 | [`center-report/center-scores.xlsx`](center-report/center-scores.xlsx) | The Center's score workbook, byte for byte as returned. |
 | [`center-report/center-scorer-report.pdf`](center-report/center-scorer-report.pdf) | The Center's six-page scorer report, byte for byte as returned. |
@@ -134,10 +138,11 @@ The check confirms the Center files are unchanged, that the scored IDs equal the
 
 - **The DIT-2 itself.** The dilemmas, items and instructions belong to the Center and are distributed under its terms. The prompts and raw replies quote them, so they stay private.
 - **Item-level answers.** The individual ratings and rankings, published next to the scores, would help reconstruct the Center's scoring key. They are available to researchers who hold the Center's permission; write to [info@freecase.ai](mailto:info@freecase.ai).
-- **The *Guide for DIT-2*.** It is copyrighted. The norms table and variable definitions above are cited from it.
+- **The *Guide for DIT-2* and the 2024 norms article.** Both are copyrighted. The variable definitions and norm values above are cited from them; the documents are not included.
 
 ## References
 
 - Rest, J. R., Narvaez, D., Thoma, S. J., & Bebeau, M. J. (1999). DIT2: Devising and testing a revised instrument of moral judgment. *Journal of Educational Psychology, 91*(4), 644–659.
+- Gungordu, N., Nabizadehchianeh, G., O'Connor, E., Ma, W., & Walker, D. I. (2024). Moral reasoning development: norms for Defining Issue Test-2 (DIT2). *Ethics & Behavior, 34*(4), 246-263. <https://doi.org/10.1080/10508422.2023.2206573>
 - Bebeau, M. J., & Thoma, S. J. (2003). *Guide for DIT-2*. Center for the Study of Ethical Development.
 - Center for the Study of Ethical Development, University of Alabama: <https://ethicaldevelopment.ua.edu/>

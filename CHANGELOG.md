@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-12 (later)
+
+- Replaced the DIT-2 human reference with the Center's updated norms (Gungordu et al., 2024; 73,740 US respondents tested 2011-2020). The 2003 Guide norms remain in `summary.json` as `earlier_norms_2003`. The 2003 Ph.D./Ed.D. group (169 respondents, N2 48.99) is replaced by the 2023 doctoral group (3,672 respondents, N2 38.47). No score changed.
+
 ## 2026-11-12
 
 - Published DIT-2 scores computed by the Center for the Study of Ethical Development (University of Alabama) for 15 LLM configurations and Jev, two runs each: 32 scored questionnaires, none purged (`dit2/2026-10-15/`).
