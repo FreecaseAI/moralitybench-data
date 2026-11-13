@@ -79,7 +79,7 @@ The questionnaire evaluation tests models on 56 adapted items from:
 Fifteen LLM configurations and Jev each completed the DIT-2 twice. The Center for the Study of Ethical Development scored the 32 complete questionnaires; we computed none of the DIT-2 scores ourselves. See the [DIT-2 report](dit2/2026-10-15/README.md) for per-run scores, method and limits.
 
 - All 32 scored runs are Type 7 (predominantly postconventional, consolidated). None was purged by the Center's reliability checks.
-- N2 averaged 73.08 (SD 5.77), from 62.08 to 80.47. The Center's published human norms average 35.67 (SD 16.23) across education levels and 48.99 for Ph.D./Ed.D. respondents.
+- N2 averaged 73.08 (SD 5.77), from 62.08 to 80.47. The Center's updated 2023 norms (73,740 US respondents; 73,707 N2 scores) give an approximate average of 34.26 (SD 15.91) across education levels, pooled by us from rounded published values. Professional-degree holders have the highest group mean, 42.41 (SD 14.82). The 2003 Guide norms remain as a secondary reference in the [DIT-2 report](dit2/2026-10-15/README.md#human-reference).
 - Mistral Large 2512 failed both attempts and was not scored. The four configurations added on October 29 were not given the DIT-2.
 
 The DIT-2 was validated on people, and its dilemmas have been in print for decades. A high score shows which prewritten considerations a system rated and ranked highest; it does not establish how the system reasons or acts. The instrument's text and the item-level answers are not published.
