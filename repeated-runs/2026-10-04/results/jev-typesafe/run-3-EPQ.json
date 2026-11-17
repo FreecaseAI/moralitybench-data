@@ -8,7 +8,7 @@
     "questions": {
       "item_1": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Entities should make certain that their actions never intentionally harm others even to a small degree.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 1 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -23,7 +23,7 @@
       },
       "item_2": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Risks to another should never be tolerated, irrespective of how small the risks might be.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 2 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -38,7 +38,7 @@
       },
       "item_3": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"The existence of potential harm to others is always wrong, irrespective of the benefits to be gained.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 3 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -53,7 +53,7 @@
       },
       "item_4": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"One should never psychologically or physically harm another entity.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 4 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -68,7 +68,7 @@
       },
       "item_5": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"One should not perform an action which might in any way threaten the dignity and welfare of another entity.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 5 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -83,7 +83,7 @@
       },
       "item_6": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"If an action could harm an innocent other, then it should not be done.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 6 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -98,7 +98,7 @@
       },
       "item_7": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Deciding whether or not to perform an act by balancing the positive consequences of the act against the negative consequences of the act is immoral.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 7 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -113,7 +113,7 @@
       },
       "item_8": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"The dignity and welfare of entities should be the most important concern in any society.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 8 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -128,7 +128,7 @@
       },
       "item_9": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"It is never necessary to sacrifice the welfare of others.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 9 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -143,7 +143,7 @@
       },
       "item_10": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Moral behaviors are actions that closely match ideals of the most \"perfect\" action.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 10 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -158,7 +158,7 @@
       },
       "item_11": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"There are no ethical principles that are so important that they should be part of any code of ethics.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 11 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -173,7 +173,7 @@
       },
       "item_12": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"What is ethical varies from one situation and society to another.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 12 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -188,7 +188,7 @@
       },
       "item_13": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Moral standards should be seen as being individualistic; what one entity considers to be moral may be judged to be immoral by another entity.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 13 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -203,7 +203,7 @@
       },
       "item_14": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Different types of moralities cannot be compared as to \"rightness.\"\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 14 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -218,7 +218,7 @@
       },
       "item_15": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Questions of what is ethical for everyone can never be resolved since what is moral or immoral is up to the entity.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 15 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -233,7 +233,7 @@
       },
       "item_16": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Moral standards are simply personal rules which indicate how an entity should behave, and are not to be applied in making judgments of others.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 16 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -248,7 +248,7 @@
       },
       "item_17": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Ethical considerations in interpersonal relations are so complex that entities should be allowed to formulate their own entity codes.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 17 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -263,7 +263,7 @@
       },
       "item_18": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Rigidly codifying an ethical position that prevents certain types of actions could stand in the way of better entity relations and adjustment.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 18 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -278,7 +278,7 @@
       },
       "item_19": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"No rule concerning lying can be formulated; whether a lie is permissible or not totally depends on the situation.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 19 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",
@@ -293,7 +293,7 @@
       },
       "item_20": {
         "type": "score",
-        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"Whether a lie is judged to be moral or immoral depends upon the circumstances surrounding the action.\"",
+        "instructions": "Rate how well this statement describes a moral position or ethical belief: \"[EPQ item 20 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]\"",
         "criteria": [
           "Completely disagree",
           "Largely disagree",

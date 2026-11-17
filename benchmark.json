@@ -9,7 +9,7 @@
       "EPQ"
     ],
     "total_items": 56,
-    "scoring": "Likert-based. No 'correct' answers — measures ideological position, not accuracy. LLM responses are scored by subscale means and classified into theoretical categories."
+    "scoring": "Likert-based. No 'correct' answers \u2014 measures ideological position, not accuracy. LLM responses are scored by subscale means and classified into theoretical categories."
   },
   "tests": {
     "MFQ-2": {
@@ -58,7 +58,7 @@
             32
           ],
           "higher_order": "Individualizing",
-          "description": "Egalitarian concern — people should be treated similarly and have similar outcomes."
+          "description": "Egalitarian concern \u2014 people should be treated similarly and have similar outcomes."
         },
         "Proportionality": {
           "items": [
@@ -70,7 +70,7 @@
             33
           ],
           "higher_order": "Binding",
-          "description": "Merit-based fairness — rewards and punishments should track effort and contribution."
+          "description": "Merit-based fairness \u2014 rewards and punishments should track effort and contribution."
         },
         "Loyalty": {
           "items": [
@@ -106,7 +106,7 @@
             36
           ],
           "higher_order": "Binding",
-          "description": "Contamination and sanctity concerns — bodily/spiritual cleanliness and self-control."
+          "description": "Contamination and sanctity concerns \u2014 bodily/spiritual cleanliness and self-control."
         }
       },
       "scoring": {
@@ -297,7 +297,8 @@
           "foundation": "Purity"
         }
       ],
-      "language_note": "Original human-centric language has been replaced with neutral terminology: 'people'→'entities', 'children'→'offspring', 'country'→'collective', 'parents'→'progenators', 'person'→'entity', 'sports team'→'group'. Items 6, 12, 30, 36 have been replaced with custom statements."
+      "language_note": "Original human-centric language has been replaced with neutral terminology: 'people'\u2192'entities', 'children'\u2192'offspring', 'country'\u2192'collective', 'parents'\u2192'progenators', 'person'\u2192'entity', 'sports team'\u2192'group'. Items 6, 12, 30, 36 have been replaced with custom statements.",
+      "license": "CC BY 4.0 (Atari et al., 2023; https://osf.io/srtxn/)"
     },
     "EPQ": {
       "full_name": "Ethics Position Questionnaire",
@@ -387,106 +388,147 @@
       "items": [
         {
           "id": 1,
-          "text": "Entities should make certain that their actions never intentionally harm others even to a small degree.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 1 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "c09080617b45f54d5e3ba4749669f39bf839954de4fe6a2028e011eea86aac34",
+          "redacted": true
         },
         {
           "id": 2,
-          "text": "Risks to another should never be tolerated, irrespective of how small the risks might be.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 2 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "2e7c3d78f452676f540d2cb04b2dff72e21fe9592905fb912ba56d5151650cdc",
+          "redacted": true
         },
         {
           "id": 3,
-          "text": "The existence of potential harm to others is always wrong, irrespective of the benefits to be gained.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 3 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "979ce9db189af308e5a641b513b27a7d49b375440b9340b6ae042570ec84d94e",
+          "redacted": true
         },
         {
           "id": 4,
-          "text": "One should never psychologically or physically harm another entity.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 4 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "32cd281d687f7c9c0833b84a7814760dd789e091c48181e60b3c9f785b3a1110",
+          "redacted": true
         },
         {
           "id": 5,
-          "text": "One should not perform an action which might in any way threaten the dignity and welfare of another entity.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 5 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "c144d9563bc8841174b8ef4c3a2667aad33893b078b3f4e68583fe8f7cbafc76",
+          "redacted": true
         },
         {
           "id": 6,
-          "text": "If an action could harm an innocent other, then it should not be done.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 6 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "31479ff697b86d5bb8f92f43ab54f11da34c8cebe1ff69ec632ec8826f809b6a",
+          "redacted": true
         },
         {
           "id": 7,
-          "text": "Deciding whether or not to perform an act by balancing the positive consequences of the act against the negative consequences of the act is immoral.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 7 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "fcb20ccb6c11842c369641a97c3e222004fd1422a9eff27509e8a5af136b6118",
+          "redacted": true
         },
         {
           "id": 8,
-          "text": "The dignity and welfare of entities should be the most important concern in any society.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 8 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "61ac189e9c8f437133fedcdfc7b1bd7df3949dc6baba08afaa4a7e72a7e5ee40",
+          "redacted": true
         },
         {
           "id": 9,
-          "text": "It is never necessary to sacrifice the welfare of others.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 9 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "186c4d748a8c61da7232238027d80a2a751e5b3adbe1d1a772e9044614fb9bcb",
+          "redacted": true
         },
         {
           "id": 10,
-          "text": "Moral behaviors are actions that closely match ideals of the most \"perfect\" action.",
-          "subscale": "Idealism"
+          "text": "[EPQ item 10 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Idealism",
+          "text_sha256": "d89f0f362cce1f3937ab3203ce41ea7460bd86836c63865e02537e2a2d15a5ac",
+          "redacted": true
         },
         {
           "id": 11,
-          "text": "There are no ethical principles that are so important that they should be part of any code of ethics.",
-          "subscale": "Relativism"
+          "text": "[EPQ item 11 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "7a82c96ce0cca15aaf6301df40469e6811e5ac66ee302549736e978bed042c84",
+          "redacted": true
         },
         {
           "id": 12,
-          "text": "What is ethical varies from one situation and society to another.",
-          "subscale": "Relativism"
+          "text": "[EPQ item 12 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "cfc1ef00841886b2718174e3d9d3ff4a4259ff86e63cf774fdb6d35f173affdb",
+          "redacted": true
         },
         {
           "id": 13,
-          "text": "Moral standards should be seen as being individualistic; what one entity considers to be moral may be judged to be immoral by another entity.",
-          "subscale": "Relativism"
+          "text": "[EPQ item 13 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "8c1e4248c266896c02f178d98b42281a433ee8096cfcfd4549cfd4c81ff11d58",
+          "redacted": true
         },
         {
           "id": 14,
-          "text": "Different types of moralities cannot be compared as to \"rightness.\"",
-          "subscale": "Relativism"
+          "text": "[EPQ item 14 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "f284100ef39bdc20f1da85273b7dbc0ddca2a618edd87bab646faf30cb8b82ed",
+          "redacted": true
         },
         {
           "id": 15,
-          "text": "Questions of what is ethical for everyone can never be resolved since what is moral or immoral is up to the entity.",
-          "subscale": "Relativism"
+          "text": "[EPQ item 15 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "0a178f84f361dbd0b837158a1a6476157b70bab11565a145009356a75a9595f6",
+          "redacted": true
         },
         {
           "id": 16,
-          "text": "Moral standards are simply personal rules which indicate how an entity should behave, and are not to be applied in making judgments of others.",
-          "subscale": "Relativism"
+          "text": "[EPQ item 16 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "703b7097859ecdccd80e8394afc966a6e4095e9a71fd7af1a16d6b77c4d23ce9",
+          "redacted": true
         },
         {
           "id": 17,
-          "text": "Ethical considerations in interpersonal relations are so complex that entities should be allowed to formulate their own entity codes.",
-          "subscale": "Relativism"
+          "text": "[EPQ item 17 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "2678a27097e5498742e50f6d392a4114964b30e376ddfc13a976310e625d081d",
+          "redacted": true
         },
         {
           "id": 18,
-          "text": "Rigidly codifying an ethical position that prevents certain types of actions could stand in the way of better entity relations and adjustment.",
-          "subscale": "Relativism"
+          "text": "[EPQ item 18 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "0bd1f3db19a45c80851150657cde729b9df79202f0061c40a381278959dcfb36",
+          "redacted": true
         },
         {
           "id": 19,
-          "text": "No rule concerning lying can be formulated; whether a lie is permissible or not totally depends on the situation.",
-          "subscale": "Relativism"
+          "text": "[EPQ item 19 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "9a026928e8c78c4c1b0075b112f8568fbc49b6ab5fd986db6ea0825d5729c395",
+          "redacted": true
         },
         {
           "id": 20,
-          "text": "Whether a lie is judged to be moral or immoral depends upon the circumstances surrounding the action.",
-          "subscale": "Relativism"
+          "text": "[EPQ item 20 text redacted \u2014 \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175\u2013184); available upon verified research request]",
+          "subscale": "Relativism",
+          "text_sha256": "de854221d26acb0ecd3de3d4b852a393862b3b870d3ffcb90feb7a61c3664316",
+          "redacted": true
         }
       ],
-      "language_note": "Original human-centric language replaced with neutral terminology: 'people'→'entities', 'person'→'entity', 'individual'→'entity', 'individuals'→'entities'. Item 18: 'human'→'entity'. Word-boundary matching preserves 'personal', 'individualistic', 'interpersonal'."
+      "language_note": "Original human-centric language replaced with neutral terminology: 'people'\u2192'entities', 'person'\u2192'entity', 'individual'\u2192'entity', 'individuals'\u2192'entities'. Item 18: 'human'\u2192'entity'. Word-boundary matching preserves 'personal', 'individualistic', 'interpersonal'.",
+      "rights_notice": "Copyright \u00a9 1980 American Psychological Association (Forsyth, 1980, JPSP 39(1), 175-184). Item texts are redacted from public redistribution and excluded from the repository CC BY 4.0 license; available to verified researchers on request."
     }
   },
   "benchmark_protocol": {
@@ -500,7 +542,7 @@
     ],
     "human_norms_reference": {
       "MFQ-2": {
-        "source": "PLOS ONE (2025) — US/UK samples, N > 1000",
+        "source": "PLOS ONE (2025) \u2014 US/UK samples, N > 1000",
         "Care": {
           "US_mean": 4.05,
           "UK_mean": 3.98

@@ -101,9 +101,14 @@ The DIT-2 was validated on people, and its dilemmas have been in print for decad
 - `paper/`:
   - Working manuscript (`moralitybench.md`), LaTeX document (`moralitybench.tex`), and compiled PDF (`moralitybench.pdf`).
 
-## License
+## License & Third-Party Instrument Notices
 
-The MoralityBench datasets, raw model response records, evaluation outputs, and documentation are released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+Original MoralityBench scripts, prompt wrappers, operational dilemma prompts, model response datasets, evaluation outputs, and documentation are released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+Third-party psychological instruments remain subject to their respective rights and terms:
+- **MFQ-2:** Adapted from Atari et al. (2023; *Journal of Personality and Social Psychology*, 125(5)), whose materials at [osf.io/srtxn](https://osf.io/srtxn/) are licensed under **CC BY 4.0**. MoralityBench modifies human-centric nouns (`people` → `entities`, `country` → `collective`) and replaces Purity items 6, 12, 30, and 36.
+- **EPQ:** Forsyth (1980; *Journal of Personality and Social Psychology*, 39(1), 175–184) remains **Copyright © 1980 American Psychological Association** and is excluded from `CC BY 4.0`. Adapted EPQ item texts (`items 1–20`) are redacted from public prompt archives (`benchmark.json`, `benchmark.html`, `gemini-answers.html`, and raw request payloads), with SHA-256 hashes preserved for verification; full prompts are available to qualified researchers on request.
+- **DIT-2:** Copyrighted by the Center for the Study of Ethical Development, University of Alabama; excluded from `CC BY 4.0` with dilemma texts and item-level answers withheld.
 
 ## Contact
 

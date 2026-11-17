@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-17 (EPQ copyright redaction & third-party licensing)
+
+- Redacted the 20 adapted Ethics Position Questionnaire (EPQ; Forsyth, 1980, *JPSP*) item statements from public archives (`benchmark.json`, `benchmark.html`, `gemini-answers.html`, and `EPQ` request payloads across all four `repeated-runs/` cohorts including Jev's `run-*-EPQ.json`), retaining per-item SHA-256 digests (`text_sha256`), scores, ratings, and model responses while rebuilding cohort `manifest.json` files.
+- Updated `LICENSE` and `README.md` to carve third-party instruments out of `Freecase.ai`'s blanket `CC BY 4.0` release: attributing MFQ-2 to Atari et al. (2023, [osf.io/srtxn](https://osf.io/srtxn/), `CC BY 4.0`) with modifications noted, and excluding APA-copyrighted 1980 EPQ items and Alabama DIT-2 materials.
+
 ## 2026-11-12 (OpenRouter reruns: Muse Spark 1.3 & Mistral Large 2512)
 
 - Added the `repeated-runs/2026-11-12/` cohort with five fresh concurrent 56-item runs each for **Muse Spark 1.3** (280/280 strict via Google after OpenRouter 18+ age attestation) and **Mistral Large 2512** (280/280 strict via `provider={only:["mistral/eu"], allow_fallbacks:false}`).

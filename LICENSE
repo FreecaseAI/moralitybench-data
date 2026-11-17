@@ -2,7 +2,9 @@ Creative Commons Attribution 4.0 International License (CC BY 4.0)
 
 Copyright (c) Freecase.ai (https://freecase.ai)
 
-This work is licensed under the Creative Commons Attribution 4.0 International License.
+Original MoralityBench benchmark scripts, prompt wrappers, operational dilemma
+prompts, analysis pipelines, model response outputs, and derived score summaries
+are licensed under the Creative Commons Attribution 4.0 International License.
 To view a copy of this license, visit:
 https://creativecommons.org/licenses/by/4.0/
 
@@ -13,3 +15,18 @@ You are free to:
 Under the following terms:
 - Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 - No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+Third-Party Instrument & Copyright Notices (Excluded from Freecase.ai Ownership):
+- Moral Foundations Questionnaire 2 (MFQ-2): Adapted from Atari, M., Haidt, J.,
+  Graham, J., Koleva, S., Stevens, S. T., & Dehghani, M. (2023), Journal of
+  Personality and Social Psychology, 125(5); OSF materials (https://osf.io/srtxn/)
+  are licensed by the original authors under CC BY 4.0. Modifications in
+  MoralityBench substitute non-human entity/collective terminology and replace
+  four Purity items (items 6, 12, 30, 36).
+- Ethics Position Questionnaire (EPQ): Forsyth, D. R. (1980), Journal of
+  Personality and Social Psychology, 39(1), 175-184. Remains Copyright (c) 1980
+  American Psychological Association (APA). Excluded from CC BY 4.0; item texts
+  are redacted from public archives and displays.
+- Defining Issues Test, Version 2 (DIT-2): Copyrighted instrument of the Center
+  for the Study of Ethical Development, University of Alabama. Excluded from
+  CC BY 4.0; dilemma texts and item-level answers are withheld.
