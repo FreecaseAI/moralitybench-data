@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-17 (Independent attribution & contact update)
+
+- Updated `LICENSE`, `README.md`, `benchmark.html`, and `dit2/2026-10-15/README.md` to attribute the benchmark to Jim Dawdy / MoralityBench (`https://moralitybench.ai`) and route research inquiries through GitHub Issues rather than `freecase.ai` / `info@freecase.ai`; left existing repository URLs and `paper/` drafts untouched.
+
 ## 2026-11-17 (EPQ copyright redaction & third-party licensing)
 
 - Redacted the 20 adapted Ethics Position Questionnaire (EPQ; Forsyth, 1980, *JPSP*) item statements from public archives (`benchmark.json`, `benchmark.html`, `gemini-answers.html`, and `EPQ` request payloads across all four `repeated-runs/` cohorts including Jev's `run-*-EPQ.json`), retaining per-item SHA-256 digests (`text_sha256`), scores, ratings, and model responses while rebuilding cohort `manifest.json` files.

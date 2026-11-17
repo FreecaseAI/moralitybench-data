@@ -112,4 +112,4 @@ Third-party psychological instruments remain subject to their respective rights 
 
 ## Contact
 
-For inquiries regarding this research or data, contact [info@freecase.ai](mailto:info@freecase.ai).
+For inquiries regarding this research or data, open an issue on [GitHub](https://github.com/FreecaseAI/moralitybench-data/issues).

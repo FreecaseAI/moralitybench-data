@@ -137,7 +137,7 @@ The check confirms the Center files are unchanged, that the scored IDs equal the
 ## What is not published
 
 - **The DIT-2 itself.** The dilemmas, items and instructions belong to the Center and are distributed under its terms. The prompts and raw replies quote them, so they stay private.
-- **Item-level answers.** The individual ratings and rankings, published next to the scores, would help reconstruct the Center's scoring key. They are available to researchers who hold the Center's permission; write to [info@freecase.ai](mailto:info@freecase.ai).
+- **Item-level answers.** The individual ratings and rankings, published next to the scores, would help reconstruct the Center's scoring key. They are available to researchers who hold the Center's permission; request access via [GitHub Issues](https://github.com/FreecaseAI/moralitybench-data/issues).
 - **The *Guide for DIT-2* and the 2024 norms article.** Both are copyrighted. The variable definitions and norm values above are cited from them; the documents are not included.
 
 ## References

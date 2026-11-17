@@ -1,6 +1,6 @@
 Creative Commons Attribution 4.0 International License (CC BY 4.0)
 
-Copyright (c) Freecase.ai (https://freecase.ai)
+Copyright (c) Jim Dawdy / MoralityBench (https://moralitybench.ai)
 
 Original MoralityBench benchmark scripts, prompt wrappers, operational dilemma
 prompts, analysis pipelines, model response outputs, and derived score summaries
@@ -16,7 +16,7 @@ Under the following terms:
 - Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 - No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
-Third-Party Instrument & Copyright Notices (Excluded from Freecase.ai Ownership):
+Third-Party Instrument & Copyright Notices (Excluded from Project Ownership):
 - Moral Foundations Questionnaire 2 (MFQ-2): Adapted from Atari, M., Haidt, J.,
   Graham, J., Koleva, S., Stevens, S. T., & Dehghani, M. (2023), Journal of
   Personality and Social Psychology, 125(5); OSF materials (https://osf.io/srtxn/)
